@@ -1,0 +1,14 @@
+@media (max-width: 768px) {
+    .member-name {
+        font-size: 1.4rem;
+    }
+
+    .member-committee-grid {
+         grid-template-columns: 1fr;
+    }
+
+    .member-committee-grid .member-card {
+        margin-bottom: 60px;
+        padding: 60px 20px;
+    }
+}

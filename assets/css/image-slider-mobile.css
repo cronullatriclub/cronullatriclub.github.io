@@ -1,0 +1,17 @@
+@media (max-width: 1199px) {
+    .image-slider-slide-image:nth-child(4) {
+        display: none;
+    }
+}
+
+@media (max-width: 899px) {
+    .image-slider-slide-image:nth-child(3) {
+        display: none;
+    }
+}
+
+@media (max-width: 599px) {
+    .image-slider-slide-image:nth-child(2) {
+        display: none;
+    }
+}

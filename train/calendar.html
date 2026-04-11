@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025 Event Calendar | Apex Triathlon Club</title>
+    <meta name="description" content="View upcoming triathlon races, training sessions, workshops and social events for 2025.">
+    <meta name="keywords" content="triathlon calendar, race schedule, training events, season events">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/assets/css/layout.min.css">
+    <link rel="stylesheet" href="/assets/css/layout-mobile.min.css">
+    <link rel="stylesheet" href="/assets/css/header.min.css">
+    <link rel="stylesheet" href="/assets/css/header-mobile.min.css">
+    <link rel="stylesheet" href="/assets/css/title.min.css">
+    <link rel="stylesheet" href="/assets/css/title-mobile.min.css">
+    <link rel="stylesheet" href="/assets/css/calendar.min.css">
+    <link rel="stylesheet" href="/assets/css/calendar-mobile.min.css">
+    <link rel="stylesheet" href="/assets/css/footer.min.css">
+    <link rel="stylesheet" href="/assets/css/footer-mobile.min.css">
+    <link rel="stylesheet" href="/assets/css/scroller.min.css">
+</head>
+<body>
+    <section id="header-placeholder"></section>
+
+    <section id="title-placeholder" data-title="Season Calendar"></section>
+   
+    <section class="calendar-navigation">
+        <button class="calendar-nav-btn" onclick="previousMonth()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" 
+                fill="none" stroke="#007BFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+        </button>
+        <div class="calendar-current" id="currentMonthYear"></div>
+        <button class="calendar-nav-btn" onclick="nextMonth()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" 
+                fill="none" stroke="#007BFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+        </button>
+    </section>
+
+    <section class="calendar-container" id="calendarContainer"></section>
+
+    <section id="footer-placeholder"></section>
+
+    <div id="scroller-placeholder"></div>
+
+    <script src="/assets/js/title.min.js"></script>
+    <script src="/assets/js/footer.min.js"></script>
+    <script src="/assets/js/header.min.js"></script>
+    <script src="/assets/js/scroller.min.js"></script>
+    <script src="/assets/js/events.min.js"></script>
+    <script src="/assets/js/calendar.min.js"></script>
+</body>
+</html>

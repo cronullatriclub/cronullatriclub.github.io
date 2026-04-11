@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronulla Triathlon Club</title>
+    <meta name="description" content="Join Cronulla Triathlon Club - Sydney's leading triathlon community for swimmers, cyclists, and runners of all levels.">
+    <meta name="keywords" content="triathlon, Sydney, swimming, cycling, running, triathlon club, sprint triathlon, Olympic distance, ironman, training">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Cronulla Triathlon Club">
+    <meta property="og:description" content="Join Sydney's leading triathlon community for all levels.">
+    <meta property="og:url" content="https://www.cronullatriclub.com.au">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/assets/css/layout.min.css">
+    <link rel="stylesheet" href="/assets/css/layout-mobile.min.css">
+    <link rel="stylesheet" href="/assets/css/header.min.css">
+    <link rel="stylesheet" href="/assets/css/header-mobile.min.css">
+    <link rel="stylesheet" href="/assets/css/hero.min.css">
+    <link rel="stylesheet" href="/assets/css/home.min.css">
+    <link rel="stylesheet" href="/assets/css/home-mobile.min.css">
+    <link rel="stylesheet" href="/assets/css/dates.min.css">
+    <link rel="stylesheet" href="/assets/css/footer.min.css">
+    <link rel="stylesheet" href="/assets/css/footer-mobile.min.css">
+    <link rel="stylesheet" href="/assets/css/scroller.min.css">
+
+</head>
+<body>
+  <section id="header-placeholder"></section>
+
+    <section class="hero">
+        <video class="hero-video" autoplay muted loop playsinline preload="auto">
+            <source src="/assets/images/home/home.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h3 class="hero-alt-font">Welcome to</h3>
+            <h3><strong>CRONULLA TRIATHLON CLUB</strong></h3>
+            <p>Cronulla Triathlon Club is situated in the birthplace of triathlon in Australia. Our club has a rich history of past and present champions, and members who come together in a shared passion for triathlon and community spirit.</p>
+        </div>
+    </section>
+
+    <section class="home-events-section">
+        <h1>Highlighted Events</h1>
+        <div class="home-slider-container">
+            <div class="home-slider" id="home-slider"></div>
+            <div class="home-slider-controls">
+                <button class="home-slider-btn" onclick="prevSlide()" aria-label="Previous slide">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" 
+                    fill="none" stroke="#007BFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+                </button>
+
+                <button class="home-slider-btn" onclick="nextSlide()" aria-label="Next slide">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" 
+                        fill="none" stroke="#007BFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <section class="home-weekly-events-section">
+        <h1>What's on this week</h1>
+        <div class="home-week-range" id="weekRange"></div>
+        <div class="home-weekly-events-container">
+            <div class="home-weekly-events-grid" id="weeklyEventsGrid"></div>
+        </div>
+    </section>
+
+
+   <section class="home-shop-section-container">
+        <div class="home-shop-section">
+            <h1>Club Shop</h1>
+            <div class="home-shop-notice justified-90">All items are for <strong>Club Members only</strong> and can only be picked up locally from our clubhouse.</div>
+            <div class="home-shop-disclaimer tiny">* Prices exclude processsing fee.</div>
+            <div class="home-shop-slider-wrapper">
+                <button class="home-slider-btn home-shop-btn" onclick="shopSliderPrev()" aria-label="Previous items">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" 
+                    fill="none" stroke="#007BFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+                </button>
+                <!-- <button class="shop-slider-btn shop-slider-prev" onclick="shopSliderPrev()">‹</button> -->
+                <div class="home-shop-slider-container">
+                    <div class="home-shop-slider" id="shopSlider">
+                        <!-- Slides will be generated by JavaScript -->
+                    </div>
+                </div>
+                                <button class="home-slider-btn home-shop-btn" onclick="shopSliderNext()" aria-label="Next items">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" 
+                        fill="none" stroke="#007BFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+                <!-- <button class="shop-slider-btn shop-slider-next" onclick="shopSliderNext()">›</button> -->
+            </div>
+            
+            <div class="shop-slider-dots" id="shopSliderDots"></div>
+        </div>
+
+        <!-- Product Modal -->
+<div id="productModal" class="product-modal">
+    <div class="product-modal-content">
+        <span class="product-modal-close" onclick="closeProductModal()">&times;</span>
+        
+        <div class="product-modal-body">
+            <!-- Image Slider -->
+            <div class="product-modal-slider">
+                <button class="product-modal-slider-btn prev" onclick="prevProductImage()">‹</button>
+                <div class="product-modal-images" id="productModalImages">
+                    <!-- Images will be inserted here -->
+                </div>
+                <button class="product-modal-slider-btn next" onclick="nextProductImage()">›</button>
+            </div>
+            
+            <!-- Product Info -->
+            <div class="product-modal-info">
+                <h2 id="productModalTitle"></h2>
+                <h4 class="product-modal-price" id="productModalPrice"></h4>
+                <div class="product-modal-description" id="productModalDescription"></div>
+                
+                <div id="productModalSizeContainer">
+                    <!-- Size selector will be inserted here if product has sizes -->
+                </div>
+                
+                <div id="productModalButton">
+                    <!-- Buy button will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </section>
+
+        <section class="home-instagram-section">
+            <h1 class="white-text">Recent Activity</h1>
+            <script type="text/javascript" src="https://www.juicer.io/embed/cronullatriclub/embed-code.js" visible=6 async defer></script>
+
+        </section>
+
+        <div class="strava-section">
+            <iframe allowtransparency='true' frameborder='0' height='454px' scrolling='no' src='https://www.strava.com/clubs/71218/latest-rides/f9fd199076f8d420689ee9d7155df471d57378fc?show_rides=true' width='100%'></iframe>
+        </div>
+
+        <section id="footer-placeholder"></section>
+
+         <div id="scroller-placeholder"></div>
+
+<script src="/assets/js/header.min.js"></script>
+<script src="/assets/js/footer.min.js"></script>
+<script src="/assets/js/events.min.js"></script>
+<script src="/assets/js/slider.min.js"></script>
+<script src="/assets/js/shop.min.js"></script>
+<script src="/assets/js/scroller.min.js"></script>
+<script src="/assets/js/juicer.min.js"></script>
+</body>
+</html>

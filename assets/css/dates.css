@@ -1,0 +1,74 @@
+
+.dates-events-section {
+    padding: 80px 20px;
+    color: white;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+#dates-events-subheader {
+    font-size: 1.3rem;
+    text-align: center;
+    display: none;
+}
+
+.dates-events-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.dates-events-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.dates-events-card{
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.dates-events-content{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.dates-events-info {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dates-events-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.dates-events-day {
+    font-size: 1.1rem;
+    font-weight: 600;
+    opacity: 0.9;
+    text-align: center;
+}
+
+.dates-events-subtitle {
+    font-size: 1rem;
+    opacity: 0.9;
+    text-align: left;
+}
+
+.dates-events-a {
+    font-size: 0.9rem;
+    color: #0089E9;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: left; 
+}

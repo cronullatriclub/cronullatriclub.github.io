@@ -1,0 +1,104 @@
+.header-logo-image {
+    width: 120px;
+}
+
+.header-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+} 
+
+.header-header-nav-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 10px 0;
+    min-width: 200px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    margin-top: 20px;
+    z-index: 1001;
+    pointer-events: none;
+}
+
+.header-nav-dropdown.active .header-header-nav-dropdown-menu{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+}
+
+.header-nav-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.header-nav-links-left,
+.header-nav-links-right {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+.header-nav-links > a,
+.header-nav-links-left > a,
+.header-nav-links-right > a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.header-nav-links > a:hover,
+.header-nav-links-left > a:hover,
+.header-nav-links-right > a:hover {
+    color: #00bfff;
+}
+
+.header-nav-dropdown {
+    position: relative;
+}
+
+.header-header-nav-dropdown-toggle {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.header-header-nav-dropdown-toggle:hover {
+    color: #00bfff;
+}
+
+.header-header-nav-dropdown-menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    pointer-events: auto;
+    transition: background 0.3s ease, color 0.3s ease, padding-left 0.3s ease;
+}
+
+.header-header-nav-dropdown-menu a:hover {
+    background: linear-gradient(90deg, rgba(0, 191, 255, 0.2), transparent);
+    color: #00bfff;
+    padding-left: 30px;
+}
+
+.header-nav-dropdown:hover .header-header-nav-dropdown-menu,
+.header-nav-dropdown.active .header-header-nav-dropdown-menu {
+    display: block;
+} 

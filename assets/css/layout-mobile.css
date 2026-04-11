@@ -1,0 +1,35 @@
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 20px;
+    }
+    
+    nav {
+        justify-content: flex-end;
+    }
+
+    .justified-90-mob {
+        text-align: justify;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .max-width-90-mob{
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1400px) {
+    .justified-50-wide {
+        text-align: justify;
+        max-width: 50%;
+        margin: 0 auto;
+    }
+}

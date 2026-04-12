@@ -843,3 +843,7 @@ html body .juicer-feed h1.referral a {
 .instagram-post:hover {
     transform: scale(1.05);
 }
+
+.instagram-curator {
+    display: none;
+}

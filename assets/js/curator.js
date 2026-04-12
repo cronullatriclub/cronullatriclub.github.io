@@ -1,5 +1,5 @@
 window.addEventListener("load", () => {
-  const target = document.querySelector(".referral");
+  const target = document.querySelector(".crt-logo");
   if (!target) return;
 
   // Force your override immediately
@@ -8,7 +8,7 @@ window.addEventListener("load", () => {
   // Watch for the 3rd‑party script trying to change it again
   const observer = new MutationObserver(() => {
     target.style.setProperty("display", "none", "important");
-      document.querySelectorAll(".juicer-about").forEach(el => {
+      document.querySelectorAll(".crt-logo").forEach(el => {
   el.style.setProperty("display", "none", "important");
   });
 

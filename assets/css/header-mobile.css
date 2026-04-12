@@ -29,7 +29,7 @@
         .header-header-nav-dropdown-menu {
     position: absolute;
     top: 100%;
-    left: 50%;
+    left: -20%;
     transform: translateX(-50%) translateY(-10px);
     background: rgba(0, 0, 0, 0.95);
     backdrop-filter: blur(10px);

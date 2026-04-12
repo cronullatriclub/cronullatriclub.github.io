@@ -12,14 +12,16 @@ function initShopSlider() {
             title: 'Junior Trisuit Rental', 
             price: '$25.00',
             description: 'With the rate that your kids are growing, it\u0027s hard to keep them in a tri suit that fits.\nIf this sounds like your kids, contact the junior coach by emailing juniors@cronullatriclub.com.au or email train@cronullatriclub.com.au',
-            link: 'https://buy.stripe.com/test_9B63cv4VxdagaRAfDrbsc01'
+            //link: 'https://buy.stripe.com/test_9B63cv4VxdagaRAfDrbsc01'
+            link: 'https://buy.stripe.com/3cIaEXds3c6c6Bk3UJbsc00'
         },
         { 
             image: '/assets/images/shop/bike.avif', 
             title: 'Beginner Bike Rental', 
             price: '$100.00', 
             description: 'Perfect for those new to the sport looking to try out triathlon without the commitment of purchasing equipment.\n If you would like to rent a bike before making a commitment, contact us at train@cronullatriclub.com.au',
-            link: 'https://buy.stripe.com/test_6oU00jgEfc6c8Jsdvjbsc0e' // No sizes, direct link
+            //link: 'https://buy.stripe.com/test_6oU00jgEfc6c8Jsdvjbsc0e' // No sizes, direct link
+            link: 'https://buy.stripe.com/3cI5kDfAbfio4tc9f3bsc0d'
         },
         { 
             image: '/assets/images/shop/socks-right.avif', 
@@ -31,9 +33,9 @@ function initShopSlider() {
             price: '$20.00',
             description: 'Cycling specific high top sock.\n Mesh weave ventilation for the top of the foot.\nSuperior wicking to keep feet dry.',
             sizes: [
-                { name: 'Small', link: 'https://buy.stripe.com/test_bJe28r0Fhc6ccZIfDrbsc0c' },
-                { name: 'Medium', link: 'https://buy.stripe.com/test_6oUeVd1Jlgms7FofDrbsc0b' },
-                { name: 'Large', link: 'https://buy.stripe.com/test_6oU5kD2Npgmsf7Q76Vbsc0a' }
+                { name: 'Small', link: 'https://buy.stripe.com/bJe28r0Fhc6ccZIfDrbsc0c' }, //link: 'https://buy.stripe.com/test_bJe28r0Fhc6ccZIfDrbsc0c' },
+                { name: 'Medium', link: 'https://buy.stripe.com/6oUeVd1Jlgms7FofDrbsc0b' }, //link: 'https://buy.stripe.com/test_6oUeVd1Jlgms7FofDrbsc0b' },
+                { name: 'Large', link: 'https://buy.stripe.com/6oU5kD2Npgmsf7Q76Vbsc0a' }, //link: 'https://buy.stripe.com/test_6oU5kD2Npgmsf7Q76Vbsc0a' }
             ]
         },
         { 
@@ -41,7 +43,8 @@ function initShopSlider() {
             title: 'Running Visor', 
             price: '$20.00', 
             description: 'Lightweight, breathable running visor with CTC logo. Perfect for sunny training sessions and race day.',
-            link: 'https://buy.stripe.com/test_bJe9ATew7c6c7Fo3UJbsc08' 
+            //link: 'https://buy.stripe.com/test_bJe9ATew7c6c7Fo3UJbsc08' 
+            link: 'https://buy.stripe.com/6oU00jgEfc6c8Jsdvjbsc0e'
         },
         { 
             image: '/assets/images/shop/jersey-front.avif', 
@@ -53,7 +56,7 @@ function initShopSlider() {
             price: '$66.50',
             description: 'Tineli\u0027s drive to make the best race-day jersey possible has delivered the Aero Pro. It\u0027s lightweight, extremely aerodynamic and surprisingly comfortable for such a focused item. Tineli is proud to bring cutting edge, pro-level tech to the custom market. For size 152: Chest 78cm Length 55cm',
             sizes: [
-                { name: 'Youth - 152', link: 'https://buy.stripe.com/test_dRm14n5ZB5HOf7QgHvbsc09' }
+                { name: 'Youth - 152', link: 'https://buy.stripe.com/dRm14n5ZB5HOf7QgHvbsc09' } // link: 'https://buy.stripe.com/test_dRm14n5ZB5HOf7QgHvbsc09' }
             ]
         },
         { 
@@ -66,7 +69,7 @@ function initShopSlider() {
             price: '$37.80', 
             description: '140gsm QuickDry enhanced moisture management fabric. Button up opening. Double stitched hems for uncompromised durability.',
             sizes: [
-                { name: 'Womens - Small', link: 'https://buy.stripe.com/test_3cI5kDfAbfio4tc9f3bsc0d' }
+                { name: 'Womens - Small', link: 'https://buy.stripe.com/bJe9ATew7c6c7Fo3UJbsc08' } //link: 'https://buy.stripe.com/test_3cI5kDfAbfio4tc9f3bsc0d' }
             ] 
         },
                 { 
@@ -80,8 +83,8 @@ function initShopSlider() {
             description: 'Lightweight, water-resistant jacket perfect for training and race day. Club Champs 40 Years Jacket.',
             price: '$24.00',
             sizes: [
-                { name: 'Womens - 8', link: 'https://buy.stripe.com/test_aFa6oHcnZc6ccZI0Ixbsc06' },
-                { name: 'Womens - 10', link: 'https://buy.stripe.com/test_aFa3cvbjV1ry6Bk3UJbsc07' }
+                { name: 'Womens - 8', link: 'https://buy.stripe.com/6oUaEXafRdage3M62Rbsc05' }, //link: 'https://buy.stripe.com/test_aFa6oHcnZc6ccZI0Ixbsc06' },
+                { name: 'Womens - 10', link: 'https://buy.stripe.com/aFa6oHcnZc6ccZI0Ixbsc06' }, // link: 'https://buy.stripe.com/test_aFa3cvbjV1ry6Bk3UJbsc07' }
             ]
         },
         { 
@@ -89,7 +92,8 @@ function initShopSlider() {
             title: 'Club Beanie', 
             price: '$8.00', 
             description: 'Keep the noggin warm during those cool winter training sessions with a CTC Fleece beanie.',
-            link: 'https://buy.stripe.com/test_6oUaEXafRdage3M62Rbsc05' 
+            //link: 'https://buy.stripe.com/test_6oUaEXafRdage3M62Rbsc05'
+            link: 'https://buy.stripe.com/5kQ3cvafR1ry8Js9f3bsc04' 
         },
         { 
             image: '/assets/images/shop/swim.avif', 
@@ -97,8 +101,8 @@ function initShopSlider() {
             price: '$42.00', 
             description: 'High quality, comfortable swimwear perfect for training and racing.',
             sizes: [
-                { name: 'Womens - XXL', link: 'https://buy.stripe.com/test_9B614n1Jl3zG0cWfDrbsc02' },
-                { name: 'Womens - XXXL', link: 'https://buy.stripe.com/test_28EaEXds3fio6Bk4YNbsc03' }
+                { name: 'Womens - XXL', link: 'https://buy.stripe.com/9B614n1Jl3zG0cWfDrbsc02' }, //link: 'https://buy.stripe.com/test_9B614n1Jl3zG0cWfDrbsc02' },
+                { name: 'Womens - XXXL', link: 'https://buy.stripe.com/9B63cv4VxdagaRAfDrbsc01' }, // link: 'https://buy.stripe.com/test_28EaEXds3fio6Bk4YNbsc03' }
             ]
         },
         { 
@@ -111,7 +115,8 @@ function initShopSlider() {
             title: 'Hooded Towel', 
             price: '$52.00', 
             description: 'No more embarrassing, awkward changes at the beach car park or the pool change room. Take your hooded towel to the gym, swim club, sport carnivals, water park and even camping. Ideal for all occasions.',
-            link: 'https://buy.stripe.com/test_5kQ3cvafR1ry8Js9f3bsc04' 
+            //link: 'https://buy.stripe.com/test_5kQ3cvafR1ry8Js9f3bsc04' 
+            link: 'https://buy.stripe.com/28EaEXds3fio6Bk4YNbsc03'
         },
     ];
     

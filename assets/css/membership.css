@@ -1,0 +1,10 @@
+.member-strikethrough {
+  text-decoration: line-through;
+  font-weight: 500;
+  color: #333;
+}
+
+.member-sale {
+  color: #007bff;
+  font-weight: bold;
+}

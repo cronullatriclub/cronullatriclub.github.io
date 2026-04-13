@@ -33,7 +33,7 @@ function populateDates(eventId, maxEvents, from = null, to = null) {
             document.getElementById("dates-events-subheader").innerText = `(Next ${maxEvents} Sessions)`;
         }
 
-        const dateNow = new Date(new Date().toLocaleString("en-AU", { timeZone: "Australia/Sydney"}));
+        const dateNow = new Date();
 
         filteredEvents.forEach(x => {
             const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];

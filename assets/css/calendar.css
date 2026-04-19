@@ -114,6 +114,7 @@
     background: linear-gradient(135deg, #43e97b, #38f9d7);
 }
 
+.calendar-day-cell.policies,
 .calendar-day-cell.robertson-ride,
 .calendar-day-cell.christmas-run,
 .calendar-day-cell.presentation {

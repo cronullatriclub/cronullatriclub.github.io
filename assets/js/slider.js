@@ -43,7 +43,8 @@ function populateUpcomingEvents() {
     const typeLabels = {
         'race': 'Race Event',
         'train': 'Training Session',
-        'belong': 'Social Event'
+        'belong': 'Social Event',
+        'governance': 'Governance Event'
     };
     
     futureEvents.forEach(({ event, eventDate }) => {
@@ -51,7 +52,11 @@ function populateUpcomingEvents() {
         slide.className = 'home-slide';
         
         const eventCard = document.createElement('div');
-        eventCard.className = 'home-event-card';
+        if (event.nav && event.type) {
+            eventCard.className = 'home-event-card';
+        } else {
+            eventCard.className = 'home-event-card no-link';
+        }
         
         const options = { month: 'long', day: 'numeric', year: 'numeric' };
         const formattedDate = eventDate.toLocaleDateString('en-US', options);
@@ -67,9 +72,11 @@ function populateUpcomingEvents() {
                 <div class="home-weekly-event-type">${typeLabels[event.nav]}</div>
             </div>
         `;
+        if (event.nav && event.type) {
               eventCard.onclick = function() {
-            window.location.href = `${event.nav}/${event.type}.html`;
-        };
+            window.location.href = `${event.nav}/${event.type}`;
+            };
+        }
         slide.appendChild(eventCard);
         slider.appendChild(slide);
     });

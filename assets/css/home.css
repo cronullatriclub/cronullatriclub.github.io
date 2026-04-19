@@ -34,6 +34,10 @@
     margin: auto;
 }
 
+.home-event-card.no-link {
+    cursor: default;
+}
+
 .home-event-image {
   width: 100%;
   height: 450px;

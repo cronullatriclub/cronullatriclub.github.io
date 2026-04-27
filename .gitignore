@@ -1,1 +1,11 @@
 davycraddock.github.io.code-workspace
+
+# Jekyll
+_site/
+Gemfile.lock
+
+# Optional Jekyll exclusions
+.bundle/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata

@@ -227,3 +227,84 @@ Delete the entire event entry, including its trailing comma if it is not the las
 
 ## Deployment
 Once committed and pushed to GitHub, the site will update automatically if using GitHub Pages or your normal deployment workflow.
+
+## Part 5: Updating the Sitemap and Submitting to Google Search Console
+
+The sitemap.xml file helps search engines like Google discover and index all pages on your website. It lists the URLs of your site's pages along with metadata like the last modification date.
+
+### Updating the Sitemap
+1. **When to Update**: Update the sitemap whenever you add, remove, or significantly change pages on the website.
+2. **Manual Update**:
+   - Open sitemap.xml in VS Code.
+   - Each page is represented by a <url> element with <loc> (the URL) and <lastmod> (last modified date in ISO format, e.g., 2026-04-27T00:00:00+00:00).
+   - To add a new page: Insert a new <url> block before the closing </urlset> tag.
+     Example:
+     `
+     <url>
+       <loc>https://cronullatriclub.com.au/new-page</loc>
+       <lastmod>2026-04-27T00:00:00+00:00</lastmod>
+     </url>
+     `
+   - To remove a page: Delete the corresponding <url> block.
+   - Update the <lastmod> date for changed pages to the current date.
+3. **Automated Generation**: If you prefer, you can use online sitemap generators or scripts to regenerate the file based on your site's structure. Ensure the output matches the existing XML format.
+4. **Validation**: After editing, validate the XML syntax (VS Code may highlight errors). Test by opening the file in a browser to ensure it's well-formed.
+
+### Submitting to Google Search Console
+1. **Access Google Search Console**:
+   - Go to [Google Search Console](https://search.google.com/search-console).
+   - Sign in with a Google account associated with the website.
+2. **Add or Select Property**:
+   - If not already added, click "Add Property" and enter your domain: cronullatriclub.com.au.
+   - Verify ownership (e.g., via DNS record or HTML file upload as instructed).
+3. **Submit Sitemap**:
+   - In the left menu, go to "Sitemaps".
+   - Click "Add a new sitemap".
+   - Enter sitemap.xml (or the full URL https://cronullatriclub.com.au/sitemap.xml).
+   - Click "Submit".
+4. **Monitor Status**:
+   - Google will process the sitemap and show the number of submitted and indexed pages.
+   - Check for errors or warnings in the "Coverage" report.
+   - Resubmit the sitemap after updates to ensure Google recrawls your site.
+
+This process improves your site's visibility in Google search results. Submit the sitemap initially and after major changes.
+
+## Part 6: Setting Up Jekyll for Local Development
+
+To run the website locally with Jekyll (matching GitHub Pages behavior and ensuring clean URLs work correctly), follow these steps. Jekyll allows you to preview the site with the same URL structure as on GitHub Pages.
+
+### Prerequisites
+1. **Install Ruby**:
+   - Download and install Ruby from [RubyInstaller for Windows](https://rubyinstaller.org/).
+   - Choose the version with DevKit (e.g., Ruby+Devkit 3.2.x).
+   - During installation, select "Add Ruby to PATH" and install MSYS2 if prompted.
+
+2. **Install Jekyll and Bundler**:
+   - Open a terminal (PowerShell or Command Prompt).
+   - Run: `gem install jekyll bundler`
+
+### Setup the Project
+1. **Navigate to the Project Directory**:
+   - Open VS Code and ensure you're in the project folder.
+
+2. **Install Dependencies**:
+   - In the terminal, run: `bundle install`
+   - This installs Jekyll and the jekyll-sitemap plugin.
+
+3. **Run the Local Server**:
+   - Run: `bundle exec jekyll serve`
+   - The site will be available at `http://localhost:4000`.
+   - Jekyll will serve the static files with clean URLs (e.g., `/belong/membership` instead of `/belong/membership.html`).
+
+### Configuration Notes
+- The `_config.yml` file is configured for the site with `permalink: pretty` for clean URLs.
+- The `Gemfile` includes necessary gems.
+- If you add new pages, place them in the root or subfolders as `.html` or `.md` files.
+- Jekyll will regenerate the sitemap automatically via the jekyll-sitemap plugin.
+
+### Troubleshooting
+- If you encounter errors, ensure Ruby and gems are installed correctly.
+- For Windows, you may need to restart VS Code or your terminal after installation.
+- If the server doesn't start, check for port conflicts (default is 4000).
+
+This setup allows you to develop and test the site locally before pushing changes to GitHub.

@@ -1,0 +1,30 @@
+# Site settings
+title: "Cronulla Triathlon Club"
+description: "Join Cronulla Triathlon Club - Sydney's leading triathlon community for swimmers, cyclists, and runners of all levels."
+url: "https://cronullatriclub.com.au"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+
+# Exclude from processing
+exclude:
+  - vendor/
+  - .bundle/
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile.lock
+  - README.md
+
+# Include static files
+include:
+  - _pages
+
+# Permalink style for clean URLs
+permalink: pretty

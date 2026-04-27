@@ -308,3 +308,93 @@ To run the website locally with Jekyll (matching GitHub Pages behavior and ensur
 - If the server doesn't start, check for port conflicts (default is 4000).
 
 This setup allows you to develop and test the site locally before pushing changes to GitHub.
+
+## Part 7: SEO Optimization and Best Practices
+
+Search Engine Optimization (SEO) helps your website rank higher in search results like Google, making it easier for people to find Cronulla Triathlon Club online. This section documents the SEO improvements implemented on the site.
+
+### SEO Improvements Implemented
+
+#### 1. **robots.txt File**
+- Created a `robots.txt` file in the root directory to guide search engine crawlers.
+- Allows all pages to be indexed and directs bots to the sitemap.xml for efficient crawling.
+
+#### 2. **Meta Tags on All Pages**
+All HTML pages now include:
+- **Title Tags**: Descriptive, keyword-rich titles in format "Page Title | Cronulla Triathlon Club"
+- **Meta Descriptions**: Concise 150-160 character summaries of page content
+- **Meta Keywords**: Relevant keywords related to page content
+- **Canonical Links**: Prevents duplicate content issues and consolidates SEO value to main URLs
+- **Open Graph Tags**: Improves social media sharing and preview appearance
+
+Example from a page:
+```html
+<title>Club Membership | Cronulla Triathlon Club</title>
+<meta name="description" content="Join Cronulla Triathlon Club. Membership options, benefits, and how to get involved.">
+<meta name="keywords" content="club membership, join, registration, triathlon club">
+<link rel="canonical" href="https://cronullatriclub.com.au/belong/membership">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Club Membership | Cronulla Triathlon Club">
+<meta property="og:description" content="Join Cronulla Triathlon Club. Membership options and benefits.">
+<meta property="og:url" content="https://cronullatriclub.com.au/belong/membership">
+<meta property="og:image" content="https://cronullatriclub.com.au/assets/images/membership.jpg">
+```
+
+#### 3. **Sitemap Submission**
+- A comprehensive `sitemap.xml` file lists all 24 main pages on the site.
+- Submitted to Google Search Console for better indexing.
+
+### How to Maintain SEO
+
+#### Adding New Pages
+When adding a new page to the website:
+1. Include proper meta tags (title, description, keywords, canonical, og tags)
+2. Use descriptive file names (e.g., `/race/new-event.html` instead of `/page1.html`)
+3. Create heading hierarchy (H1, H2, etc.) rather than skipping heading levels
+4. Add meaningful alt text to images
+5. Update `sitemap.xml` with the new page URL
+6. Resubmit the updated sitemap to Google Search Console
+
+#### Content Best Practices
+- **Title Tags**: Keep under 60 characters, include primary keyword
+- **Meta Descriptions**: 150-160 characters, include call-to-action if appropriate
+- **Keywords**: 3-5 relevant keywords per page, naturally incorporated in content
+- **Headings**: One H1 per page (usually the title), use H2/H3 for sections
+- **Images**: Use descriptive filenames and alt text (e.g., `alt="Cronulla beach swimmers"`)
+- **Links**: Use descriptive anchor text instead of "click here"
+- **Content**: Write for humans first, optimize for search engines second
+
+#### Monitoring Performance
+1. **Google Search Console** ([https://search.google.com/search-console](https://search.google.com/search-console)):
+   - Check indexing status (Coverage report)
+   - View search performance and impressions
+   - Monitor mobile usability issues
+   - Review manual actions or penalties
+
+2. **Google Analytics**:
+   - Track visitor behavior and sources
+   - Identify popular pages
+   - Measure conversion goals
+
+#### Local SEO
+To improve local search visibility:
+1. Ensure the club's address, phone, and hours are consistent across pages
+2. Create Google My Business profile for the club
+3. Get listed in local directories (e.g., TripAdvisor for events)
+4. Encourage member reviews on Google
+5. Use location-based keywords ("Cronulla", "Shire", "Sydney triathlon")
+
+### Common SEO Issues to Avoid
+- **Duplicate Content**: Always use canonical links
+- **Broken Links**: Check internal and external links regularly
+- **Missing Alt Text**: Always describe images for accessibility and SEO
+- **Slow Page Load**: Optimize images and minimize CSS/JavaScript
+- **Mobile Issues**: Test on mobile devices; Google prioritizes mobile-first indexing
+- **Keyword Stuffing**: Use keywords naturally, not excessively
+
+### Tools for SEO Analysis
+- **Google Search Console**: Official tool for monitoring search performance
+- **Google PageSpeed Insights**: Check page speed and performance metrics
+- **Mobile-Friendly Test**: Verify mobile compatibility
+- **Lighthouse**: Integrated in Chrome DevTools for performance audits
+- **SEO Checklist Tools**: Online tools to verify SEO best practices

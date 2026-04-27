@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /_site/
+Disallow: /assets/components/
+
+Sitemap: https://cronullatriclub.com.au/sitemap.xml

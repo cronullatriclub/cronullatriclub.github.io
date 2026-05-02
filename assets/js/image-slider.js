@@ -1,45 +1,62 @@
 function generateSliderImages(imageFolderPath, sliderId, numberOfImages) {
     let currentIndex = 0;
     const slider = document.getElementById(sliderId);
-    
+
     function getImagesPerSlide() {
         const containerWidth = slider.parentElement.offsetWidth;
         const minImageWidth = 302.75;
         const gap = 10;
-        
+
         let imagesPerSlide = Math.floor((containerWidth + gap) / (minImageWidth + gap));
         return Math.min(Math.max(imagesPerSlide, 1), 4);
     }
-    
+
+   
+    function getRandomUniqueIndices(total, max) {
+        const indices = new Set();
+        while (indices.size < total) {
+            indices.add(Math.floor(Math.random() * max) + 1);
+        }
+        return Array.from(indices);
+    }
+
     let imagesPerSlide = getImagesPerSlide();
-    let totalSlides = Math.ceil(numberOfImages / imagesPerSlide);
-    
+    let totalSlides = Math.floor(numberOfImages / imagesPerSlide);
+
     function buildSlider() {
         imagesPerSlide = getImagesPerSlide();
-        totalSlides = Math.ceil(numberOfImages / imagesPerSlide);
+        totalSlides = Math.floor(numberOfImages / imagesPerSlide);
+        const totalImagesNeeded = totalSlides * imagesPerSlide;
         currentIndex = 0;
+        // Pick random unique images
+        const selectedImages = getRandomUniqueIndices(totalImagesNeeded, numberOfImages);
+
         slider.innerHTML = '';
-        
-        for (let i = 0; i < numberOfImages; i += imagesPerSlide) {
+
+        let pointer = 0;
+
+        for (let i = 0; i < totalSlides; i++) {
             const slideDiv = document.createElement('div');
             slideDiv.className = 'image-slider-slide-image-container';
-            
-            for (let j = 0; j < imagesPerSlide && (i + j) < numberOfImages; j++) {
+
+            for (let j = 0; j < imagesPerSlide; j++) {
                 const imageContainer = document.createElement('div');
                 imageContainer.className = 'image-slider-slide-image';
-                
+
                 const img = document.createElement('img');
-                img.src = imageFolderPath + `image${i+j+1}.avif`;
-                img.alt = `image${i+j+1}`;
+                const imageIndex = selectedImages[pointer++];
+
+                img.src = `${imageFolderPath}image${imageIndex}.avif`;
+                img.alt = `image${imageIndex}`;
                 img.loading = 'lazy';
-                
+
                 imageContainer.appendChild(img);
                 slideDiv.appendChild(imageContainer);
             }
-            
+
             slider.appendChild(slideDiv);
         }
-        
+
         slider.style.transform = 'translateX(0)';
     }
     
@@ -47,8 +64,9 @@ function generateSliderImages(imageFolderPath, sliderId, numberOfImages) {
         currentIndex = (currentIndex + 1) % totalSlides;
         slider.style.transform = `translateX(-${currentIndex * 100}%)`;
     }
-    
+
     buildSlider();
+
     const interval = setInterval(goToNextSlide, 5000);
     
     let resizeTimeout;

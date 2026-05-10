@@ -186,15 +186,19 @@ const events = {
 function populateEventDates(type, from, to) {
     if(!from) {
         from = new Date()
+        from.setHours(0,0,0,0)
     }
     else {
         from = new Date(from)
+        from.setHours(0,0,0,0)
     }
     if(!to) {
          to = new Date('2026-12-30')
+         to.setHours(0,0,0,0)
     }
     else {
         to = new Date(to)
+        to.setHours(0,0,0,0)
     }
     return Object.entries(events)
     .map(([dateKey, event]) => {

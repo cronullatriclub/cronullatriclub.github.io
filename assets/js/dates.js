@@ -34,6 +34,7 @@ function populateDates(eventId, maxEvents, from = null, to = null) {
         }
 
         const dateNow = new Date();
+        dateNow.setHours(0,0,0,0)
 
         filteredEvents.forEach(x => {
             const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];

@@ -59,20 +59,7 @@ function initShopSlider() {
                 { name: 'Youth - 152', link: 'https://buy.stripe.com/dRm14n5ZB5HOf7QgHvbsc09' } // link: 'https://buy.stripe.com/test_dRm14n5ZB5HOf7QgHvbsc09' }
             ]
         },
-        { 
-            image: '/assets/images/shop/polo-front.avif', 
-            images: [
-                '/assets/images/shop/polo-front.avif',
-                '/assets/images/shop/polo-back.avif'
-            ],
-            title: 'Polo Shirt', 
-            price: '$37.80', 
-            description: '140gsm QuickDry enhanced moisture management fabric. Button up opening. Double stitched hems for uncompromised durability.',
-            sizes: [
-                { name: 'Womens - Small', link: 'https://buy.stripe.com/bJe9ATew7c6c7Fo3UJbsc08' } //link: 'https://buy.stripe.com/test_3cI5kDfAbfio4tc9f3bsc0d' }
-            ] 
-        },
-                { 
+    { 
             image: '/assets/images/shop/jacket.avif', 
             images: [
                 '/assets/images/shop/jacket.avif',

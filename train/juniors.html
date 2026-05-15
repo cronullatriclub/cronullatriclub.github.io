@@ -199,6 +199,15 @@ border-right: 1.5px solid rgb(255,255,255,0.17);
     /* padding: 24px 28px; */
   
   }
+  .highlight-image {
+    width: 40%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    margin: 16px auto;
+    object-fit: cover;
+  }
   .highlight-card.featured {
     grid-column: 1 / -1;
     background: var(--navy);
@@ -573,6 +582,7 @@ background: rgba(255, 255, 255, .15);
   /* ── CTA STRIP ── */
   .cta-section {
     padding: 72px 40px;
+        margin-bottom: 40px;
     text-align: center;
     background: linear-gradient(rgba(0, 141, 208, 0.9), rgba(0, 141, 208, 0.4));
   }
@@ -639,6 +649,9 @@ background: rgba(255, 255, 255, .15);
     .result-list {
         padding-left: 24px;
         padding-right: 24px;
+    }
+    .highlight-card:first-child {
+            padding-bottom: 30px;
     }
   }
 
@@ -718,6 +731,9 @@ background: rgba(255, 255, 255, .15);
                     <div class="highlight-card" style="gap:16px;">
                         <h3>NSW State Champions</h3>
                         <p class="justified-70 justified-90-mob">Cronulla Juniors have been crowned Club Champions for the <strong>second year in a row</strong>, with 16 junior athletes representing the club. An outstanding collective achievement.</p>                    
+                        <a href="https://www.triathlon.org.au/nsw/club-championships/" target="_blank" rel="noopener noreferrer">
+                            <img src="/assets/images/juniors/champions.avif" alt="NSW State Champions" class="highlight-image">
+                        </a>
                     </div>
                 </div>
             </div>

@@ -152,7 +152,7 @@ border-right: 1.5px solid rgb(255,255,255,0.17);
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-top: 20px;
-    color: #0b1f3aab;
+    color: #0b1f3ac9;
   }
 
   /* ── SHARED LAYOUT ── */
@@ -630,11 +630,7 @@ background: rgba(255, 255, 255, .15);
 
   @media (max-width: 720px) {
     .hero, .section { padding-left: 20px; padding-right: 20px; }
-    .stats-strip { padding: 40px 40px; }
-    .stats-inner { grid-template-columns: 1fr; gap: 16px; }
-    .stat { border-right: none; border-bottom: 1.5px solid rgba(11,31,58,0.4); padding-bottom: 16px; padding-bottom: 26px; padding-top: 26px; width: 40%; place-self: center;}
-    .stat:last-child { border-bottom: none; }
-    .highlight-grid, .two-col, .squad-grid { grid-template-columns: 1fr; }
+      .highlight-grid, .two-col, .squad-grid { grid-template-columns: 1fr; }
     .highlight-card.featured { flex-direction: column; gap: 16px; }
     .points-grid { grid-template-columns: repeat(2, 1fr); }
     .activekids-box { grid-template-columns: 1fr; }
@@ -645,6 +641,14 @@ background: rgba(255, 255, 255, .15);
         padding-right: 24px;
     }
   }
+
+  @media (max-width: 480px) {
+  .stats-strip { padding: 40px 40px; }
+    .stats-inner { grid-template-columns: 1fr; gap: 16px; }
+    .stat { border-right: none; border-bottom: 1.5px solid rgb(255,255,255,0.17); padding-bottom: 16px; padding-bottom: 26px; padding-top: 26px; width: 40%; place-self: center;}
+    .stat:last-child { border-bottom: none; }
+
+}
 </style>
 </head>
 <body>

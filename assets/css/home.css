@@ -851,3 +851,265 @@ html body .juicer-feed h1.referral a {
 .instagram-curator {
     display: none;
 }
+
+.ctc-section {
+/* padding: 60px 0px;
+    max-width: 800px; */
+    margin: 0 auto;
+    background-color: #F4F6F9;
+}
+.ctc-gs {
+padding: 60px 0px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Header */
+.ctc-gs-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.ctc-gs-eyebrow {
+    margin-bottom: 10px;
+        text-transform: uppercase;
+    color: #008dd0;
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+}
+
+/* .ctc-gs-heading {
+    font-size: 30px;
+    font-weight: 700;
+    color: #1a2235;
+    line-height: 1.25;
+    margin-bottom: 10px;
+} */
+.ctc-gs-sub {
+    /* font-size: 15px;
+    color: #6b7a99;
+    max-width: 480px; */
+    margin: 0 auto;
+    /* line-height: 1.65; */
+}
+
+/* Card grid */
+.ctc-gs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+/* Individual pathway cards */
+.ctc-gs-card {
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    position: relative;
+}
+.ctc-gs-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 36px rgba(26, 34, 53, 0.16);
+}
+
+/* Card imagery area */
+.ctc-gs-visual {
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+}
+
+/* Juniors card — teal/green accent */
+.ctc-gs-card--juniors .ctc-gs-visual {
+background: linear-gradient(145deg, #1a2235 0, #1d3a4a 60%, #1E88E5 100%);
+}
+/* Adults card — orange accent */
+.ctc-gs-card--adults .ctc-gs-visual {
+background: linear-gradient(145deg, #1a2235 0, #2d1f3a 50%, #ff69b4 100%);
+}
+
+/* Decorative sport icon(s) in the visual */
+.ctc-gs-deco {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    /* opacity: 0.12; */
+    margin-top: 4px;
+}
+.ctc-gs-card--juniors .ctc-gs-deco {
+    opacity: 1;
+}
+.ctc-gs-deco i {
+    font-size: 80px;
+    color: #fff;
+}
+.ctc-gs-deco-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Accent stripe at top of visual */
+.ctc-gs-card--juniors .ctc-gs-visual::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+background: #1E88E5;
+}
+.ctc-gs-card--adults .ctc-gs-visual::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: #ff69b4;
+}
+
+/* Age tag in corner */
+.ctc-gs-age {
+    position: absolute;
+    top: 16px; left: 16px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 20px;
+    color: #fff;
+}
+.ctc-gs-card--juniors .ctc-gs-age {
+    background: rgb(171 184 255 / 98%);
+    border: .5px solid rgb(10 12 207 / 80%);
+    color: #0061b9;
+}
+.ctc-gs-card--adults .ctc-gs-age {
+    background: rgb(255 197 179);
+    border: .5px solid rgb(231 117 82 / 45%);
+    color: #e72285;
+}
+
+/* Stat pill in visual */
+.ctc-gs-stat-pill {
+    position: absolute;
+    bottom: 16px; right: 16px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(6px);
+    border: 0.5px solid rgba(255,255,255,0.2);
+    border-radius: 8px;
+    padding: 8px 12px;
+    text-align: right;
+}
+.ctc-gs-stat-pill .num {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1;
+}
+.ctc-gs-stat-pill .lbl {
+    font-size: 10px;
+    color: rgba(255,255,255,0.65);
+    margin-top: 2px;
+}
+
+/* Card body */
+.ctc-gs-body {
+    background: #fff;
+    flex: 1;
+    padding: 1.5rem 1.4rem;
+    display: flex;
+    flex-direction: column;
+    border: 0.5px solid rgba(26,34,53,0.1);
+    border-top: none;
+    border-radius: 0 0 16px 16px;
+}
+.ctc-gs-card-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 7px;
+    text-align: center;
+}
+.ctc-gs-card-desc {
+    font-size: 14px;
+text-align: left;
+    line-height: 1.6;
+    margin-bottom: 1.1rem;
+    flex: 1;
+}
+.ctc-gs-features {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 1.25rem;
+}
+
+.check {
+        color: gold;
+    font-size: 16px;
+}
+
+.ctc-gs-feat {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+}
+.ctc-gs-feat i {
+    font-size: 15px;
+    flex-shrink: 0;
+}
+.ctc-gs-card--juniors .ctc-gs-feat i { color: #1aaa87; }
+.ctc-gs-card--adults  .ctc-gs-feat i { color: #e8420f; }
+
+/* CTA button */
+.ctc-gs-cta {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    padding: 11px 16px;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    /* text-align: center; */
+    transition: opacity 0.15s;
+}
+.ctc-gs-cta:hover { opacity: 0.88; }
+.ctc-gs-card--juniors .ctc-gs-cta {
+background: #008dd0;
+    color: white;
+}
+.ctc-gs-card--adults .ctc-gs-cta {
+background: #ff69b4;
+    color: #fff;
+}
+.ctc-gs-cta i { font-size: 16px; }
+
+/* Bottom nudge line */
+.ctc-gs-nudge {
+    text-align: center;
+    margin-top: 1.25rem;
+    font-size: 13px;
+}
+.ctc-gs-nudge a {
+    color: #008dd0;
+    text-decoration: none;
+    font-weight: 500;
+}
+.ctc-gs-nudge a:hover { text-decoration: underline; }
+
+/* ── Responsive ── */
+@media (max-width: 580px) {
+    .ctc-gs-grid { grid-template-columns: 1fr; }
+    /* .ctc-gs-heading { font-size: 24px; } */
+    .ctc-gs-visual { height: 160px; }
+}

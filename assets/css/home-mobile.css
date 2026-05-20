@@ -64,6 +64,10 @@
     .ctc-gs {
         padding: 60px 40px;
     }
+
+    .ctc-gs-grid {
+        gap: 30px;
+    }
 }
 
 /* @media (max-width: 1200px) {

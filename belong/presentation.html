@@ -254,6 +254,24 @@
       padding: 1.5rem 1.4rem 1.25rem;
       position: relative;
       background: linear-gradient(rgba(0, 141, 208, 0.9), rgba(0, 141, 208, 0.4));
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .ticket-top-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .ticket-top-head > div {
+      min-width: 160px;
+      flex: 1;
+    }
+    .ticket-buy-btn {
+      white-space: nowrap;
+      align-self: flex-start;
     }
     .ticket-label {
       font-size: 11px;
@@ -528,9 +546,14 @@
       <!-- Adult ticket -->
       <div class="ticket-card ticket-card--adult">
         <div class="ticket-top">
-          <div class="ticket-label">Ticket Type</div>
-          <div class="ticket-type">Adult</div>
-          <div class="ticket-who">18 years and over</div>
+          <div class="ticket-top-head">
+            <div>
+              <div class="ticket-label">Ticket Type</div>
+              <div class="ticket-type">Adult</div>
+              <div class="ticket-who">18 years and over</div>
+            </div>
+            <a href="https://buy.stripe.com/14AdR9afR3zG3p8fDrbsc0f" target="_blank" class="cta-btn ticket-buy-btn">Buy</a>
+          </div>
           <div class="ticket-price-area">
             <span class="ticket-currency">$</span>
             <span class="ticket-price">60</span>
@@ -554,6 +577,10 @@
           </div>
         </div>
         <div class="ticket-bottom">
+                  <a href="https://buy.stripe.com/14AdR9afR3zG3p8fDrbsc0f" target="_blank" class="cta-btn">
+    
+        Buy
+      </a>
           <span class="ticket-event">CTC Presentation Night · Aug 15</span>
           <span class="ticket-dot" aria-hidden="true"></span>
         </div>
@@ -562,9 +589,9 @@
     </div>
     </section>
 
-    <section class="section">
+    <!-- <section class="section">
          <div class="section-inner">
-            <!-- More info -->   <!-- CTA bar -->
+
     <div class="cta-bar">
       <div class="cta-text">
         <h2>Ready to celebrate?</h2>
@@ -576,7 +603,7 @@
       </a>
     </div>
          </div>
-    </section>
+    </section> -->
 
     <section class="image-slider-placeholder" data-id="presentation2" data-folder="/assets/images/presentation/slider2/" data-number-of-images="8"></section>
 

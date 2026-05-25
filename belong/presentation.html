@@ -25,6 +25,396 @@
     <link rel="stylesheet" href="/assets/css/footer.min.css">
     <link rel="stylesheet" href="/assets/css/footer-mobile.min.css">
     <link rel="stylesheet" href="/assets/css/scroller.min.css">
+    
+    <style>
+
+            :root {
+      --ctc-navy: #1a2235;
+       --navy-mid: #1A3557;
+      --ctc-navy-light: #243050;
+      --ctc-orange: #e8420f;
+      --ctc-white: #ffffff;
+      --ctc-light: #f4f6fa;
+      --ctc-muted: #6b7a99;
+      --ctc-border: rgba(26, 34, 53, 0.12);
+      --ctc-gold: #f5a623;
+    }
+
+      .wow {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate3d(0, -20px, 0);
+  }
+  .animated {
+    opacity: 1;
+    visibility: visible;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+  .animated.bounceInDown {
+    animation-name: bounceInDown;
+  }
+  @keyframes bounceInDown {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, -3000px, 0) scaleY(3);
+    }
+    60% {
+      opacity: 1;
+      transform: translate3d(0, 25px, 0) scaleY(0.9);
+    }
+    75% {
+      transform: translate3d(0, -10px, 0) scaleY(0.95);
+    }
+    90% {
+      transform: translate3d(0, 5px, 0) scaleY(0.985);
+    }
+    100% {
+      transform: translate3d(0, 0, 0) scaleY(1);
+    }
+  }
+
+    .section-inner {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+          .activekids-box {
+    /* background: linear-gradient(135deg, #1A3557 0%, #0B1F3A 100%); */
+    border-radius: 12px;
+    padding: 40px 44px;
+    color: var(--white);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 32px;
+    align-items: center;
+    background: linear-gradient(rgba(0, 141, 208, 0.9), rgba(0, 141, 208, 0.4));
+  }
+  .activekids-saving {
+    background: linear-gradient(45deg, rgba(252, 211, 77, 0.9), rgba(252, 211, 77, 1));
+    color: var(--navy);
+    border-radius: 12px;
+    padding: 24px 28px;
+    text-align: center;
+    flex-shrink: 0;
+    
+  }
+  .saving-num {
+    /* font-family: 'Barlow Condensed', sans-serif; */
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1;
+  }
+  .saving-label {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 4px;
+  }
+  .activekids-box h3 {
+    /* font-family: 'Barlow Condensed', sans-serif; */
+    font-size: 22px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: gold;
+    margin-bottom: 12px;
+  }
+  .activekids-box p { color: rgba(255, 255, 255, 0.78);
+    text-align: justify;}
+  .activekids-includes {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+  .activekids-includes li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+ color: rgba(255, 255, 255, 0.78);
+ font-weight: 600;
+  }
+  .check { color: gold; font-size: 16px; }
+  .activekids-link {
+    display: inline-block;
+    margin-top: 20px;
+    background: var(--white);
+    color: var(--navy);
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 10px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+
+      /* ── Why come section ── */
+    .why-card {
+      background: var(--ctc-navy);
+      border-radius: 16px;
+      padding: 2rem 1.75rem;
+      margin-bottom: 2.5rem;
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    .why-left { flex: 1; min-width: 240px; }
+    .why-left h3 {
+      color: #fff;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      line-height: 1.35;
+    }
+    .why-left p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.68);
+      line-height: 1.65;
+      margin-bottom: 1.25rem;
+    }
+    .why-check {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.82);
+      margin-bottom: 8px;
+      line-height: 1.45;
+    }
+    .why-check i { color: var(--ctc-gold); font-size: 15px; margin-top: 1px; flex-shrink: 0; }
+    .why-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--ctc-orange);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 11px 22px;
+      border-radius: 9px;
+      text-decoration: none;
+      margin-top: 0.25rem;
+      transition: background 0.15s;
+    }
+    .why-cta-btn:hover { background: #cf3a0d; }
+    .why-right {
+      flex: 0 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      min-width: 160px;
+    }
+    .why-stat {
+      background: rgba(255,255,255,0.07);
+      border: 0.5px solid rgba(255,255,255,0.12);
+      border-radius: 10px;
+      padding: 12px 16px;
+      text-align: center;
+    }
+    .why-stat .snum {
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--ctc-navy);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .why-stat .slbl {
+      font-size: 11px;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.35;
+    }
+
+        /* ── Ticket cards ── */
+    .ticket-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 2.5rem;
+    }
+    .ticket-card {
+      border-radius: 14px;
+      overflow: hidden;
+      position: relative;
+    }
+    .ticket-card--adult { background: var(--ctc-navy); }
+    .ticket-card--junior { background: var(--ctc-navy-light); }
+    /* Dashed tear line */
+    /* .ticket-card::after {
+      content: '';
+      position: absolute;
+      top: 50%; left: 0; right: 0;
+      height: 0;
+      border-top: 2px dashed rgba(255,255,255,0.12);
+    } */
+    .ticket-top {
+      padding: 1.5rem 1.4rem 1.25rem;
+      position: relative;
+      background: linear-gradient(rgba(0, 141, 208, 0.9), rgba(0, 141, 208, 0.4));
+    }
+    .ticket-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 6px;
+    }
+    .ticket-type {
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+    .ticket-who {
+      font-size: 12px;
+      color: rgba(255,255,255,0.6);
+    }
+    .ticket-price-area {
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+      margin-top: 14px;
+    }
+    .ticket-currency {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--ctc-gold);
+    }
+    .ticket-price {
+      font-size: 48px;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1;
+    }
+    .ticket-bottom {
+      background: rgba(0,0,0,0.18);
+      padding: 0.85rem 1.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .ticket-event {
+      font-size: 12px;
+      color: rgba(255,255,255,0.55);
+    }
+    .ticket-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--ctc-gold);
+      flex-shrink: 0;
+    }
+
+      /* ── Highlights grid ── */
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 2.5rem;
+    }
+    .highlight-card {
+      background: var(--ctc-white);
+      border: 0.5px solid var(--ctc-border);
+      border-radius: 13px;
+      padding: 1.25rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: box-shadow 0.15s;
+    }
+    .highlight-card:hover { box-shadow: 0 4px 16px rgba(26,34,53,0.09); }
+    .highlight-card.featured {
+      background: var(--ctc-navy);
+      border-color: transparent;
+    }
+    .highlight-icon {
+      font-size: 26px;
+      line-height: 1;
+    }
+    .highlight-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--ctc-navy);
+      line-height: 1.3;
+    }
+    .highlight-card.featured .highlight-title { color: #fff; }
+    .highlight-desc {
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    .highlight-card.featured .highlight-desc { color: rgba(255,255,255,0.65); }
+
+    .section-label {
+
+    text-transform: uppercase;
+    color: #008dd0;
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+}
+    /* ── CTA bar ── */
+    .cta-bar {
+    background: linear-gradient(rgba(0, 141, 208, 0.9), rgba(0, 141, 208, 0.4));
+      border-radius: 14px;
+      padding: 1.75rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+    .cta-bar h2 {
+    /* font-family: 'Barlow Condensed', sans-serif; */
+    font-size: 22px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--navy);
+    /* margin-bottom: 16px; */
+    }
+    .cta-text h3 { color: #fff; font-size: 18px; font-weight: 600; margin-bottom: 5px; }
+    .cta-text p { font-size: 13px; }
+    .cta-text a { color: rgba(255,255,255,0.9); text-decoration: none; }
+    .cta-text a:hover { color: #fff; text-decoration: underline; }
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+     background: var(--ctc-navy);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 12px 24px;
+      border-radius: 4px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background 0.15s;
+    }
+    .cta-btn:hover { background: var(--navy-mid); }
+
+@media (max-width: 720px) {
+    .hero, .section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+    /* ── Responsive ── */
+    @media (max-width: 580px) {
+      .hero h1 { font-size: 24px; }
+      .ticket-grid { grid-template-columns: 1fr; }
+      .highlights-grid { grid-template-columns: 1fr 1fr; }
+      .cta-bar { flex-direction: column; align-items: flex-start; }
+      .why-right { flex-direction: row; flex-wrap: wrap; width: 100%; }
+      .why-stat { flex: 1; min-width: 120px; }
+    }
+    @media (max-width: 380px) {
+      .highlights-grid { grid-template-columns: 1fr; }
+    }
+
+    </style>
 </head>
 <body>
     <section id="header-placeholder"></section>
@@ -40,9 +430,144 @@
     <section>
         <div>
             <h1>Event Details</h1>
-           <p>More to follow</p>
+           <p class="justified-70 justified-90-mob">Join us as we celebrate another incredible year of Train, Race and Belong with the Cronulla Triathlon Club community. Our night to come together, recognise outstanding performances, and celebrate everything that makes our club special.</p>
                 
         </div>
+    </section>
+
+    <section class="section">
+   
+    <div class="section-inner">
+        <p class="section-label">All Welcome</p>
+        <h2 style="text-align: center; margin-bottom: 28px;">This night is for everyone</h2>
+        <div class="activekids-box">
+        <div>
+            <h3>Raced once or every weekend, you belong here</h3>
+            <p>Whether you crossed a finish line, volunteered your time, or cheered from the sidelines: this night is for you. Come and celebrate the season, connect with the club, and be part of what makes Cronulla Triathlon Club such a strong and welcoming community.</p>
+            <ul class="activekids-includes">
+            <li><span class="check">✓</span> Raced at any event this season</li>
+            <li><span class="check">✓</span> Volunteered or supported the club</li>
+            <li><span class="check">✓</span> Cheered from the sidelines</li>
+            <li><span class="check">✓</span> Just love being part of the community</li>
+            </ul>
+          </div>
+      <div class="why-right">
+        <div class="why-stat">
+          <div class="snum stat-num" data-target="2" data-suffix="×">2×</div>
+          <div class="slbl">Sydney Premier<br>League Champions</div>
+        </div>
+        <div class="why-stat">
+          <div class="snum stat-num" data-target="5" data-suffix="hrs">5hrs</div>
+          <div class="slbl">of celebrating<br>together</div>
+        </div>
+        <div class="why-stat">
+          <div class="snum stat-num" data-target="1">1</div>
+          <div class="slbl">incredible<br>community</div>
+        </div>
+      </div>
+        </div>
+    </div>
+    </section>
+
+    <section class="section">
+         <div class="section-inner">
+            <!-- Highlights of the night -->
+    <p class="section-label">What's on</p>
+    <h2 class="section-title" style="text-align: center; margin-bottom: 28px;">Highlights of the night</h2>
+
+    <div class="highlights-grid">
+      <div class="highlight-card wow bounceInDown" data-wow-delay="0.4s">
+        <div class="highlight-icon">🏆</div>
+        <div class="highlight-title">Back-to-Back Sydney Premier League Champions</div>
+        <div class="highlight-desc">Two years running!! we're celebrating the club's team achievement yet again.</div>
+      </div>
+      <div class="highlight-card wow bounceInDown" data-wow-delay="0.6s">
+        <div class="highlight-icon">🎖️</div>
+        <div class="highlight-title">Club Awards &amp; Recognitions</div>
+        <div class="highlight-desc">Season awards honouring outstanding performances across all categories.</div>
+      </div>
+      <div class="highlight-card wow bounceInDown" data-wow-delay="0.8s">
+        <div class="highlight-icon">🎁</div>
+        <div class="highlight-title">Lucky Door Prizes Galore</div>
+        <div class="highlight-desc">Loads of prizes up for grabs on the night,  you've got to be in it!</div>
+      </div>
+      <div class="highlight-card wow bounceInDown" data-wow-delay="1s">
+        <div class="highlight-icon">🎤</div>
+        <div class="highlight-title">DJ, Dance Floor &amp; Karaoke</div>
+        <div class="highlight-desc">Matt Garvey on the karaoke mic. Enough said. Come prepared.</div>
+      </div>
+      <div class="highlight-card wow bounceInDown" data-wow-delay="1.2s">
+        <div class="highlight-icon">🤝</div>
+        <div class="highlight-title">Teammates, Family &amp; Friends</div>
+        <div class="highlight-desc">A relaxed, social night to reconnect with your club community.</div>
+      </div>
+      <div class="highlight-card wow bounceInDown" data-wow-delay="1.4s">
+        <div class="highlight-icon">🥂</div>
+        <div class="highlight-title">Celebrate the Season</div>
+        <div class="highlight-desc">From first-timers to podium finishers, every member's journey gets celebrated.</div>
+      </div>
+    </div>
+         </div>
+    </section>
+
+    <section class="section">
+         <div class="section-inner">
+            <!-- Tickets -->
+    <p class="section-label" id="tickets">Tickets</p>
+    <h2 class="section-title" style="text-align: center; margin-bottom: 28px;">Secure your spot</h2>
+
+    <div class="ticket-grid">
+      <!-- Adult ticket -->
+      <div class="ticket-card ticket-card--adult">
+        <div class="ticket-top">
+          <div class="ticket-label">Ticket Type</div>
+          <div class="ticket-type">Adult</div>
+          <div class="ticket-who">18 years and over</div>
+          <div class="ticket-price-area">
+            <span class="ticket-currency">$</span>
+            <span class="ticket-price">60</span>
+          </div>
+        </div>
+        <div class="ticket-bottom">
+          <span class="ticket-event">CTC Presentation Night · Aug 15</span>
+          <span class="ticket-dot" aria-hidden="true"></span>
+        </div>
+      </div>
+
+      <!-- Junior ticket -->
+      <div class="ticket-card ticket-card--junior">
+        <div class="ticket-top">
+          <div class="ticket-label">Ticket Type</div>
+          <div class="ticket-type">Junior</div>
+          <div class="ticket-who">Under 18 years</div>
+          <div class="ticket-price-area">
+            <span class="ticket-currency">$</span>
+            <span class="ticket-price">15</span>
+          </div>
+        </div>
+        <div class="ticket-bottom">
+          <span class="ticket-event">CTC Presentation Night · Aug 15</span>
+          <span class="ticket-dot" aria-hidden="true"></span>
+        </div>
+      </div>
+    </div>
+    </div>
+    </section>
+
+    <section class="section">
+         <div class="section-inner">
+            <!-- More info -->   <!-- CTA bar -->
+    <div class="cta-bar">
+      <div class="cta-text">
+        <h2>Ready to celebrate?</h2>
+        <p>Make sure you adjust your ticket type and quantity on checkout. Don't miss out!</p>
+      </div>
+      <a href="https://buy.stripe.com/14AdR9afR3zG3p8fDrbsc0f" target="_blank" class="cta-btn">
+    
+        Purchase Tickets Now
+      </a>
+    </div>
+         </div>
     </section>
 
     <section class="image-slider-placeholder" data-id="presentation2" data-folder="/assets/images/presentation/slider2/" data-number-of-images="8"></section>
@@ -61,6 +586,7 @@
     <script src="/assets/js/dates.min.js"></script>
     <script src="/assets/js/placeholder.min.js"></script>
     <script src="/assets/js/image-slider.min.js"></script>
+    <script src="/assets/js/stat-counters.min.js"></script>
     <script src="/assets/js/location.min.js"></script>
 </body>
 </html>

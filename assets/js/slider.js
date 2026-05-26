@@ -28,16 +28,23 @@ function populateUpcomingEvents() {
     const today = new Date();
     today.setHours(0, 0, 0, 0);
     
-    const futureEvents = Object.entries(events)
+    const allFutureEvents = Object.entries(events)
         .map(([dateKey, event]) => {
             const [year, month, day] = dateKey.split('-').map(Number);
             const eventDate = new Date(year, month - 1, day);
             return { dateKey, event, eventDate };
         })
-        .filter(item => item.eventDate >= today && item.event.ishighlight)
+        .filter(item => item.eventDate >= today);
+
+    const highlightEvents = allFutureEvents
+        .filter(item => item.event.ishighlight && !item.event.iskey)
         .sort((a, b) => a.eventDate - b.eventDate)
         .slice(0, 3);
-    
+
+    const futureEvents = allFutureEvents
+        .filter(item => item.event.iskey || highlightEvents.some(highlight => highlight.dateKey === item.dateKey))
+        .sort((a, b) => a.eventDate - b.eventDate);
+
     slider.innerHTML = '';
     
     const typeLabels = {

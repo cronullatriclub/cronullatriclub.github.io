@@ -94,7 +94,7 @@
 }
 
 .header-header-nav-dropdown-menu a:hover {
-    background: linear-gradient(90deg, rgba(0, 191, 255, 0.2), transparent);
+    /* background: linear-gradient(90deg, rgba(0, 191, 255, 0.2), transparent); */
     color: #00bfff;
     padding-left: 30px;
 }
@@ -103,3 +103,12 @@
 .header-nav-dropdown.active .header-header-nav-dropdown-menu {
     display: block;
 } 
+
+.mega-title {
+    color:  #00bfff;
+    padding: 12px 25px;
+}
+
+.mega-menu {
+    white-space: nowrap;
+}

@@ -40,8 +40,36 @@
 
 .home-event-image {
   width: 100%;
-  height: 450px;
+  height: 400px;
   overflow: hidden;
+}
+
+.home-weekly-event-tag,
+.home-event-tag {
+   display: inline-block;
+    background: #FCD34D;
+    color: #0B1F3A;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 11px;
+    text-transform: uppercase;
+    margin: 10px 10px 10px 0;
+}
+
+.home-weekly-event-tag-adults,
+.home-event-tag-adults {
+   display: inline-block;
+    background: #008dd0;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 11px;
+    text-transform: uppercase;
+    margin: 10px 10px 10px 0;
 }
 
 .home-event-image img {
@@ -50,7 +78,7 @@
     object-fit: cover;
     display: block;
     border-radius: 15px;
-    max-width: 450px;
+    max-width: 400px;
     float: right;
 }
 

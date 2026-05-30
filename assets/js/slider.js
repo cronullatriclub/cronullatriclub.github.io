@@ -28,13 +28,22 @@ function populateUpcomingEvents() {
     const today = new Date();
     today.setHours(0, 0, 0, 0);
     
-    const allFutureEvents = Object.entries(events)
-        .map(([dateKey, event]) => {
-            const [year, month, day] = dateKey.split('-').map(Number);
-            const eventDate = new Date(year, month - 1, day);
-            return { dateKey, event, eventDate };
-        })
-        .filter(item => item.eventDate >= today);
+    var allFutureEventsEntries = Object.entries(events);
+    var allFutureEvents = [];
+    for (var i = 0; i < allFutureEventsEntries.length; i++) {
+        var dateKey = allFutureEventsEntries[i][0];
+        var ev = allFutureEventsEntries[i][1];
+        var parts = dateKey.split('-').map(Number);
+        var eventDate = new Date(parts[0], parts[1] - 1, parts[2]);
+        if (Array.isArray(ev)) {
+            for (var j = 0; j < ev.length; j++) {
+                allFutureEvents.push({ dateKey: dateKey, event: ev[j], eventDate: eventDate });
+            }
+        } else {
+            allFutureEvents.push({ dateKey: dateKey, event: ev, eventDate: eventDate });
+        }
+    }
+    allFutureEvents = allFutureEvents.filter(function(item) { return item.eventDate >= today; });
 
     const highlightEvents = allFutureEvents
         .filter(item => item.event.ishighlight && !item.event.iskey)
@@ -67,7 +76,14 @@ function populateUpcomingEvents() {
         
         const options = { month: 'long', day: 'numeric', year: 'numeric' };
         const formattedDate = eventDate.toLocaleDateString('en-US', options);
-        
+        var tagHtml = '';
+        var tags = event.tags || [];
+        for (var k = 0; k < tags.length; k++) {
+            var tag = tags[k];
+            var tagClass = tag.toLowerCase().indexOf('adults') !== -1 ? 'home-weekly-event-tag-adults' : 'home-weekly-event-tag';
+            tagHtml += '<span class="' + tagClass + '">' + tag + '</span>';
+        }
+
         eventCard.innerHTML = `
             <div class="home-event-overlay">
                 <div class="home-event-image"><img src="assets/images/components/events/${event.image}" alt="${event.name}"></div>
@@ -77,6 +93,7 @@ function populateUpcomingEvents() {
                 <h3>${event.name}</h3>
                 <p class="home-event-subtitle limit-lines-5">${event.subtitle}</p>
                 <div class="home-weekly-event-type">${typeLabels[event.nav]}</div>
+                <div class="home-event-tags">${tagHtml}</div>
             </div>
         `;
         if (event.nav && event.type) {
@@ -132,14 +149,23 @@ function generateWeeklyEvents() {
         weekRangeDiv.textContent = `${startFormatted} - ${endFormatted}, ${today.getFullYear()}`;
     }
     
-    const thisWeekEvents = Object.entries(events)
-        .map(([dateKey, event]) => {
-            const [year, month, day] = dateKey.split('-').map(Number);
-            const eventDate = new Date(year, month - 1, day);
-            return { dateKey, event, eventDate };
-        })
-        .filter(item => item.eventDate >= startOfWeek && item.eventDate <= endOfWeek)
-        .sort((a, b) => a.eventDate - b.eventDate);
+    var thisWeekEntries = Object.entries(events);
+    var thisWeekEvents = [];
+    for (var i = 0; i < thisWeekEntries.length; i++) {
+        var dateKey = thisWeekEntries[i][0];
+        var ev = thisWeekEntries[i][1];
+        var parts = dateKey.split('-').map(Number);
+        var eventDate = new Date(parts[0], parts[1] - 1, parts[2]);
+        if (Array.isArray(ev)) {
+            for (var j = 0; j < ev.length; j++) {
+                thisWeekEvents.push({ dateKey: dateKey, event: ev[j], eventDate: eventDate });
+            }
+        } else {
+            thisWeekEvents.push({ dateKey: dateKey, event: ev, eventDate: eventDate });
+        }
+    }
+    thisWeekEvents = thisWeekEvents.filter(function(item) { return item.eventDate >= startOfWeek && item.eventDate <= endOfWeek; });
+    thisWeekEvents.sort(function(a, b) { return a.eventDate - b.eventDate; });
     
     weeklyEventsGrid.innerHTML = '';
     
@@ -155,17 +181,26 @@ function generateWeeklyEvents() {
     const typeLabels = {
         'train': 'Training Session',
         'race': 'Race Event',
-        'belong': 'Social Event'
+        'belong': 'Social Event',
+        'governance': 'Governance Event'
     };
     
     const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    
+
     thisWeekEvents.forEach(({ dateKey, event, eventDate }) => {
         const card = document.createElement('div');
         card.className = `home-weekly-event-card ${event.type}`;
         
         const dayName = dayNames[eventDate.getDay()];
         const monthDay = eventDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+        
+        var tagHtml = '';
+        var tags = event.tags || [];
+        for (var k = 0; k < tags.length; k++) {
+            var tag = tags[k];
+            var tagClass = tag.toLowerCase().indexOf('adults') !== -1 ? 'home-weekly-event-tag-adults' : 'home-weekly-event-tag';
+            tagHtml += '<span class="' + tagClass + '">' + tag + '</span>';
+        };
         
         card.innerHTML = `
             <div class="home-weekly-event-content">
@@ -177,6 +212,7 @@ function generateWeeklyEvents() {
                     <div class="home-weekly-event-day">${event.start} ${dayName}, ${monthDay}</div>
                     <div class="home-weekly-event-subtitle">${event.subtitle}</div>
                     <div class="home-weekly-event-type">${typeLabels[event.nav]}</div>
+                    <div class="home-weekly-event-tags">${tagHtml}</div>
                 </div>
             </div>
         `;

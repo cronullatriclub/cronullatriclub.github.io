@@ -68,23 +68,26 @@ function generateCalendar() {
         dayNumber.textContent = day;
         dayCell.appendChild(dayNumber);
 
-        const pad = (num) => String(num).padStart(2, '0');
-        const dateKey = `${currentYear}-${pad(currentMonth + 1)}-${pad(day)}`;
+        var pad = function(num) { return String(num).length === 1 ? '0' + num : String(num); };
+        var dateKey = currentYear + '-' + pad(currentMonth + 1) + '-' + pad(day);
 
         if (events[dateKey]) {
-            const event = events[dateKey];
-            dayCell.classList.add('has-event', event.type);
+            var eventsForDay = events[dateKey];
+            var eventArray = Array.isArray(eventsForDay) ? eventsForDay : [eventsForDay];
+            var firstEvent = eventArray[0];
             
-            const eventIndicator = document.createElement('div');
+            dayCell.classList.add('has-event', firstEvent.type);
+            
+            var eventIndicator = document.createElement('div');
             eventIndicator.className = 'calendar-indicator';
-            eventIndicator.textContent = event.name;
+            eventIndicator.textContent = eventArray.length > 1 ? firstEvent.name + ' +' + (eventArray.length - 1) : firstEvent.name;
             dayCell.appendChild(eventIndicator);
             
-            dayCell.title = `${event.name} - ${event.type}`;
+            dayCell.title = firstEvent.name + ' - ' + firstEvent.type;
             
             dayCell.style.cursor = 'pointer';
             dayCell.onclick = function() {
-                window.location.href = `../${event.nav}/${event.type}.html`;
+                window.location.href = '../' + firstEvent.nav + '/' + firstEvent.type;
             };
         }
         

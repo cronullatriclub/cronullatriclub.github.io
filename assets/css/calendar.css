@@ -106,10 +106,11 @@
     background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
 }
 
+.calendar-day-cell.juniors-bike-skills,
 .calendar-day-cell.bike-skills {
     background: linear-gradient(135deg, #4facfe, #00f2fe);
 }
-
+.calendar-day-cell.juniors-run,
 .calendar-day-cell.run {
     background: linear-gradient(135deg, #43e97b, #38f9d7);
 }

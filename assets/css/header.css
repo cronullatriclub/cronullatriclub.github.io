@@ -90,13 +90,15 @@
     padding: 12px 25px;
     font-size: 1rem;
     pointer-events: auto;
-    transition: background 0.3s ease, color 0.3s ease, padding-left 0.3s ease;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    transform: translateX(0);
 }
 
 .header-header-nav-dropdown-menu a:hover {
     /* background: linear-gradient(90deg, rgba(0, 191, 255, 0.2), transparent); */
     color: #00bfff;
-    padding-left: 30px;
+    transform: translateX(5px);
+
 }
 
 .header-nav-dropdown:hover .header-header-nav-dropdown-menu,

@@ -59,6 +59,7 @@ function populateUpcomingEvents() {
     const typeLabels = {
         'race': 'Race Event',
         'train': 'Training Session',
+        'train/juniors': 'Training Session',
         'belong': 'Social Event',
         'governance': 'Governance Event'
     };
@@ -180,6 +181,7 @@ function generateWeeklyEvents() {
     
     const typeLabels = {
         'train': 'Training Session',
+        'train/juniors': 'Training Session',
         'race': 'Race Event',
         'belong': 'Social Event',
         'governance': 'Governance Event'

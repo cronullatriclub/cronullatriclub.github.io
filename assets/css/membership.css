@@ -373,7 +373,6 @@
     .trial-note {
       font-size: 13px;
       color: var(--ctc-muted);
-      margin-bottom: 2.5rem;
       margin-top: 0.75rem;
     }
     .trial-note a {

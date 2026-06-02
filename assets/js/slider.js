@@ -77,6 +77,12 @@ function populateUpcomingEvents() {
         
         const options = { month: 'long', day: 'numeric', year: 'numeric' };
         const formattedDate = eventDate.toLocaleDateString('en-US', options);
+
+        var times = event.start;
+        if (event.finish) {
+            times = event.start + " - " + event.finish
+        }
+
         var tagHtml = '';
         var tags = event.tags || [];
         for (var k = 0; k < tags.length; k++) {
@@ -90,7 +96,7 @@ function populateUpcomingEvents() {
                 <div class="home-event-image"><img src="assets/images/components/events/${event.image}" alt="${event.name}"></div>
             </div>
             <div class="home-event-details">
-                <span class="home-event-date">${event.start} ${formattedDate}</span>
+                <span class="home-event-date">${times} </br> ${formattedDate}</span>
                 <h3>${event.name}</h3>
                 <p class="home-event-subtitle limit-lines-5">${event.subtitle}</p>
                 <div class="home-weekly-event-type">${typeLabels[event.nav]}</div>
@@ -196,6 +202,11 @@ function generateWeeklyEvents() {
         const dayName = dayNames[eventDate.getDay()];
         const monthDay = eventDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
         
+        var times = event.start;
+        if (event.finish) {
+            times = event.start + " - " + event.finish
+        }
+
         var tagHtml = '';
         var tags = event.tags || [];
         for (var k = 0; k < tags.length; k++) {
@@ -211,7 +222,7 @@ function generateWeeklyEvents() {
                 </div>
                 <div class="home-weekly-event-info">
                     <div class="home-weekly-event-name">${event.name}</div>
-                    <div class="home-weekly-event-day">${event.start} ${dayName}, ${monthDay}</div>
+                    <div class="home-weekly-event-day">${times} ${dayName}, ${monthDay}</div>
                     <div class="home-weekly-event-subtitle">${event.subtitle}</div>
                     <div class="home-weekly-event-type">${typeLabels[event.nav]}</div>
                     <div class="home-weekly-event-tags">${tagHtml}</div>

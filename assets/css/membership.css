@@ -795,4 +795,13 @@ background: #ff69b4;
     max-width: 90%;
     margin: 0 auto;
 }
+.cta-btn {
+  margin: auto;
+}
+.ctc-gs-sub {
+  text-align: justify;
+}
+.section-inner {
+   max-width: 80%;
+}
 }

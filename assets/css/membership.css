@@ -788,3 +788,11 @@ background: #ff69b4;
     /* .ctc-gs-heading { font-size: 24px; } */
     .ctc-gs-visual { height: 160px; }
 }
+
+@media (max-width: 720px) {
+    .ctc-gs {
+    padding: 60px 0;
+    max-width: 90%;
+    margin: 0 auto;
+}
+}

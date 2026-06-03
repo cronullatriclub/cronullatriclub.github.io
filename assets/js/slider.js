@@ -96,7 +96,7 @@ function populateUpcomingEvents() {
                 <div class="home-event-image"><img src="assets/images/components/events/${event.image}" alt="${event.name}"></div>
             </div>
             <div class="home-event-details">
-                <span class="home-event-date">${times} ${formattedDate}</span>
+                <div class="home-event-date"><span class="home-event-time">${times}</span> <span class="home-event-day">${formattedDate}</span></div>
                 <h3>${event.name}</h3>
                 <p class="home-event-subtitle limit-lines-5">${event.subtitle}</p>
                 <div class="home-weekly-event-type">${typeLabels[event.nav]}</div>

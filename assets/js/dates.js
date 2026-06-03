@@ -48,7 +48,7 @@ function populateDates(eventId, maxEvents, from = null, to = null) {
             card.className = `dates-events-card`;
             card.innerHTML = `<div class="dates-events-content">
             <div class="dates-events-info">
-                    <div class="dates-events-day">${times} ${dayName}, ${monthDay}</div>
+                    <div class="dates-events-day"><span class="dates-time">${times}</span> <span class="dates-day-name">${dayName}, ${monthDay}</span></div>
                     ${x.event.registerurl && x.eventDate >= dateNow ? `<p><a class="dates-events-a" href="${x.event.registerurl}" target="_blank">Register Here</a></p>` : ""}
                     ${x.event.resultsurl ? `<p><a class="dates-events-a" href="${x.event.resultsurl}" target="_blank">Results</a></p>` : ""}
                 </div>

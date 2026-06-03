@@ -3,6 +3,18 @@
         overflow-x: hidden;
     }
 
+    .home-event-card {
+        gap: 20px;
+    }
+
+    .home-event-date {
+        padding: 10px 10px;
+    }
+
+    .home-events-section {
+        padding: 80px 20px 0px 20px;
+    }
+
     .home-slider-btn {
         padding: 5px;
         margin: 0 0;

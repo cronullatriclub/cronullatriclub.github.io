@@ -72,3 +72,16 @@
     letter-spacing: 1px;
     text-align: left; 
 }
+
+/* Responsive: break time and day onto separate lines on small screens */
+.dates-events-day .dates-time,
+.dates-events-day .dates-day-name {
+    display: inline;
+}
+
+@media (max-width: 720px) {
+    .dates-events-day .dates-time,
+    .dates-events-day .dates-day-name {
+        display: block;
+    }
+}

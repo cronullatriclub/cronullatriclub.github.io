@@ -106,6 +106,18 @@
     margin-bottom: 20px;
 }
 
+.home-event-date .home-event-time,
+.home-event-date .home-event-day {
+    display: inline;
+}
+
+@media (max-width: 720px) {
+    .home-event-date .home-event-time,
+    .home-event-date .home-event-day {
+        display: block;
+    }
+}
+
 .home-slider-controls {
     position: absolute;
     top: 50%;

@@ -804,4 +804,10 @@ background: #ff69b4;
 .section-inner {
    max-width: 80%;
 }
+.ctc-gs-body {
+    background: #f4f6f9;
+}
+.step:not(:last-child)::after {
+  background: none;
+}
 }

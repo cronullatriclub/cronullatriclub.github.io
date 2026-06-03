@@ -37,6 +37,10 @@ function populateDates(eventId, maxEvents, from = null, to = null) {
         dateNow.setHours(0,0,0,0)
 
         filteredEvents.forEach(x => {
+            var times = x.event.start;
+            if (x.event.finish) {
+                times = x.event.start + " - " + x.event.finish
+            }
             const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
             const dayName = dayNames[x.eventDate.getDay()];
             const monthDay = x.eventDate.toLocaleDateString('en-AU', { month: 'short', day: 'numeric', year: 'numeric'});
@@ -44,7 +48,7 @@ function populateDates(eventId, maxEvents, from = null, to = null) {
             card.className = `dates-events-card`;
             card.innerHTML = `<div class="dates-events-content">
             <div class="dates-events-info">
-                    <div class="dates-events-day">${x.event.start} ${dayName}, ${monthDay}</div>
+                    <div class="dates-events-day">${times} ${dayName}, ${monthDay}</div>
                     ${x.event.registerurl && x.eventDate >= dateNow ? `<p><a class="dates-events-a" href="${x.event.registerurl}" target="_blank">Register Here</a></p>` : ""}
                     ${x.event.resultsurl ? `<p><a class="dates-events-a" href="${x.event.resultsurl}" target="_blank">Results</a></p>` : ""}
                 </div>

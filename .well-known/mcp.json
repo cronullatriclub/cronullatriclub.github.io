@@ -1,0 +1,45 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/mcp-server-card/v1.json",
+  "version": "1.0",
+  "protocolVersion": "2025-06-18",
+  "serverInfo": {
+    "name": "cronulla-tri-club-events",
+    "title": "Cronulla Triathlon Club Events",
+    "version": "1.0.0",
+    "description": "Browse and search upcoming events for Cronulla Triathlon Club — Sydney's leading triathlon community for swimmers, cyclists, and runners of all levels.",
+    "iconUrl": "https://www.cronullatriclub.com.au/assets/images/home/og-image.jpg",
+    "documentationUrl": "https://www.cronullatriclub.com.au"
+  },
+  "transport": {
+    "type": "streamable-http",
+    "endpoint": "/mcp"
+  },
+  "capabilities": {
+    "tools": {
+      "listChanged": false
+    }
+  },
+  "tools": [
+    {
+      "name": "get_events_this_week",
+      "description": "Returns all Cronulla Tri Club events occurring this week (Mon–Sun) in Sydney time."
+    },
+    {
+      "name": "get_events_for_date",
+      "description": "Returns all events for a specific date (YYYY-MM-DD)."
+    },
+    {
+      "name": "search_events",
+      "description": "Search events by keyword across titles, descriptions, and event type."
+    }
+  ],
+  "authentication": {
+    "required": false
+  },
+  "categories": ["sports", "fitness", "events"],
+  "languages": ["en"],
+  "coverage": "AU",
+  "contact": "belong@cronullatriclub.com.au",
+  "docs": "https://www.cronullatriclub.com.au",
+  "crawl": true
+}

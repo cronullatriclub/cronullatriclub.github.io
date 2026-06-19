@@ -7,12 +7,12 @@
     "title": "Cronulla Triathlon Club Events",
     "version": "1.0.0",
     "description": "Browse and search upcoming events for Cronulla Triathlon Club — Sydney's leading triathlon community for swimmers, cyclists, and runners of all levels.",
-    "iconUrl": "https://www.cronullatriclub.com.au/assets/images/home/og-image.jpg",
+    "iconUrl": "https://www.cronullatriclub.com.au/assets/images/components/title/circlelogo.webp",
     "documentationUrl": "https://www.cronullatriclub.com.au"
   },
   "transport": {
     "type": "streamable-http",
-    "endpoint": "/mcp"
+    "endpoint": "https://mcp.little-smoke-d790.workers.dev/mcp"
   },
   "capabilities": {
     "tools": {

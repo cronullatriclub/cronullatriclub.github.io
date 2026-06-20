@@ -25,6 +25,7 @@ exclude:
 # Include static files
 include:
   - _pages
+  - ".well-known"
 
 # Permalink style for clean URLs
 permalink: pretty

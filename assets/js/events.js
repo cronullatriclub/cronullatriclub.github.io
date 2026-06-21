@@ -220,3 +220,72 @@ function populateEventDates(type, from, to) {
     items.sort(function(a, b) { return a.eventDate - b.eventDate; });
     return items;
 }
+
+function generateJsonLdFromEvents(events) {
+  const jsonLdEvents = [];
+
+  for (const [date, items] of Object.entries(events)) {
+    for (const ev of items) {
+      const startDate = buildIsoDate(date, ev.start);
+      const endDate = buildIsoDate(date, ev.finish);
+
+      jsonLdEvents.push({
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": ev.name,
+        "startDate": startDate,
+        "endDate": endDate,
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+
+        "description": ev.subtitle || "",
+        "image": ev.image
+          ? `https://www.cronullatriclub.com.au/assets/images/${ev.image}`
+          : undefined,
+
+        "location": {
+          "@type": "Place",
+          "name": inferLocation(ev),
+          "address": "Cronulla NSW, Australia"
+        },
+
+        "organizer": {
+          "@type": "Organization",
+          "name": "Cronulla Triathlon Club",
+          "url": "https://www.cronullatriclub.com.au"
+        },
+
+        "eventType": ev.type,
+        "keywords": ev.tags || []
+      });
+    }
+  }
+
+  return JSON.stringify(jsonLdEvents, null, 2);
+}
+
+function buildIsoDate(date, timeStr) {
+  if (!timeStr) return date;
+
+  const match = timeStr.match(/(\d{1,2}):(\d{2})(am|pm)/i);
+  if (!match) return date;
+
+  let [_, hour, minute, period] = match;
+  hour = parseInt(hour, 10);
+
+  if (period.toLowerCase() === "pm" && hour !== 12) hour += 12;
+  if (period.toLowerCase() === "am" && hour === 12) hour = 0;
+
+  const hh = hour.toString().padStart(2, "0");
+  const mm = minute.padStart(2, "0");
+
+  return `${date}T${hh}:${mm}:00+10:00`; // Sydney timezone
+}
+
+// Infer location from nav/type if possible
+function inferLocation(ev) {
+  if (ev.type?.includes("run")) return "Cronulla Tri Club Clubhouse, Gunnamatta";
+  if (ev.type?.includes("bike")) return "Sutherland Bike Track";
+  if (ev.type?.includes("swim")) return "Gunnamatta Bay / Caringbah Leisure Centre";
+  return "Cronulla Tri Club Clubhouse, Gunnamatta";
+}

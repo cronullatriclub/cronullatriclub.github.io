@@ -1,0 +1,7 @@
+{
+  "type": "module",
+  "scripts": {
+    "jsonld-build": "node build-jsonld.js",
+    "dev": "npm run jsonld-build && bundle exec jekyll serve"
+  }
+}

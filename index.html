@@ -229,6 +229,13 @@
     <script src="/assets/js/header.min.js"></script>
     <script src="/assets/js/footer.min.js"></script>
     <script src="/assets/js/events.js"></script>
+    <script>
+        const jsonLd = generateJsonLdFromEvents(events);
+        const script = document.createElement("script");
+        script.type = "application/ld+json";
+        script.textContent = jsonLd;
+        document.head.appendChild(script);
+    </script>
     <script src="/assets/js/slider.min.js"></script>
     <script src="/assets/js/shop.min.js"></script>
     <script src="/assets/js/scroller.min.js"></script>
@@ -240,13 +247,6 @@
         i.src="https://cdn.curator.io/published/35634152-4cf4-4da6-a858-7da4b646e377.js";
         e=d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
         })();
-    </script>  
-    <script>
-        const jsonLd = generateJsonLdFromEvents(events);
-        const script = document.createElement("script");
-        script.type = "application/ld+json";
-        script.textContent = jsonLd;
-        document.head.appendChild(script);
     </script>
 </body>
 </html>

@@ -9,7 +9,7 @@ function generateJsonLdFromEvents(events) {
       const startDate = buildIsoDate(date, ev.start);
       const endDate = buildIsoDate(date, ev.finish);
 
-      jsonLdEvents.push({
+        jsonLdEvents.push({
         "@context": "https://schema.org",
         "@type": "Event",
         "name": ev.name,
@@ -17,21 +17,24 @@ function generateJsonLdFromEvents(events) {
         "endDate": endDate,
         "description": ev.subtitle || "",
         "image": ev.image
-          ? `https://www.cronullatriclub.com.au/assets/images/${ev.type}/${ev.image}`
-          : undefined,
+            ? `https://www.cronullatriclub.com.au/assets/images/${ev.image}`
+            : undefined,
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "eventStatus": "https://schema.org/EventScheduled",
+
         "location": {
-          "@type": "Place",
-          "name": "Cronulla",
-          "address": "Cronulla NSW, Australia"
+            "@type": "Place",
+            "name": "Cronulla",
+            "address": "Cronulla NSW, Australia"
         },
         "organizer": {
-          "@type": "Organization",
-          "name": "Cronulla Triathlon Club",
-          "url": "https://www.cronullatriclub.com.au"
+            "@type": "Organization",
+            "name": "Cronulla Triathlon Club",
+            "url": "https://www.cronullatriclub.com.au"
         },
         "eventType": ev.type,
         "keywords": ev.tags || []
-      });
+        });
     }
   }
 

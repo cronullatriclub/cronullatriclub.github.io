@@ -1,5 +1,5 @@
 // Shared events data
-export const events = {
+const events = {
 '2025-09-13': [{ ishighlight: false, nav: 'race', type: 'triathlons', name: 'Club Triathlon', start: '6:45am', resultsurl: 'https://www.webscorer.com/race?raceid=405376'}],
 '2025-11-22': [{ ishighlight: false, nav: 'race', type: 'triathlons', name: 'Club Triathlon', start: '6:45am', resultsurl: 'https://www.webscorer.com/race?raceid=414236'}],
 '2025-12-13': [{ ishighlight: false, nav: 'race', type: 'triathlons', name: 'Club Triathlon', start: '6:45am', resultsurl: 'https://www.webscorer.com/race?raceid=416100'}],

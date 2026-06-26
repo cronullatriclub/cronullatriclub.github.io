@@ -130,7 +130,7 @@
     max-width: 960px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 0;
   }
   .stat {
@@ -185,11 +185,77 @@ border-right: 1.5px solid rgb(255,255,255,0.17);
     line-height: 1.05;
   } */
 
+      .table-wrapper2 {
+      margin: 0 auto;
+      background: rgba(255,255,255,0.15);
+      border-radius: 10px;
+      overflow: hidden;
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    thead tr {
+      background: rgba(255,255,255,0.25);
+    }
+
+    th {
+      padding: 14px 18px;
+      text-align: left;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: white;
+    }
+
+    td {
+      padding: 13px 18px;
+      font-size: 14px;
+      color: white;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+    }
+
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    tbody tr:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    .athlete-name {
+      font-weight: 600;
+    }
+
+    .squad-badge.program-badge {
+margin-top:8px;
+margin-bottom:8px;
+    }
+
+    .badge-nswt {
+      background: #f6c90e;
+      color: #1a2e44;
+    }
+
+    .badge-rosta {
+      background: #1a5ea8;
+      color: white;
+    }
+
+    .result-highlight {
+      font-weight: 600;
+    }
+
   /* ── HIGHLIGHTS ── */
   .highlight-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 52px;
     margin-top: 32px;
   }
   .highlight-card {
@@ -329,12 +395,47 @@ background: rgba(255, 255, 255, .15);
     line-height: 1.55;
   }
 
+  .ctc-gs-features {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 1.25rem;
+}
+
+.ctc-gs-feat {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+}
+.ctc-gs-feat i {
+    font-size: 15px;
+    flex-shrink: 0;
+}
+
+.ctc-gs-cta-alt {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    padding: 11px 16px;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    /* text-align: center; */
+    transition: opacity 0.15s;
+    border: 2px solid #008dd0;
+    color: #008dd0;
+    margin-bottom: 10px;
+}
+
   /* ── EQUIPMENT ── */
   .equip-items {
     display: flex;
     flex-direction: column;
     gap: 14px;
     margin-top: 8px;
+    margin-bottom: 30px;
   }
   .equip-item {
     display: flex;
@@ -424,6 +525,7 @@ background: rgba(255, 255, 255, .15);
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
+    margin-bottom: 30px;
   }
   .event-tag {
     background: rgba(255,255,255,0.15);
@@ -639,6 +741,239 @@ background: rgba(255, 255, 255, .15);
     transform: translateY(-2px);
       }
 
+         .ranked-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .ranked-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid #e8edf2;
+    }
+
+    .ranked-list li:last-child {
+      border-bottom: none;
+    }
+
+    .rank-circle {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 800;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .rank-1 { background: #f6c90e; color: #1a2e44; }
+    .rank-2 { background: #d0d8e4; color: #1a2e44; }
+    .rank-3 { background: #e8a87c; color: #fff; }
+    .rank-other { background: #e2e8f0; color: #555; }
+
+    .ranked-list .name {
+      font-weight: 600;
+      font-size: 14px;
+      color: #1a2e44;
+    }
+
+    .ranked-list .sub {
+      font-size: 12px;
+      color: #888;
+      margin-top: 2px;
+    }
+
+    /* Right col */
+    .right-col p {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.7;
+      margin: 0 0 20px;
+    }
+
+    .right-col p strong {
+      color: #1a2e44;
+    }
+
+    /* Kyle Mason spotlight card */
+    .spotlight-card {
+      background: #00843d;
+      border-radius: 12px;
+      color: white;
+      margin-top: 4px;
+    }
+
+    .spotlight-card .inner-content {
+      background: linear-gradient(35deg, rgba(255, 205, 0, 0.9), rgba(0, 132, 61, 0.4));
+    padding: 20px;
+    border-radius: 12px;
+    }
+
+    .spotlight-card .tag {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: gold;
+      margin-bottom: 6px;
+    }
+
+    .spotlight-card h4 {
+      font-size: 22px;
+      font-weight: 800;
+      margin: 0 0 4px;
+      color: white;
+      padding-bottom: 14px;
+    }
+
+    .spotlight-card .event-info {
+      font-size: 12px;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .spotlight-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .spotlight-card ul li {
+      font-size: 13px;
+      color: var(--white);
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+    }
+
+    .spotlight-card ul li::before {
+      content: "★";
+      color: var(--gold-light);
+      flex-shrink: 0;
+      font-size: 11px;
+      margin-top: 2px;
+    }
+
+    /* Tamworth note */
+    .tamworth {
+      margin-top: 20px;
+      background: white;
+      border-radius: 10px;
+      padding: 14px 16px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+      border: 1px solid #e8edf2;
+    }
+
+    .tamworth .tamworth-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #4a9eca;
+      margin-bottom: 8px;
+    }
+
+    .tamworth ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .tamworth ul li {
+      font-size: 13px;
+      color: #444;
+      display: flex;
+      gap: 8px;
+    }
+
+    .tamworth ul li::before {
+      content: "🏅";
+      flex-shrink: 0;
+    }
+
+        .table-wrapper {
+      max-width: 100%;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+      border: 1px solid #e8edf2;
+      margin-bottom: 14px;
+    }
+
+    .table-wrapper table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    .table-wrapper thead tr {
+      background-color: #4a9eca;
+      color: white;
+    }
+
+    .table-wrapper th {
+      padding: 11px 16px;
+      text-align: left;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .table-wrapper td {
+      padding: 11px 16px;
+      font-size: 13px;
+      color: #2d3748;
+      border-bottom: 1px solid #edf2f7;
+      vertical-align: top;
+    }
+
+    .table-wrapper tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .table-wrapper tbody tr:hover {
+      background-color: #f7fafc;
+    }
+
+    .table-wrapper td.date {
+      white-space: nowrap;
+      color: #4a9eca;
+      font-weight: 600;
+      width: 38%;
+    }
+
+    .table-wrapper td.event {
+      color: #1a2e44;
+    }
+
+
+    .note {
+      max-width: 100%;
+      font-size: 12px;
+      color: #666;
+      line-height: 1.6;
+      padding: 0 4px;
+      text-align: left;
+    }
+
+    .note strong {
+      color: #1a2e44;
+    }
+
+
   @media (max-width: 720px) {
     .hero, .section { padding-left: 20px; padding-right: 20px; }
       .highlight-grid, .two-col, .squad-grid { grid-template-columns: 1fr; }
@@ -654,6 +989,14 @@ background: rgba(255, 255, 255, .15);
     .highlight-card:first-child {
             padding-bottom: 30px;
     }
+
+
+
+    .note {
+      margin: 0 20px;
+    }
+
+   
   }
 
   @media (max-width: 480px) {
@@ -661,7 +1004,11 @@ background: rgba(255, 255, 255, .15);
     .stats-inner { grid-template-columns: 1fr; gap: 16px; }
     .stat { border-right: none; border-bottom: 1.5px solid rgb(255,255,255,0.17); padding-bottom: 16px; padding-bottom: 26px; padding-top: 26px; width: 40%; place-self: center;}
     .stat:last-child { border-bottom: none; }
+.last-child { display: none; }
 
+    .race-calendar {
+      margin: 20px;
+    }
 }
 </style>
 </head>
@@ -676,67 +1023,81 @@ background: rgba(255, 255, 255, .15);
         <h1>Program Details</h1>
         <div>
             <div class="padding-bottom-30">
-                <h3 class="padding-bottom-10">Cronulla Triathlon Club Juniors</h3>
                 <p class="justified-70 justified-90-mob">Cronulla Triathlon Club has one of the strongest and most supportive Junior programs in NSW, catering for athletes from 5 years old right through to Youth and Junior competitors.</p>
                 <p class="justified-70 justified-90-mob">Our program is designed to be fun, inclusive and rewarding – building confidence and friendships while developing triathlon skills. With expert coaches, loan equipment options, and clear pathways into higher-level competition, every junior has the chance to reach their potential.</p>
             </div>
 
-            <div class="section-inner padding-bottom-30">
-                <p class="section-label">Season Highlights 2024/25</p>
-                <!-- <h3 class="padding-bottom-10">Season Highlights</h3>
-             -->
-                <div class="highlight-grid">
-                    <!-- All Schools Results -->
-                    <div class="highlight-card">
-                        <h3>All Schools Triathlon Championships</h3>
-                        <ul class="result-list">
-                        <li>
-                            <span class="medal medal-1">1</span>
-                            <div>
-                            <div class="athlete-name">Kyle Mason</div>
-                            <div class="result-desc">Senior Boys – Champion</div>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="medal medal-1">1</span>
-                            <div>
-                            <div class="athlete-name">Lachie Targett</div>
-                            <div class="result-desc">Junior Boys</div>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="medal medal-2">2</span>
-                            <div>
-                            <div class="athlete-name">Petra Fransen</div>
-                            <div class="result-desc">Intermediate Girls</div>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="medal medal-3">3</span>
-                            <div>
-                            <div class="athlete-name">Phoenix Rostron</div>
-                            <div class="result-desc">Junior Boys</div>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="medal medal-p">6</span>
-                            <div>
-                            <div class="athlete-name">Sophie Fransen</div>
-                            <div class="result-desc">Junior Girls</div>
-                            </div>
-                        </li>
-                        </ul>
-                    </div>
-               
-                    <!-- Membership note -->
-                    <div class="highlight-card" style="gap:16px;">
-                        <h3>NSW State Champions</h3>
-                        <p class="justified-70 justified-90-mob">Cronulla Juniors have been crowned Club Champions for the <strong>second year in a row</strong>, with 16 junior athletes representing the club. An outstanding collective achievement.</p>                    
-                        <a href="https://www.triathlon.org.au/nsw/club-championships/" target="_blank" rel="noopener noreferrer">
-                            <img src="/assets/images/juniors/champions.avif" alt="NSW State Champions" class="highlight-image">
-                        </a>
-                    </div>
-                </div>
+<div class="section-inner padding-bottom-30">
+                <p class="section-label">Race Calendar 2026/27</p>
+              <div class="table-wrapper race-calendar">
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Event</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="date">11–13 Sep 2026</td>
+          <td class="event">ROSTA Pathway Camp</td>
+        </tr>
+        <tr>
+          <td class="date">27 Sep 2026</td>
+          <td class="event">Race #1: MacTri</td>
+        </tr>
+        <tr>
+          <td class="date">9–11 Oct 2026</td>
+          <td class="event">Development Squad Camp + Race #2: Illawarra (11 Oct)</td>
+        </tr>
+        <tr>
+          <td class="date">24 Oct 2026</td>
+          <td class="event">Race #3: Cronulla</td>
+        </tr>
+        <tr>
+          <td class="date">4 Nov 2026</td>
+          <td class="event">All Schools NSW Triathlon</td>
+        </tr>
+        <tr>
+          <td class="date">28–29 Nov 2026</td>
+          <td class="event">Race #4: Orange</td>
+        </tr>
+        <tr>
+          <td class="date">17–20 Dec 2026</td>
+          <td class="event">National SS Championships: Runaway Bay, QLD</td>
+        </tr>
+        <tr>
+          <td class="date">31 Jan 2027</td>
+          <td class="event">Race #5: Penrith</td>
+        </tr>
+        <tr>
+          <td class="date">Feb 2027 (TBC)</td>
+          <td class="event">Race #6: Newcastle</td>
+        </tr>
+        <tr>
+          <td class="date">20 Feb 2027</td>
+          <td class="event">Race #7: Club Championships (Final Race)</td>
+        </tr>
+        <tr>
+          <td class="date">13–14 Mar 2027</td>
+          <td class="event">Oceania Sprint Championship: Devonport, TAS</td>
+        </tr>
+        <tr>
+          <td class="date">16–19 Mar 2027</td>
+          <td class="event">National School Sport Triathlon/Aquathlon</td>
+        </tr>
+        <tr>
+          <td class="date">9–11 Apr 2027</td>
+          <td class="event">Academy Games (ROSTA)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="note"><strong>NB Billigence Race rounds</strong> are also an opportunity for Cronulla Juniors aged +10 to compete in the non-draft race at each event. This offers additional race experience together with the chance to watch pathway racing and cheer on their CTC teammates.</p>
+</div>
+
+
             </div>
         </div>
     </section>
@@ -745,16 +1106,20 @@ background: rgba(255, 255, 255, .15);
     <div class="stats-strip">
         <div class="stats-inner">
             <div class="stat">
-                <div class="stat-num" data-target="65">0</div>
-                <div class="stat-label">Registered Juniors</div>
+                <div class="stat-num" data-target="42">0</div>
+                <div class="stat-label">Coached Sessions</div>
             </div>
             <div class="stat">
-                <div class="stat-num" data-target="60" data-prefix="~">0</div>
-                <div class="stat-label">Consistently Active</div>
+                <div class="stat-num" data-target="21">0</div>
+                <div class="stat-label">Bike Sessions</div>
             </div>
             <div class="stat">
-                <div class="stat-num" data-target="2" data-suffix="×">0</div>
-                <div class="stat-label">Back-to-Back Club Champions</div>
+                <div class="stat-num" data-target="21">0</div>
+                <div class="stat-label">Run / Swim Sessions</div>
+            </div>
+            <div class="stat">
+                <div class="stat-num" data-target="2">0</div>
+                <div class="stat-label">Sessions Per Week</div>
             </div>
         </div>
     </div>
@@ -836,11 +1201,27 @@ background: rgba(255, 255, 255, .15);
             <div class="equip-item">
                 <div>
                 <div class="equip-name">Club T-Shirt & Swim Cap</div>
-                <div class="equip-detail">Included with membership</div>
+                <div class="equip-detail">Included with 1st year membership</div>
                 </div>
                 <div class="equip-price" style="color:#ff69b4;font-size:16px;font-weight:700;">FREE</div>
             </div>
             </div>
+
+             <p class="section-label">NSW Government Initiative</p>
+            <h2 style="text-align: center;">Active Kids Vouchers</h2>
+            <div class="equip-items">
+            <div class="equip-item">
+                <div>
+                            <div class="ctc-gs-features">
+                <p style="text-align: justify;">Cronulla Triathlon Club is a registered Active Kids provider. Families can claim two $50 vouchers per child, per year via Service NSW — applied directly to your child's Junior Membership Package.</p>
+            </div>
+            <a class="ctc-gs-cta-alt" href="/train/juniors">
+                Apply for Active Kids Voucher
+                <i class="ti ti-arrow-right" aria-hidden="true"></i>
+            </a>
+            </div>
+            </div>
+
         </div>
         </div>
     </div>
@@ -851,23 +1232,28 @@ background: rgba(255, 255, 255, .15);
     <div class="section-inner">
         <p class="section-label">NSW Development</p>
         <h2>Athlete Pathways</h2>
-        <p class="pathway-intro">Cronulla Tri Club proudly supports juniors selected for NSW Development &amp; Pathway Programs, providing opportunities to progress towards national and international competition.</p>
+        <p class="pathway-intro">The NSW Triathlon Pathway Series, presented by Billigence, is the premier development competition 
+for Youth, Junior, Under-23, and PARA athletes. This season comprised four rounds: Sutherland, 
+Illawarra, Orange, and Penrith. Cronulla Triathlon Club proudly had 13 athletes represented across 
+both development programs.</p>
 
         <div class="squad-grid">
         <div class="squad-card">
             <div class="squad-badge">NSWT Development Squad</div>
             <p style="font-weight: 700;
-;font-size:14px;margin-bottom:12px;">2025 Squad Athletes</p>
+;font-size:14px;margin-bottom:12px;">2025/2026 Squad Athletes</p>
             <div class="squad-athletes">
             <span class="athlete-pill">Ryder O'Gradey</span>
             <span class="athlete-pill">Austin Crump</span>
             <span class="athlete-pill">Petra Fransen</span>
             <span class="athlete-pill">Kyle Mason</span>
+            <span class="athlete-pill">Bohdi Jackson</span>
+            <span class="athlete-pill">Zane Galea</span>
             </div>
         </div>
         <div class="squad-card">
             <div class="squad-badge rosta">ROSTA</div>
-            <p style="font-weight: 700; font-size:14px;margin-bottom:12px;">2025 Squad Athletes</p>
+            <p style="font-weight: 700; font-size:14px;margin-bottom:12px;">2025/2026 Squad Athletes</p>
             <div class="squad-athletes">
             <span class="athlete-pill">Lachie Targett</span>
             <span class="athlete-pill">Harry Beukes</span>
@@ -875,6 +1261,7 @@ background: rgba(255, 255, 255, .15);
             <span class="athlete-pill">Mikayla Reay</span>
             <span class="athlete-pill">Phoenix Rostron</span>
             <span class="athlete-pill">Cate McCulloch</span>
+            <span class="athlete-pill">Koby Hellyer</span>
             </div>
         </div>
         </div>
@@ -887,32 +1274,196 @@ background: rgba(255, 255, 255, .15);
             <span class="event-tag">World Triathlon Junior/U23</span>
             <span class="event-tag">Tactical Development Camps</span>
         </div>
-        </div>
+        
+
+        <h3>2025/2026 Key Series Results</h3>
+  <div class="table-wrapper2">
+    <table>
+      <thead>
+        <tr>
+          <th>Athlete</th>
+          <th>Category</th>
+          <th>Result</th>
+          <th class="last-child">Program</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="athlete-name">Petra Fransen</span></td>
+          <td>Female Junior B / Junior / U23</td>
+          <td><span class="result-highlight">1st Place — all three categories</span></td>
+          <td class="last-child"><span class="squad-badge program-badge">NSWT Dev Squad</span></td>
+        </tr>
+        <tr>
+          <td><span class="athlete-name">Kyle Mason</span></td>
+          <td>Male Juniors</td>
+          <td>2nd Place</td>
+          <td class="last-child"><span class="squad-badge program-badge">NSWT Dev Squad</span></td>
+        </tr>
+        <tr>
+          <td><span class="athlete-name">Mikayla Reay</span></td>
+          <td>Female Youth</td>
+          <td>4th Place</td>
+          <td class="last-child"><span class="squad-badge program-badge rosta">ROSTA</span></td>
+        </tr>
+        <tr>
+          <td><span class="athlete-name">Zane Galea</span></td>
+          <td>Male U23</td>
+          <td>4th Place</td>
+          <td class="last-child"><span class="squad-badge program-badge">NSWT Dev Squad</span></td>
+        </tr>
+        <tr>
+          <td><span class="athlete-name">Lachlan Targett</span></td>
+          <td>Male Youth</td>
+          <td>7th Place</td>
+          <td class="last-child"><span class="squad-badge program-badge rosta">ROSTA</span></td>
+        </tr>
+        <tr>
+          <td><span class="athlete-name">Harry Beukes</span></td>
+          <td>Male Youth</td>
+          <td>8th Place</td>
+          <td class="last-child"><span class="squad-badge program-badge rosta">ROSTA</span></td>
+        </tr>
+        <tr>
+          <td><span class="athlete-name">Cate McCulloch</span></td>
+          <td>Female Youth</td>
+          <td>11th Place</td>
+          <td class="last-child"><span class="squad-badge program-badge rosta">ROSTA</span></td>
+        </tr>
+        <tr>
+          <td><span class="athlete-name">Bohdi Jackson</span></td>
+          <td>Male Juniors</td>
+          <td>11th Place</td>
+          <td class="last-child"><span class="squad-badge program-badge">NSWT Dev Squad</span></td>
+        </tr>
+        <tr>
+          <td><span class="athlete-name">Austin Crump</span></td>
+          <td>Male Juniors / Overall</td>
+          <td>12th / 15th Place</td>
+          <td class="last-child"><span class="squad-badge program-badge">NSWT Dev Squad</span></td>
+        </tr>
+        <tr>
+          <td><span class="athlete-name">Phoenix Rostron</span></td>
+          <td>Male Youth</td>
+          <td>11th Place</td>
+          <td class="last-child"><span class="squad-badge program-badge rosta">ROSTA</span></td>
+        </tr>
+        <tr>
+          <td><span class="athlete-name">Darcy Kelly</span></td>
+          <td>Male Youth</td>
+          <td>19th Place</td>
+          <td class="last-child"><span class="squad-badge program-badge rosta">ROSTA</span></td>
+        </tr>
+        <tr>
+          <td><span class="athlete-name">Koby Hellyer</span></td>
+          <td>Male Youth</td>
+          <td>13th Place</td>
+          <td class="last-child"><span class="squad-badge program-badge rosta">ROSTA</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
     </div>
     </section>
 
     <!-- ACTIVE KIDS -->
     <section class="section">
     <div class="section-inner">
-        <p class="section-label">NSW Government Initiative</p>
-        <h2 style="text-align: center; margin-bottom: 28px;">Active Kids Vouchers</h2>
-        <div class="activekids-box">
-        <div>
-            <h3>Save Up to $100 Per Child</h3>
-            <p>Cronulla Triathlon Club is a registered Active Kids provider. Families can claim two $50 vouchers per child, per year via Service NSW – applied directly to your child's Junior Membership Package.</p>
-            <ul class="activekids-includes">
-            <li><span class="check">✓</span> Junior CTC Membership (with insurance &amp; training access)</li>
-            <li><span class="check">✓</span> Club membership pack – t-shirt &amp; swim cap</li>
-            <li><span class="check">✓</span> Entry into FIVE club races (aquathlons, duathlons, triathlons)</li>
-            <li><span class="check">✗</span> Excludes Richie Walker Aquathlon</li>
-            </ul>
-            <a href="https://www.service.nsw.gov.au/active-and-creative-kids-voucher" class="activekids-link">Apply via Service NSW →</a>
-        </div>
-        <div class="activekids-saving">
-            <div class="saving-num">$100</div>
-            <div class="saving-label">Saved per child<br>per year</div>
-        </div>
-        </div>
+            <div class="section-inner padding-bottom-30">
+                <p class="section-label">Season Highlights 2025/26</p>
+                <div class="highlight-grid">
+                    <!-- All Schools Results -->
+                    <div class="highlight-card">
+   <h2 style="text-align: center; margin-bottom:28px;">National &amp; State Pathway Success</h2>
+         <p style="text-align: justify;">Seven junior athletes progressed through the state pathways to represent Cronulla and NSW at the School Sport Australia National Championships, held at Runaway Bay on the Gold Coast.</p>
+   
+   <ul class="ranked-list">
+        <li>
+          <span class="rank-circle rank-1">1</span>
+          <div>
+            <div class="name">Kyle Mason</div>
+            <div class="sub">Senior A Final Triathlon — National Champion</div>
+          </div>
+        </li>
+        <li>
+          <span class="rank-circle rank-other">6</span>
+          <div>
+            <div class="name">Harry Beukes</div>
+            <div class="sub">Junior B Final Triathlon</div>
+          </div>
+        </li>
+        <li>
+          <span class="rank-circle rank-other">9</span>
+          <div>
+            <div class="name">Petra Fransen</div>
+            <div class="sub">Senior A Final Triathlon</div>
+          </div>
+        </li>
+        <li>
+          <span class="rank-circle rank-other">11</span>
+          <div>
+            <div class="name">Ryder O'Gradey</div>
+            <div class="sub">Senior A Aquathlon Final</div>
+          </div>
+        </li>
+        <li>
+          <span class="rank-circle rank-other">—</span>
+          <div>
+            <div class="name">Koby Hellyer</div>
+            <div class="sub">Triathlon/Aquathlon Pathway — Represented (TBC)</div>
+          </div>
+        </li>
+        <li>
+          <span class="rank-circle rank-other">—</span>
+          <div>
+            <div class="name">Phoenix Jackson</div>
+            <div class="sub">Triathlon/Aquathlon Pathway — Represented (TBC)</div>
+          </div>
+        </li>
+        <li>
+          <span class="rank-circle rank-other">—</span>
+          <div>
+            <div class="name">Austin Crump</div>
+            <div class="sub">Triathlon/Aquathlon Pathway — Represented (TBC)</div>
+          </div>
+        </li>
+      </ul>
+
+      <div class="tamworth">
+        <div class="tamworth-label">Tamworth Academy Games</div>
+        <ul>
+          <li>Koby Hellyer — 10th Place, Youth Male Individual Finals</li>
+          <li>Cate McCulloch — 10th Place, Youth Female Individual Finals</li>
+        </ul>
+      </div>
+
+                    </div>
+               
+                    <!-- Membership note -->
+                    <div class="highlight-card" style="gap:16px;">
+      <h2 style="text-align: center; margin-bottom:28px;">International Spotlight</h2>
+      <p class="padding-bottom-30" style="text-align: justify;">The path to the green and gold suit is extraordinarily competitive, assessed by Australia's High 
+Performance program over sustained periods. The entire CTC community congratulates Kyle and 
+looks forward to cheering him on in Spain this September!</p>
+
+      <div class="spotlight-card">
+        <div class="inner-content">
+        <div class="tag">Australian Junior Team · World Championships</div>
+        <div class="event-info">2026 World Triathlon Championship Finals · Pontevedra, Spain · 23–27 September 2026</div>
+
+        <h4>Kyle Mason</h4>
+           <ul>
+          <li>2025 NSW All Schools Triathlon Championships: Senior Boys Champion</li>
+          <li>Kiama Triathlon 2025: Overall Champion (1st of 178 competitors)</li>
+          <li>National SS Championships 2025/26: Senior A National Champion</li>
+          <li>Bronze medal: Australian Triathlon Championships</li>
+        </ul>
+      </div>
+      </div>
+    </div>
+                    </div>
+                </div>
     </div>
     </section>
 
@@ -923,29 +1474,75 @@ background: rgba(255, 255, 255, .15);
             <h2 style="text-align: center; margin-bottom: 28px;">Junior Points Series</h2>
             <p style="margin: 0 auto; text-align: justify;">All juniors earn points at club races, including the Richie Walker Aquathlon and Club Championships. Points accumulate across the season to determine end-of-season medals and trophies.</p>
 
-            <div class="points-grid">
+            <div class="points-grid padding-bottom-30">
             <div class="points-card p1 wow bounceInDown" data-wow-delay="0.6s">
-                <div class="points-pos">🥇 1st Place</div>
+                <div class="points-pos">🏅 Club Champs</div>
                 <div class="points-num">4</div>
                 <div class="points-unit">points</div>
             </div>
             <div class="points-card p2 wow bounceInDown" data-wow-delay="0.8s">
-                <div class="points-pos">🥈 2nd Place</div>
+                <div class="points-pos">🥇 1st Place</div>
                 <div class="points-num">3</div>
                 <div class="points-unit">points</div>
             </div>
             <div class="points-card p3 wow bounceInDown" data-wow-delay="1s">
-                <div class="points-pos">🥉 3rd Place</div>
+                <div class="points-pos">🥈 2nd Place</div>
                 <div class="points-num">2</div>
                 <div class="points-unit">points</div>
             </div>
             <div class="points-card pp wow bounceInDown" data-wow-delay="1.2s">
-                <div class="points-pos">🏅 Participation</div>
+                <div class="points-pos">🥉 3rd Place</div>
                 <div class="points-num">1</div>
                 <div class="points-unit">point</div>
             </div>
             </div>
-        </div>
+      
+
+  <h3 class="padding-bottom-30">2025/2026 Top Ranked Athletes</h3>
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Athlete</th>
+          <th>Category</th>
+          <th>Points</th>
+          <th class="last-child">Highlights</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="rank-circle rank-1">1</span></td>
+          <td><span class="athlete-name">Ewan Lichner</span></td>
+          <td>Youth B Boys (10–12)</td>
+          <td><span class="points">19 pts / 6 events</span></td>
+          <td class="highlight last-child">Five race wins, dominant Club Championships</td>
+        </tr>
+        <tr>
+          <td><span class="rank-circle rank-2">2</span></td>
+          <td><span class="athlete-name">Isla Fifield</span></td>
+          <td>Youth C Girls (7–9)</td>
+          <td><span class="points">16 pts / 5 events</span></td>
+          <td class="highlight last-child">Dominant throughout, a bright emerging star</td>
+        </tr>
+        <tr>
+          <td><span class="rank-circle rank-3">3</span></td>
+          <td><span class="athlete-name">Petra Fransen</span></td>
+          <td>Junior A Women (17–19)</td>
+          <td><span class="points">15 pts / 5 events</span></td>
+          <td class="highlight last-child">Perfect scorecard, five wins from five events</td>
+        </tr>
+        <tr>
+          <td><span class="rank-circle rank-3">3</span></td>
+          <td><span class="athlete-name">Eva Lichner</span></td>
+          <td>Youth B Girls (10–12)</td>
+          <td><span class="points">15 pts / 5 events</span></td>
+          <td class="highlight last-child">Brilliant consistency + Club Championship gold</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
     </section>
 
     <!-- CTA -->

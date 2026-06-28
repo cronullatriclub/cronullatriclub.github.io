@@ -113,4 +113,8 @@
 
 .mega-menu {
     white-space: nowrap;
+    display:grid;
+    grid-template-columns:repeat(3,min-content);
+    gap:14px;
+    padding:12px;
 }

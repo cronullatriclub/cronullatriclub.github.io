@@ -131,6 +131,7 @@ const events = {
 '2026-09-02': [{ ishighlight: false, nav: 'train/juniors', image: 'juniors-run.avif', type: 'juniors-run', name: 'Junior Club Run', start: '6:20pm', finish: '7:30pm', subtitle: 'Taken by one of our Junior coaches with the aim to develop fundamental running skills and build confidence in a supportive environment.'}, { ishighlight: false, nav: 'train', image:'run.avif', type: 'run', name: 'Club Run', start: '6:20pm', finish: '7:30pm', subtitle: 'There is no better way to introduce yourself to the club than to join us for our regular loop of Cronulla. Feel free to hang around afterwards and have a beverage and chat to meet new friends or catch up with long time mates.' }],
 '2026-09-04': [{ ishighlight: false, nav: 'train', image:'swim.avif', type: 'swim', name: 'Club Swim', start: '4:30pm', finish: '5:30pm', subtitle: 'Join us for a friday afternoon swim. We swim in the ocean as a group, so all speeds are welcome.', tags: ['adults'] }],
 '2026-09-05': [{ ishighlight: true, nav: 'train', image:'bike-training.avif', type: 'bike-training', name: 'Bike Training', start: '6:45am', finish: '7:45am', subtitle: 'Our club bike training is a fast, fun hit‑out designed to test your fitness and track your progress across the season. It’s a simple format: show up, go hard, and see what you can do. Whether you’re chasing a PB or just want a solid training effort with mates around you, it’s a great way to push yourself in a supportive club environment.', tags: ['adults'] }],
+'2026-09-06': [{ ishighlight: true, iskey: true, nav: 'train/juniors', image:'juniors-bike-skills.avif', type: 'juniors-season-kick-off', name: 'Junior Season Kick-Off', start: '8:30am', finish: '3:00pm', subtitle: 'Come along to our junior season kick-off and find out what the season holds and a chance to meet your team mates and coaches.', tags: ['juniors'] }],
 '2026-09-07': [{ ishighlight: false, nav: 'train/juniors', image:'juniors-bike-skills.avif', type: 'juniors-bike-skills', name: 'Junior Bike Skills', start: '5:30pm', finish: '6:30pm', subtitle: 'Gain confidence and enhance your biking skills under the guidance of experienced instructors. Don’t forget to come prepared in your cycling gear, helmet and a serviced bike for a safe and enjoyable experience. Stay hydrated by bringing along a drink and ensure visibility with front and rear lights. Bring your running shoes for transition practice.', tags: ['juniors 14+']},{ ishighlight: false, nav: 'train', image:'bike-skills.avif', type: 'bike-skills', name: 'Bike Skills', start: '6:30pm', finish: '8:30pm', subtitle: 'Join us at our club organised track session. Whether you’re a beginner eager to boost your confidence or an advanced rider aiming to refine your skills, this session is tailored for all levels.', tags: ['adults'] }],
 '2026-09-09': [{ ishighlight: false, nav: 'train', image:'run.avif', type: 'run', name: 'Club Run', start: '6:20pm', finish: '7:30pm', subtitle: 'There is no better way to introduce yourself to the club than to join us for our regular loop of Cronulla. Feel free to hang around afterwards and have a beverage and chat to meet new friends or catch up with long time mates.', tags: ['adults'] }],
 '2026-09-11': [{ ishighlight: false, nav: 'train', image:'swim.avif', type: 'swim', name: 'Club Swim', start: '4:30pm', finish: '5:30pm', subtitle: 'Join us for a friday afternoon swim. We swim in the ocean as a group, so all speeds are welcome.', tags: ['adults'] }],
@@ -284,8 +285,11 @@ function buildIsoDate(date, timeStr) {
 
 // Infer location from nav/type if possible
 function inferLocation(ev) {
-  if (ev.type?.includes("run")) return "Cronulla Tri Club Clubhouse, Gunnamatta";
-  if (ev.type?.includes("bike")) return "Sutherland Bike Track";
-  if (ev.type?.includes("swim")) return "Gunnamatta Bay / Caringbah Leisure Centre";
+  if(ev.type) {
+      if (ev.type.includes("run")) return "Cronulla Tri Club Clubhouse, Gunnamatta";
+      if (ev.type.includes("bike")) return "Sutherland Bike Track";
+      if (ev.type.includes("swim")) return "Gunnamatta Bay / Caringbah Leisure Centre";
+      if (ev.type.includes("junior-season-kick-off")) return "Sutherland Bike Track";
+  }
   return "Cronulla Tri Club Clubhouse, Gunnamatta";
 }

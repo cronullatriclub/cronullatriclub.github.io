@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junior Season Kick-off | Cronulla Triathlon Club</title>
+    <meta name="description" content="Junior season kick-off event with Cronulla Triathlon Club. kids triathlon for all fitness levels in the Shire.">
+    <meta name="keywords" content="junior running, run training, bike training, swim training, Cronulla, group runs, triathlon training, triathlon for kids">
+    <link rel="canonical" href="https://cronullatriclub.com.au/train/run">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Junior Season Kick-off | Cronulla Triathlon Club">
+    <meta property="og:description" content="Junior run training sessions with Cronulla Triathlon Club. Group runs for juniors.">
+    <meta property="og:url" content="https://cronullatriclub.com.au/train/juniors/run">
+    <meta property="og:image" content="https://cronullatriclub.com.au/assets/images/run.avif">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/assets/css/layout.min.css">
+    <link rel="stylesheet" href="/assets/css/layout-mobile.min.css">
+    <link rel="stylesheet" href="/assets/css/header.min.css">
+    <link rel="stylesheet" href="/assets/css/header-mobile.min.css">
+    <link rel="stylesheet" href="/assets/css/title.min.css">
+    <link rel="stylesheet" href="/assets/css/title-mobile.min.css">
+    <link rel="stylesheet" href="/assets/css/image-slider.min.css">
+    <link rel="stylesheet" href="/assets/css/image-slider-mobile.min.css">
+    <link rel="stylesheet" href="/assets/css/dates.min.css">
+    <link rel="stylesheet" href="/assets/css/location.min.css">
+    <link rel="stylesheet" href="/assets/css/footer.min.css">
+    <link rel="stylesheet" href="/assets/css/footer-mobile.min.css">
+    <link rel="stylesheet" href="/assets/css/scroller.min.css">
+
+    <style>
+
+        
+            :root {
+      --ctc-navy: #1a2235;
+       --navy-mid: #1A3557;
+      --ctc-navy-light: #243050;
+      --ctc-orange: #e8420f;
+      --ctc-white: #ffffff;
+      --ctc-light: #f4f6fa;
+      --ctc-muted: #6b7a99;
+      --ctc-border: rgba(26, 34, 53, 0.12);
+      --ctc-gold: #f5a623;
+    }
+    .section-inner {
+    max-width: 960px;
+    margin: 0 auto;
+}
+      .wow {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate3d(0, -20px, 0);
+  }
+  .animated {
+    opacity: 1;
+    visibility: visible;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+  .animated.bounceInDown {
+    animation-name: bounceInDown;
+  }
+  @keyframes bounceInDown {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, -3000px, 0) scaleY(3);
+    }
+    60% {
+      opacity: 1;
+      transform: translate3d(0, 25px, 0) scaleY(0.9);
+    }
+    75% {
+      transform: translate3d(0, -10px, 0) scaleY(0.95);
+    }
+    90% {
+      transform: translate3d(0, 5px, 0) scaleY(0.985);
+    }
+    100% {
+      transform: translate3d(0, 0, 0) scaleY(1);
+    }
+  }
+
+  /* ── Schedule ── */
+
+    .schedule h2 {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #4a9eca;
+      margin: 0 0 14px;
+    }
+
+    .timeline {
+      position: relative;
+      padding-left: 16px;
+      border-left: 3px solid #4a9eca;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .timeline-item {
+      position: relative;
+      background: white;
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin-bottom: 10px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+      border: 1px solid #e8edf2;
+      margin-left: 12px;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -22px;
+      top: 18px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #4a9eca;
+      border: 2px solid white;
+      box-shadow: 0 0 0 2px #4a9eca;
+    }
+
+    .timeline-item .time {
+      font-size: 11px;
+      font-weight: 700;
+      color: #4a9eca;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 4px;
+    }
+
+    .timeline-item .activity {
+      font-size: 14px;
+      font-weight: 700;
+      color: #1a2e44;
+      margin-bottom: 3px;
+    }
+
+    .timeline-item .detail {
+      font-size: 13px;
+      color: #666;
+      line-height: 1.5;
+    }
+
+    .timeline-item.highlight {
+      border-left: 3px solid #f6c90e;
+      /* background: #fffdf0; */
+    }
+
+    .timeline-item.highlight::before {
+      background: #f6c90e;
+      box-shadow: 0 0 0 2px #f6c90e;
+    }
+
+
+
+              /* ── Highlights grid ── */
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 2.5rem;
+    }
+    .highlight-card {
+      background: var(--ctc-white);
+      border: 0.5px solid var(--ctc-border);
+      border-radius: 13px;
+      padding: 1.25rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: box-shadow 0.15s;
+    }
+    .highlight-card:hover { box-shadow: 0 4px 16px rgba(26,34,53,0.09); }
+    .highlight-card.featured {
+      background: var(--ctc-navy);
+      border-color: transparent;
+    }
+    .highlight-icon {
+      font-size: 26px;
+      line-height: 1;
+          font-weight: 600;
+          color: #008dd0;
+    }
+    .highlight-icon.highlight { color: var(--ctc-gold); }
+    .highlight-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--ctc-navy);
+      line-height: 1.3;
+    }
+    .highlight-card.featured .highlight-title { color: #fff; }
+    .highlight-desc {
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    .highlight-card.featured .highlight-desc { color: rgba(255,255,255,0.65); }
+    
+    .bring-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 12px;
+    }
+
+    .bring-card {
+      border-radius: 10px;
+      padding: 18px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      justify-content: center;
+      border: 2px solid #008dd0;
+    color: #008dd0;
+    }
+
+        .section-label {
+
+    text-transform: uppercase;
+    color: #008dd0;
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+}
+            /* ── Responsive ── */
+    @media (max-width: 580px) {
+      .highlights-grid { grid-template-columns: 1fr 1fr; }
+              .section-inner {
+    margin: auto 20px;
+  }
+    }
+    @media (max-width: 380px) {
+      .highlights-grid { grid-template-columns: 1fr; }
+
+    }
+    </style>
+</head>
+<body>
+    <section id="header-placeholder"></section>
+
+    <section id="title-placeholder" data-title="Junior Season Kick-off"></section>
+
+    <!-- <section class="image-slider-placeholder" data-id="run1" data-folder="/assets/images/run/slider1/" data-number-of-images="12"></section> -->
+
+    <!-- <section id="dates-placeholder" data-background-image="/assets/images/run/run.avif" data-event-id="run" data-max-events="4"></section>
+     -->
+    <section class="content-placeholder">
+            <div class="section-inner">
+        <div>
+            <h1>Event Details</h1>
+            <div>
+                <div >
+                    <h3 class="padding-bottom-30">Get Ready To Start Your Season</h3>
+                        <div class="highlights-grid">
+      <div class="highlight-card wow bounceInDown" data-wow-delay="0.4s">
+        <div class="highlight-icon">3</div>
+        <div class="highlight-title">Pick up your 26/27 season squad kit</div>
+        <div class="highlight-desc">Includes T-Shirt, Swim cap, and more!</div>
+      </div>
+      <div class="highlight-card wow bounceInDown" data-wow-delay="0.6s">
+        <div class="highlight-icon">2</div>
+        <div class="highlight-title">Train, Race, Belong</div>
+        <div class="highlight-desc">Learn about our exciting season calendar.</div>
+      </div>
+      <div class="highlight-card wow bounceInDown" data-wow-delay="0.8s">
+        <div class="highlight-icon">1</div>
+        <div class="highlight-title">Bring You race gear</div>
+        <div class="highlight-desc">Get your equipment checked</div>
+      </div>
+      <div class="highlight-card wow bounceInDown" data-wow-delay="1s">
+        <div class="highlight-icon highlight">GO!</div>
+        <div class="highlight-title">Say Hello</div>
+        <div class="highlight-desc">Meet your team mates and coaches.</div>
+      </div>
+    </div>
+                    <!-- <p class="justified-50 justified-90-mob">&#9679; Pick up your 26/27 season squad kit.</p>
+                    <p class="justified-50 justified-90-mob">&#9679; Learn about our exciting TRAIN, RACE, BELONG calendar.</p>
+                    <p class="justified-50 justified-90-mob">&#9679; Get your equipment checked.</p>
+                    <p class="justified-50 justified-90-mob">&#9679; Meet your team mates and coaches.</p>
+                    <p class="justified-50 justified-90-mob">&#9679; Have fun.</p>    -->
+                </div>
+
+                    <!-- Schedule -->
+    <div class="schedule padding-bottom-30">
+      <h3 class="padding-bottom-30">Schedule</h3>
+      <div class="timeline ">
+        <div class="timeline-item">
+          <div class="time">8:30am</div>
+          <div class="activity">Arrive &amp; Registration</div>
+          <div class="detail">Check in, grab your pack and meet your coaches.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="time">9:00am</div>
+          <div class="activity">Warm-up &amp; Drills</div>
+          <div class="detail">Meet your team mates, group dynamic stretches, agility training and coordination exercises.</div>
+        </div>
+        <div class="timeline-item ">
+          <div class="time">9:30am – 12:00pm</div>
+          <div class="activity">Equipment Checks &amp; Technical Skill Stations</div>
+          <div class="detail">Rotating bike, run and transition stations · Bike fits · Includes snack breaks.</div>
+        </div>
+        <div class="timeline-item highlight">
+          <div class="time">12:00pm – 1:00pm</div>
+          <div class="activity">Lunch</div>
+          <div class="detail">Get to know your team mates, Q&amp;A with senior athletes and guest speaker. Lunch provided.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="time">1:00pm – 2:15pm</div>
+          <div class="activity">Swim Smart</div>
+          <div class="detail">Rotating swim stations.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="time">2:15pm – 3:00pm</div>
+          <div class="activity">Training &amp; Race Calendar</div>
+          <div class="detail">Wrap-up and Q&amp;A.</div>
+        </div>
+      </div>
+    </div>
+
+        <!-- What To Bring -->
+    <div class="bring padding-bottom-30">
+      <h3 class="padding-bottom-30">What To Bring</h3>
+      <div class="bring-grid">
+        <div class="bring-card">Running trainers</div>
+        <div class="bring-card">towel and goggles</div>
+        <div class="bring-card">Bike, helmet &amp; bike shoes</div>
+        <div class="bring-card">Change of clothes</div>
+      </div>
+    </div>
+
+
+                <div class="padding-bottom-10">
+                    <h3>Contact</h3>
+                    <p class="justified-90-mob">For additional information, reach out to <a href="mailto:juniors@cronullatriclub.com.au">juniors@cronullatriclub.com.au</a></p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+        <section id="dates-placeholder" data-event-id="juniors-season-kick-off"></section>
+    
+    <!-- <section class="image-slider-placeholder" data-id="run2" data-folder="/assets/images/run/slider2/" data-number-of-images="12"></section> -->
+
+    <section id="location-placeholder" data-venue-details="Sutherland Shire Cycling Club, Sutherland NSW 2232, Australia" data-parking-details="Free parking available at the cycle track." data-transport-details="Sutherland station is a 10-minute walk to the cycle track. Regular trains from Sydney CBD." data-map="https://www.google.com/maps?q=Sutherland+Shire+Cycling+Club+Sutherland+NSW&output=embed"></section>
+
+    <section id="footer-placeholder"></section>
+
+    <div id="scroller-placeholder"></div>
+
+    <script src="/assets/js/title.min.js"></script>
+    <script src="/assets/js/footer.min.js"></script>
+    <script src="/assets/js/header.min.js"></script>
+    <script src="/assets/js/scroller.min.js"></script>
+    <script src="/assets/js/events.min.js"></script>
+    <script src="/assets/js/dates.min.js"></script>
+    <script src="/assets/js/image-slider.min.js"></script>
+        <script src="/assets/js/wow.min.js"></script>
+    <script src="/assets/js/location.min.js"></script>
+</body>
+</html>

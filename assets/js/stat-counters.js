@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
+   
+   
     var counters = Array.prototype.slice.call(document.querySelectorAll('.stat-num'));
     if (!counters.length) return;
 

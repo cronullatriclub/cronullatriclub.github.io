@@ -3,7 +3,7 @@
 }
 
 .footer-border {
-    border-top: 1px solid #333;
+    border-top: 1px solid var(--gray-dark);
     margin: 0 auto; 
     width:100%;
 }
@@ -35,20 +35,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #2a2a2a;
+    background-color: var(--gray-darker);
     border-radius: 50%;
-    color: #ffffff;
+    color: var(--white);
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .footer-social-icon:hover {
-    background-color: #3a3a3a;
+    background-color: var(--gray-darkest);
     transform: scale(1.1);
 }
 
 .footer-copyright-section p {
     font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--white-70);
     margin: 0;
 }
 
@@ -61,7 +61,7 @@
     text-align: center;
     font-size: 3rem;
     margin-bottom: 2rem;
-    color: #ffffff;
+    color: var(--white);
 }
 
 .footer-sponsor-tier {
@@ -77,15 +77,15 @@
 }
 
 .footer-gold-tier h4 {
-    color: #ffd700;
+    color: var(--yellow-bright);
 }
 
 .footer-silver-tier h4 {
-    color: #c0c0c0;
+    color: var(--silver);
 }
 
 .footer-bronze-tier h4 {
-    color: #cd7f32;
+    color: var(--bronze);
 }
 
 .footer-sponsors-grid {
@@ -97,7 +97,7 @@
 }
 
 .footer-sponsors-logo {
-    background-color: #2a2a2a;
+    background-color: var(--gray-darker);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -115,7 +115,7 @@
 .footer-sponsors-logo.gold {
     padding: 0;
    font-size: 0;
-    border: 3px solid #ffd700;
+    border: 3px solid var(--yellow-bright);
     box-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
 }
 
@@ -130,7 +130,7 @@
 .footer-sponsors-logo.silver {
     padding: 0;
     font-size: 0;
-    border: 2px solid #c0c0c0;
+    border: 2px solid var(--silver);
     box-shadow: 0 4px 15px rgba(192, 192, 192, 0.3);
 }
 
@@ -145,7 +145,7 @@
 .footer-sponsors-logo.bronze {
     padding: 0;
     font-size: 0;
-    border: 2px solid #cd7f32;
+    border: 2px solid var(--bronze);
     box-shadow: 0 4px 10px rgba(205, 127, 50, 0.3);
 }
 

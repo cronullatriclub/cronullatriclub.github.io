@@ -1,0 +1,16 @@
+/* ── Responsive ── */
+@media (max-width: 580px) {
+  .highlights-grid { 
+    grid-template-columns: 1fr 1fr; 
+  }
+  
+  .section-inner {
+    margin: auto 20px;
+  }
+}
+
+@media (max-width: 380px) {
+  .highlights-grid { 
+    grid-template-columns: 1fr; 
+  }
+}

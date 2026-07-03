@@ -4,9 +4,9 @@
     bottom: 40px;
     right: 40px;
     z-index: 99;
-    border: 2px solid #007BFF;
+    border: 2px solid var(--cyan-light);
     background-color: transparent;
-    color: #007BFF; 
+    color: var(--cyan-light); 
     cursor: pointer;
     padding: 10px 14px;
     border-radius: 15%; 
@@ -16,5 +16,5 @@
 }
 
 #scroller-button:hover {
-    background-color: rgba(0, 123, 255, 0.1); 
+    background-color: rgba(0, 123, 255, 0.1); }
 }

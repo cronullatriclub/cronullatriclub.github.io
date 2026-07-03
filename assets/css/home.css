@@ -7,7 +7,7 @@
     text-align: center;
     font-size: 3rem;
     margin-bottom: 50px;
-    color: #2c3e50;
+    color: var(--color-gray-navy);
 }
 
 .home-slider-container {
@@ -47,8 +47,8 @@
 .home-weekly-event-tag,
 .home-event-tag {
    display: inline-block;
-    background: #FCD34D;
-    color: #0B1F3A;
+    background: var(--gold-light);
+    color: var(--navy);
     padding: 10px 20px;
     border-radius: 5px;
     font-weight: 600;
@@ -61,8 +61,8 @@
 .home-weekly-event-tag-adults,
 .home-event-tag-adults {
    display: inline-block;
-    background: #008dd0;
-    color: #fff;
+    background: var(--cyan-medium);
+    color: var(--white);
     padding: 10px 20px;
     border-radius: 5px;
     font-weight: 600;
@@ -85,21 +85,21 @@
 .home-event-details h3 {
     font-size: 2rem;
     margin-bottom: 15px;
-    color: #2c3e50;
+    color: var(--color-gray-navy);
     text-align: left;
 }
 
 .home-event-details p {
     font-size: 1.1rem;
     line-height: 1.8;
-    color: #555;
+    color: var(--text-muted);
     margin-bottom: 20px;
 }
 
 .home-event-date {
     display: inline-block;
-    background: #008dd0;
-    color: white;
+    background: var(--cyan-medium);
+    color: var(--white);
     padding: 10px 20px;
     border-radius: 25px;
     font-weight: 600;
@@ -130,7 +130,7 @@
 
 .home-slider-btn {
     background: transparent;
-    border: 2px solid #007BFF;
+    border: 2px solid var(--cyan-light);
     border-radius: 50%;
     padding: 10px;
     cursor: pointer;
@@ -152,7 +152,7 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    color: white;
+    color: var(--white);
     position: relative;
 }
 
@@ -160,7 +160,7 @@
     text-align: center;
     font-size: 3rem;
     margin-bottom: 20px;
-    color: white;
+    color: var(--white);
 }
 
 .home-week-range {
@@ -418,7 +418,7 @@ width: 60%;
     gap: 30px;
     padding: 40px;
     overflow-y: auto; /* Allow internal scrolling if needed */
-    background-color: white;
+    background-color: var(--white);
 }
 
 /* Image Slider */
@@ -712,7 +712,7 @@ width: 60%;
 }
 
 .product-size-select option {
-    background: white;
+    background: var(--white);
     color: #333;
 }
 
@@ -745,7 +745,7 @@ width: 60%;
     border-radius: 50%;
     width: 50px;
     font-size: 3rem;
-    color: #007BFF;
+    color: var(--cyan-light);
     cursor: pointer;
     transition: all 0.3s ease;
     flex-shrink: 0;
@@ -775,11 +775,11 @@ width: 60%;
     background: rgba(255, 255, 255, .3);
     cursor: pointer;
     transition: all .3s ease;
-    border: 2px solid #007bff;
+    border: 2px solid var(--cyan-light);
 }
 
 .shop-slider-dot.active {
-    background: #007bff;
+    background: var(--cyan-light);
     transform: scale(1.3);
 }
 
@@ -863,7 +863,7 @@ html body .juicer-feed h1.referral a {
     font-size: 3rem;
     margin-bottom: 40px;
     text-align: center;
-    color: white;
+    color: var(--white);
 }
 
 .juicer-feed h1.referral {
@@ -912,7 +912,7 @@ padding: 60px 0px;
 .ctc-gs-eyebrow {
     margin-bottom: 10px;
         text-transform: uppercase;
-    color: #008dd0;
+    color: var(--cyan-medium);
     margin-bottom: 10px;
     font-size: 12px;
     font-weight: 700;
@@ -990,7 +990,7 @@ background: linear-gradient(145deg, #1a2235 0, #2d1f3a 50%, #ff69b4 100%);
 }
 .ctc-gs-deco i {
     font-size: 80px;
-    color: #fff;
+    color: var(--white);
 }
 .ctc-gs-deco-img {
     width: 100%;
@@ -1025,7 +1025,7 @@ background: #1E88E5;
     text-transform: uppercase;
     padding: 4px 10px;
     border-radius: 20px;
-    color: #fff;
+    color: var(--white);
 }
 .ctc-gs-card--juniors .ctc-gs-age {
     background: rgb(168 210 255 / 98%);
@@ -1052,7 +1052,7 @@ background: #1E88E5;
 .ctc-gs-stat-pill .num {
     font-size: 20px;
     font-weight: 700;
-    color: #fff;
+    color: var(--white);
     line-height: 1;
 }
 .ctc-gs-stat-pill .lbl {
@@ -1063,7 +1063,7 @@ background: #1E88E5;
 
 /* Card body */
 .ctc-gs-body {
-    background: #fff;
+    background: var(--white);
     flex: 1;
     padding: 1.5rem 1.4rem;
     display: flex;
@@ -1093,7 +1093,7 @@ text-align: left;
 }
 
 .check {
-        color: gold;
+        color: var(--gold);
     font-size: 16px;
 }
 
@@ -1125,12 +1125,12 @@ text-align: left;
 }
 .ctc-gs-cta:hover { opacity: 0.88; }
 .ctc-gs-card--juniors .ctc-gs-cta {
-background: #008dd0;
-    color: white;
+background: var(--cyan-medium);
+    color: var(--white);
 }
 .ctc-gs-card--adults .ctc-gs-cta {
 background: #ff69b4;
-    color: #fff;
+    color: var(--white);
 }
 .ctc-gs-cta i { font-size: 16px; }
 

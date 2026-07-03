@@ -13,7 +13,7 @@
 
 .calendar-nav-btn {
     background: transparent;
-    border: 2px solid #007BFF;
+    border: 2px solid var(--cyan-light);
     border-radius: 50%;
     padding: 10px;
     cursor: pointer;
@@ -33,16 +33,16 @@
 .calendar-current {
     font-size: 2rem;
     font-weight: bold;
-    color: #2c3e50;
+    color: var(--color-gray-navy);
     min-width: 200px;
     text-align: center;
 }
 
 .calendar-card {
-    background: white;
+    background: var(--white);
     border-radius: 20px;
     padding: 30px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 40px var(--black-10);
     margin-bottom: 60px;
 }
 
@@ -55,7 +55,7 @@
 .calendar-day-header {
     text-align: center;
     font-weight: bold;
-    color: #666;
+    color: var(--gray-medium);
     padding: 10px 5px;
     font-size: 0.9rem;
 }
@@ -75,7 +75,7 @@
 
 .calendar-day-cell:hover {
     transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 5px 15px var(--black-20);
 }
 
 .calendar-day-cell.empty {
@@ -89,17 +89,17 @@
 
 .calendar-day-number {
     font-size: 1rem;
-    color: #333;
+    color: var(--gray-dark);
     font-weight: 600;
     margin-bottom: 2px;
 }
 
 .calendar-day-cell.has-event {
-    color: white;
+    color: var(--white);
 }
 
 .calendar-day-cell.has-event .calendar-day-number {
-    color: white;
+    color: var(--white);
 }
 
 .calendar-day-cell.swim {

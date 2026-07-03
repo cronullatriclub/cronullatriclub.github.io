@@ -7,7 +7,7 @@
 body {
     /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     font-family: Lato, sans-serif;
-    color: #333;
+    color: var(--gray-dark);
     overflow-x: hidden;
 }
 
@@ -16,7 +16,7 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    background: #1a1a1a; 
+    background: var(--black-dark); 
     backdrop-filter: blur(10px);
     padding: 0px 40px;
     z-index: 1000;
@@ -61,12 +61,12 @@ p {
 
 span a,
 p a {
-    color: #00bfff;
+    color: var(--cyan);
     text-decoration: none;
 }
 
 footer {
-    background-color: #1a1a1a;
+    background-color: var(--black-dark);
 }
 
 th {
@@ -84,7 +84,7 @@ td:last-child {
 
 
 td a {
-    color: #007BFF;
+    color: var(--cyan-light);
     text-decoration: none;
 }
 
@@ -101,7 +101,7 @@ li {
 }
 
 .white-text {
-    color: white;
+    color: var(--white);
 }
 
 .padding-bottom-10 {
@@ -138,7 +138,7 @@ li {
   margin-top: 10px;
   padding: 10px 20px;
   background-color: hotpink;  
-  color: white;               
+  color: var(--white);               
   border: none;
   border-radius: 5px;
   cursor: pointer;

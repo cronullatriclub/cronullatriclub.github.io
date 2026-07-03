@@ -1,11 +1,11 @@
 .member-strikethrough {
   text-decoration: line-through;
   font-weight: 500;
-  color: #333;
+  color: var(--gray-dark);
 }
 
 .member-sale {
-  color: #007bff;
+  color: var(--cyan-light);
   font-weight: bold;
 }
 
@@ -66,8 +66,8 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: #25D366;
-      color: #fff;
+      background: var(--whatsapp-green);
+      color: var(--white);
       font-size: 14px;
       font-weight: 600;
       padding: 10px 20px;
@@ -75,7 +75,7 @@
       text-decoration: none;
       transition: background 0.15s;
     }
-    .wa-btn:hover { background: #1fb959; }
+    .wa-btn:hover { background: var(--whatsapp-green-dark); }
     .wa-btn i { font-size: 18px; }
     .whatsapp-sidebar {
       background: var(--ctc-navy);
@@ -126,7 +126,7 @@
         /* ── Section labels ── */
     .section-label {
     text-transform: uppercase;
-    color: #008dd0;
+    color: var(--cyan-medium);
     margin-bottom: 10px;
     font-size: 12px;
     font-weight: 700;
@@ -148,7 +148,7 @@
     }
 
       /* ── ACTIVE KIDS ── */
-  .activekids-box {
+    .activekids-box {
     /* background: linear-gradient(135deg, #1A3557 0%, #0B1F3A 100%); */
     border-radius: 12px;
     padding: 40px 44px;
@@ -186,7 +186,7 @@
     font-size: 22px;
     font-weight: 800;
     text-transform: uppercase;
-    color: gold;
+    color: var(--gold);
     margin-bottom: 12px;
   }
   .activekids-box p { color: rgba(255, 255, 255, 0.78);
@@ -207,19 +207,19 @@
  color: rgba(255, 255, 255, 0.78);
  font-weight: 600;
   }
-  .check { color: gold; font-size: 16px; }
-  .activekids-link {
+  .check { color: var(--gold); font-size: 16px; }
+    .activekids-link {
     display: inline-block;
     margin-top: 20px;
     background: var(--white);
-    color: #0B1F3A;
+    color: var(--navy);
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
     padding: 10px 24px;
     border-radius: 4px;
     text-decoration: none;
-        border: 2px solid #0B1F3A;
+        border: 2px solid var(--navy);
   }
 
   /* ── Membership cards ── */
@@ -229,7 +229,7 @@
       gap: 14px;
     }
     .mem-card {
-      background: #fff;
+      background: var(--white);
       border: 0.5px solid rgba(26, 34, 53, 0.12);
       border-radius: 14px;
       padding: 1.4rem 1.1rem 1.1rem;
@@ -240,14 +240,14 @@
       box-shadow: 0 4px 20px rgba(26, 34, 53, 0.1);
     }
     .mem-card.featured {
-      border: 2px solid #008dd0;
+      border: 2px solid var(--cyan-medium);
     }
-    .mem-badge {
+        .mem-badge {
       position: absolute;
       top: -12px; left: 50%;
       transform: translateX(-50%);
-      background: #008dd0;
-      color: #fff;
+      background: var(--cyan-medium);
+      color: var(--white);
       font-size: 11px;
       font-weight: 600;
       padding: 3px 12px;
@@ -322,16 +322,16 @@
       font-size: 14px;
       margin-top: 1px;
       flex-shrink: 0;
-      color: gold;
+      color: var(--gold);
     }
     .check-item i.no { color: var(--ctc-muted); }
 
     .section-alt {
-      background: #F4F6F9;
+      background: var(--off-white);
     }
 
     .ti-check {
-      color: gold;
+      color: var(--gold);
     }
     /* ── Trial cards ── */
     .trial-grid {
@@ -341,10 +341,10 @@
       margin-bottom: 1rem;
     }
     .trial-card {
-      background: #243050;
+      background: var(--ctc-navy-light);
       border-radius: 14px;
       
-      color: #fff;
+      color: var(--white);
       overflow: hidden;
     }
 
@@ -356,7 +356,7 @@
     .trial-title {
       font-size: 16px;
       font-weight: 600;
-      color: #fff;
+      color: var(--white);
       margin-bottom: 8px;
     }
     .trial-price {
@@ -384,7 +384,7 @@
         .ticket-currency {
       font-size: 18px;
       font-weight: 600;
-      color: gold;
+      color: var(--gold);
     }
 
  /* ── How to join steps ── */
@@ -419,8 +419,8 @@
     .step-num {
       width: 34px; height: 34px;
       border-radius: 50%;
-      background: gold;
-      color: #fff;
+      background: var(--gold);
+      color: var(--white);
       font-size: 15px;
       font-weight: 600;
       display: flex;
@@ -452,7 +452,7 @@
 
  /* ── CTA bar ── */
     .cta-bar {
-      background: #243050;
+      background: var(--ctc-navy-light);
       border-radius: 14px;
    overflow: hidden;
       /* display: flex;
@@ -472,7 +472,7 @@
     flex-wrap: wrap;
     }
     .cta-text h3 {
-      color: #fff;
+      color: var(--white);
       font-size: 18px;
       font-weight: 600;
       margin-bottom: 5px;
@@ -485,11 +485,11 @@
       color: rgba(255, 255, 255, 0.9);
       text-decoration: none;
     }
-    .cta-text a:hover { color: #fff; text-decoration: underline; }
-    .cta-btn {
+    .cta-text a:hover { color: var(--white); text-decoration: underline; }
+        .cta-btn {
       display: inline-block;
-      background: #1a2235;
-      color: #fff;
+      background: var(--ctc-navy);
+      color: var(--white);
       font-family: 'Inter', sans-serif;
       font-size: 14px;
       font-weight: 600;
@@ -525,10 +525,10 @@ padding: 60px 0px;
     text-align: center;
     margin-bottom: 2rem;
 }
-.ctc-gs-eyebrow {
+    .cta-gs-eyebrow {
     margin-bottom: 10px;
         text-transform: uppercase;
-    color: #008dd0;
+    color: var(--cyan-medium);
     margin-bottom: 10px;
     font-size: 12px;
     font-weight: 700;
@@ -608,7 +608,7 @@ background: linear-gradient(145deg, #1a2235 0, #2d1f3a 50%, #ff69b4 100%);
 }
 .ctc-gs-deco i {
     font-size: 80px;
-    color: #fff;
+    color: var(--white);
 }
 .ctc-gs-deco-img {
     width: 100%;
@@ -643,7 +643,7 @@ background: #1E88E5;
     text-transform: uppercase;
     padding: 4px 10px;
     border-radius: 20px;
-    color: #fff;
+    color: var(--white);
 }
 .ctc-gs-card--juniors .ctc-gs-age {
     background: rgb(168 210 255 / 98%);
@@ -670,7 +670,7 @@ background: #1E88E5;
 .ctc-gs-stat-pill .num {
     font-size: 20px;
     font-weight: 700;
-    color: #fff;
+    color: var(--white);
     line-height: 1;
 }
 .ctc-gs-stat-pill .lbl {
@@ -681,7 +681,7 @@ background: #1E88E5;
 
 /* Card body */
 .ctc-gs-body {
-    background: #fff;
+    background: var(--white);
     flex: 1;
     padding: 1.5rem 1.4rem;
     display: flex;
@@ -759,7 +759,7 @@ text-align: left;
 .ctc-gs-cta-alt:hover { opacity: 0.88; }
 .ctc-gs-cta:hover { opacity: 0.88; }
 .ctc-gs-card--juniors .ctc-gs-cta {
-background: #008dd0;
+background: var(--cyan-medium);
     color: white;
 }
 
@@ -775,8 +775,8 @@ background: #ff69b4;
     margin-top: 1.25rem;
     font-size: 13px;
 }
-.ctc-gs-nudge a {
-    color: #008dd0;
+    .ctc-gs-nudge a {
+    color: var(--cyan-medium);
     text-decoration: none;
     font-weight: 500;
 }

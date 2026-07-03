@@ -1,7 +1,7 @@
 
 .dates-events-section {
     padding: 80px 20px;
-    color: white;
+    color: var(--white);
     position: relative;
     margin-bottom: 60px;
 }
@@ -24,12 +24,12 @@
 }
 
 .dates-events-card{
-    background: rgba(255, 255, 255, 0.35);
+    background: var(--white-35);
     backdrop-filter: blur(20px);
     border-radius: 20px;
     padding: 30px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid var(--white-20);
 }
 
 .dates-events-content{
@@ -66,7 +66,7 @@
 
 .dates-events-a {
     font-size: 0.9rem;
-    color: #0089E9;
+    color: var(--cyan-light);
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;

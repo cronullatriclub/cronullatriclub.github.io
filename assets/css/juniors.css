@@ -35,7 +35,7 @@
   font-weight: 600;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-light);
   margin-bottom: 16px;
 }
 .hero h1 {
@@ -46,7 +46,7 @@
   text-transform: uppercase;
   margin-bottom: 28px;
 }
-.hero h1 span { color: var(--gold); }
+.hero h1 span { color: var(--gold-light); }
 .hero-desc {
   font-size: 18px;
   color: rgba(255,255,255,0.82);
@@ -56,7 +56,7 @@
 }
 .hero-cta {
   display: inline-block;
-  background: var(--gold);
+  background: var(--gold-light);
   color: var(--navy);
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 16px;
@@ -226,7 +226,7 @@ tbody tr:hover {
   flex-shrink: 0;
 }
 .highlight-card.featured h3 {
-  color: var(--gold);
+  color: var(--gold-light);
   font-size: 22px;
 }
 .highlight-card.featured p {
@@ -256,7 +256,7 @@ tbody tr:hover {
   line-height: 28px;
   flex-shrink: 0;
 }
-.medal-1 { background: var(--gold); color: var(--white); }
+.medal-1 { background: var(--gold-light); color: var(--white); }
 .medal-2 { background: var(--gray-light); color: var(--white); }
 .medal-3 { background: var(--orange-bright); color: var(--white); }
 .medal-p { background: var(--gray-very-light); color: var(--gray-slate); }
@@ -312,7 +312,7 @@ tbody tr:hover {
   padding: 14px 16px;
   background: rgba(255, 255, 255, .15);
   margin-bottom: 30px;
-  border-left: 3px solid var(--gold);
+  border-left: 3px solid var(--gold-light);
   border-radius: 0 4px 4px 0;
   font-size: 14px;
   line-height: 1.55;
@@ -402,7 +402,7 @@ tbody tr:hover {
 }
 .squad-badge {
   display: inline-block;
-  background: var(--gold);
+  background: var(--gold-light);
   color: var(--navy);
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 13px;
@@ -503,7 +503,7 @@ tbody tr:hover {
   text-align: center;
   background: var(--white);
 }
-.points-card.p1 { border-top: 4px solid var(--gold); }
+.points-card.p1 { border-top: 4px solid var(--gold-light); }
 .points-card.p2 { border-top: 4px solid var(--gray-light); }
 .points-card.p3 { border-top: 4px solid var(--orange-bright); }
 .points-card.pp { border-top: 4px solid var(--gray-very-light); }
@@ -559,7 +559,7 @@ tbody tr:hover {
   font-size: 22px;
   font-weight: 800;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-light);
   margin-bottom: 12px;
 }
 .activekids-box p { 
@@ -581,7 +581,7 @@ tbody tr:hover {
   color: rgba(255, 255, 255, 0.78);
   font-weight: 600;
 }
-.check { color: var(--gold); font-size: 16px; }
+.check { color: var(--gold-light); font-size: 16px; }
 .activekids-link {
   display: inline-block;
   margin-top: 20px;

@@ -30,6 +30,275 @@
     <link rel="stylesheet" href="/assets/css/footer-mobile.min.css">
     <link rel="stylesheet" href="/assets/css/scroller.min.css">
 </head>
+<style>
+  :root{
+    --blue: #29a8e0;
+    --blue-dark: #0d6fa8;
+    --navy: #16324f;
+    --orange: #f5a623;
+    --ink: #2a3b4d;
+    --muted: #6b7c8c;
+    --line: #e3e9ee;
+    --bg: #f7fafc;
+  }
+ section h2 {
+    text-align: center;
+}
+  p.section-sub{
+    text-align:center;
+    color: var(--blue-dark);
+    font-weight:600;
+    font-size:0.85rem;
+    letter-spacing:0.5px;
+    text-transform:uppercase;
+    margin: 0 0 6px;
+  }
+  p.section-link{
+    text-align:center;
+    color: var(--muted);
+    font-size:0.9rem;
+    margin: 0 0 30px;
+  }
+  p.section-link a{
+    color: var(--blue-dark);
+    font-weight:600;
+    text-decoration:none;
+  }
+  p.section-link a:hover{ text-decoration:underline; }
+ 
+  /* ---- Schedule ---- */
+  .schedule{
+    background:#fff;
+    padding: 8px;
+    margin-bottom: 40px;
+  }
+  .timeline-item{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    padding:14px 16px;
+    border-bottom:1px solid var(--line);
+  }
+  .timeline-item:last-child{ border-bottom:none; }
+  .schedule-time{
+    flex: 0 0 150px;
+    background: var(--blue);
+    color:#fff;
+    font-weight:700;
+    font-size:0.82rem;
+    text-align:center;
+    padding:8px 6px;
+    border-radius:8px;
+  }
+  .timeline-item.junior .schedule-time{ background: var(--blue); }
+  .timeline-item.open .schedule-time{ background: var(--navy); }
+  .schedule-label{
+    font-size:0.95rem;
+    color: var(--ink);
+  }
+
+  .timeline {
+  position: relative;
+  padding-left: 16px;
+  border-left: 3px solid var(--cyan-medium-dark);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.timeline-item {
+  position: relative;
+  background: white;
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+  border: 1px solid var(--light-slate);
+  margin-left: 12px;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -22px;
+  top: 18px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--cyan-medium-dark);
+  border: 2px solid white;
+  box-shadow: 0 0 0 2px var(--cyan-medium-dark);
+}
+
+.timeline-item .time {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--cyan-medium-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+
+.timeline-item .activity {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--dark-slate);
+  margin-bottom: 3px;
+}
+
+.timeline-item .detail {
+  font-size: 13px;
+  color: var(--gray-medium);
+  line-height: 1.5;
+}
+
+.timeline-item.open::before {
+    background: var(--navy);
+  box-shadow: 0 0 0 2px var(--navy);
+}
+
+  .tag{
+    display:inline-block;
+    font-size:0.65rem;
+    font-weight:700;
+    letter-spacing:0.5px;
+    text-transform:uppercase;
+    padding:2px 8px;
+    border-radius:20px;
+    margin-left:8px;
+    vertical-align:middle;
+  }
+  .tag.junior{ background:#e6f5fd; color:var(--blue-dark); }
+  .tag.open{ background:#eaeef2; color:var(--navy); }
+ 
+  /* ---- Race info cards ---- */
+  .info-grid{
+    display:grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-bottom: 40px;
+  }
+  .info-card{
+    background:#fff;
+    padding: 20px 24px;
+  }
+
+  .info-card p{
+    margin:0;
+    color: var(--muted);
+    font-size:0.92rem;
+    line-height:1.5;
+  }
+ 
+  /* Fee table */
+  .fee-grid{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:12px;
+    margin-top:8px;
+  }
+  .fee-item{
+    background: var(--bg);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:12px 14px;
+  }
+  .fee-item .fee-label{
+    font-size:0.78rem;
+    color: var(--muted);
+    margin-bottom:4px;
+  }
+  .fee-item .fee-value{
+    font-size:1.25rem;
+    font-weight:700;
+    color: var(--navy);
+  }
+  .fee-note{
+    grid-column: 1 / -1;
+    background: #fff7e8;
+    border:1px solid #f4dfa8;
+    border-radius:10px;
+    padding:12px 14px;
+    font-size:0.85rem;
+    color:#8a6415;
+  }
+ 
+  .eft-box{
+    margin-top:14px;
+    background: var(--bg);
+    border:1px dashed var(--blue);
+    border-radius:10px;
+    padding:14px 16px;
+    font-size:0.88rem;
+    color: var(--ink);
+    line-height:1.7;
+  }
+  .eft-box strong{ color: var(--navy); }
+ 
+  /* ---- Distances table ---- */
+  .table-wrap{
+
+    padding: 8px;
+    margin-bottom: 40px;
+    overflow-x:auto;
+  }
+  table{
+    width:100%;
+    border-collapse: collapse;
+    font-size:0.88rem;
+    min-width: 560px;
+  }
+  thead th{
+    text-align:left;
+    background: var(--cyan-medium-dark);
+    color:#fff;
+    padding:12px 16px;
+    font-weight:600;
+  }
+  thead th:first-child{ border-radius:8px 0 0 0; }
+  thead th:last-child{ border-radius:0 8px 0 0; }
+  tbody td{
+    padding:11px 16px;
+    border-bottom:1px solid var(--line);
+    color: var(--ink);
+  }
+  tbody tr:nth-child(even){ background: var(--bg); }
+  tbody tr:last-child td{ border-bottom:none; }
+  tbody td:first-child{ font-weight:700; color: var(--blue-dark); }
+
+  .section-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+ 
+  /* ---- Footer / contact ---- */
+  .contact{
+    text-align:center;
+    padding: 20px 0 10px;
+    color: var(--muted);
+    font-size:0.9rem;
+    border-top:1px solid var(--line);
+  }
+  .contact a{
+    color: var(--blue-dark);
+    font-weight:600;
+    text-decoration:none;
+  }
+ 
+  @media(min-width:640px){
+    .fee-grid{ grid-template-columns: repeat(4, 1fr); }
+  }
+  @media (max-width: 580px) {
+
+  
+  .section-inner {
+    margin: auto 20px;
+  }
+}
+  @media(max-width:520px){
+    .schedule-time{ flex-basis:120px; font-size:0.72rem; }
+  }
+</style>
 <body>
     <section id="header-placeholder"></section>
 
@@ -50,106 +319,115 @@
     <section id="event-placeholder" data-event="CTC Triathlon Series" data-event-id="triathlons"></section>
 
     <section class="content-placeholder">
-        <div>
-            <h1>Event Details</h1>
-            <div>
-                <div class="padding-bottom-30">
-                    <h3 class="padding-bottom-10">Come practice and test your transition skills</h3>
-                    <p class="justified-90-mob">Further events details can be found in our <a href="/assets/documents/CTC_Triathlon_Athlete_Guide.pdf" target="_blank">event guide</a></p>
-                </div>
-
-                <div class="padding-bottom-30">
-                    <h3 class="padding-bottom-10">Schedule</h3>
-                    <p><strong>6:30 to 7:00am</strong> - Junior Registration</p> 
-                    <p><strong>6:30 to 7:10am</strong> - Open/Enticer Registration</p> 
-                    <p><strong>7:10am</strong> - Junior Race Briefing</p> 
-                    <p><strong>7:15am</strong> - Junior Walk to Pool</p> 
-                    <p><strong>7:25am</strong> - Open/Enticer Race Briefing</p> 
-                    <p><strong>7:30am</strong> - Junior Race Start</p> 
-                    <p><strong>7:35am</strong> - Open/Enticer Walk to Pool</p> 
-                    <p><strong>7:50am</strong> - Open/Enticer Race Start</p>                
-                </div>
-
-                <div class="padding-bottom-30">
-                    <h3 class="padding-bottom-10">Race Info</h3>
-                    <p class="justified-50-wide justified-70 justified-90-mob"><strong>Special Rules:</strong> no passing allowed on the bike through the transition zone
-- no personal music devices allowed during racing</p>
-                    <p class="justified-50-wide justified-70 justified-90-mob"><strong>Race Fee:</strong> (cash on the day of race or EFT - see below)</p>
-                    <ul class="justified-50-wide justified-70 padding-bottom-30">
-                        <li class="justified-50-wide justified-70 justified-90-mob">Club member: Adult (16yrs and over) race entry fee: $20</li>
-                        <li class="justified-50-wide justified-70 justified-90-mob">Club member: Junior (5yrs to 15yrs) race entry fee: $15</li>
-                        <li class="justified-50-wide justified-70 justified-90-mob">Non club member: Adult (16yrs and over) race entry fee: $25</li>
-                        <li class="justified-50-wide justified-70 justified-90-mob">Non club member: Junior (5yrs to 15yrs) race entry fee: $20</li>
-                        <li class="justified-50-wide justified-70 justified-90-mob">Non-Tri Australia members: $5 (One Day Licence) + the above race entry fee</li>
-                    </ul>
-                    <p class="justified-50-wide justified-70 justified-90-mob"><strong>EFT Option: </strong> <strong>Account name</strong>: Cronulla Tri Club <strong>BSB</strong>: 112879 <strong>Account No.</strong>: 452384914</p>
-                    <p class="justified-50-wide justified-70 justified-90-mob">**Please add YOUR SURNAME, first name to the comments line</p>
-                </div>
-
-                <div class="padding-bottom-10">
-                    <h3 class="padding-bottom-10">Distances</h3>
-                    <table class="justified-90 max-width-90-mob" cellpadding="6" cellspacing="0">
-                        <thead>
-                            <tr>
-                            <th>Category</th>
-                            <th>Swim</th>
-                            <th>Bike</th>
-                            <th>Run</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                            <td>Open (18+)</td>
-                            <td>400m Swim (16 × 25m Laps)</td>
-                            <td>15k Bike (10 × Track 3)</td>
-                            <td>4k Run (4 × Track 2)</td>
-                            </tr>
-                            <tr>
-                            <td>Enticer (18+)</td>
-                            <td>200m Swim (8 × 25m Laps)</td>
-                            <td>10k Bike (10 × Track 2)</td>
-                            <td>2k Run (2 × Track 2)</td>
-                            </tr>
-                            <tr>
-                            <td>Junior A (17–19)</td>
-                            <td>400m Swim (16 × 25m Laps)</td>
-                            <td>15k Bike (15 × Track 2)</td>
-                            <td>3k Run (3 × Track 2)</td>
-                            </tr>
-                            <tr>
-                            <td>Junior B (15–16)</td>
-                            <td>400m Swim (16 × 25m Laps)</td>
-                            <td>15k Bike (15 × Track 2)</td>
-                            <td>3k Run (3 × Track 2)</td>
-                            </tr>
-                            <tr>
-                            <td>Youth A (13–14)</td>
-                            <td>300m Swim (12 × 25m Laps)</td>
-                            <td>12k Bike (12 × Track 2)</td>
-                            <td>2.5k Run (2 × Track 2 & 1 × Track 1)</td>
-                            </tr>
-                            <tr>
-                            <td>Youth B (10–12)</td>
-                            <td>200m Swim (8 × 25m Laps)</td>
-                            <td>6k Bike (6 × Track 2)</td>
-                            <td>1k Run (1 × Track 2)</td>
-                            </tr>
-                            <tr>
-                            <td>Youth C (7–9)</td>
-                            <td>100m Swim (4 × 25m Laps)</td>
-                            <td>3k Bike (3 × Track 2)</td>
-                            <td>450m Run (1 × Track 1)</td>
-                            </tr>
-                            <tr>
-                            <td>Mini (&lt;7)</td>
-                            <td>50m Swim (2 × 25m Laps)</td>
-                            <td>450m Bike (1 × Track 1)</td>
-                            <td>450m Run (1 × Track 1)</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+        
+        <h1>Event Details</h1>
+        <div class="section-inner">
+    <h3 class="section-title">Come Practice &amp; Test Your Transition Skills</h3>
+    <p class="section-link">Further event details can be found in our <a href="/assets/documents/CTC_Triathlon_Athlete_Guide.pdf" target="_blank">event guide</a></p>
+ 
+    <!-- Schedule -->
+    <div class="schedule">
+          <h3 class="section-title padding-bottom-30">Schedule</h3>
+          <div class="timeline ">
+      <div class="timeline-item"junior">
+        <div class="schedule-time">6:30 – 7:00am</div>
+        <div class="schedule-label">Junior Registration <span class="tag junior">Junior</span></div>
+      </div>
+      <div class="timeline-item open">
+        <div class="schedule-time">6:30 – 7:10am</div>
+        <div class="schedule-label">Open / Enticer Registration <span class="tag open">Open</span></div>
+      </div>
+      <div class="timeline-item junior">
+        <div class="schedule-time">7:10am</div>
+        <div class="schedule-label">Junior Race Briefing <span class="tag junior">Junior</span></div>
+      </div>
+      <div class="timeline-item junior">
+        <div class="schedule-time">7:15am</div>
+        <div class="schedule-label">Junior Walk to Pool <span class="tag junior">Junior</span></div>
+      </div>
+      <div class="timeline-item open">
+        <div class="schedule-time">7:15am</div>
+        <div class="schedule-label">Open / Enticer Race Briefing <span class="tag open">Open</span></div>
+      </div>
+      <div class="timeline-item junior">
+        <div class="schedule-time">7:20am</div>
+        <div class="schedule-label">Junior Race Start <span class="tag junior">Junior</span></div>
+      </div>
+      <div class="timeline-item open">
+        <div class="schedule-time">7:15am</div>
+        <div class="schedule-label">Open / Enticer Walk to Pool <span class="tag open">Open</span></div>
+      </div>
+      <div class="timeline-item open">
+        <div class="schedule-time">7:25am</div>
+        <div class="schedule-label">Open / Enticer Race Start <span class="tag open">Open</span></div>
+      </div>
+      </div>
+    </div>
+ 
+    <!-- Race info -->
+    <h2 class="section-title">Race Info</h2>
+    <p class="section-link">Please read the special rules and fees carefully before race day</p>
+ 
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>Special Rules</h3>
+        <p>No passing allowed on the bike through the transition zone. No personal music devices allowed during racing.</p>
+      </div>
+ 
+      <div class="info-card">
+        <h3>Race Fee</h3>
+        <p style="margin-bottom:2px;">Payable by cash on the day of the race, or by EFT — see details below.</p>
+        <div class="fee-grid">
+          <div class="fee-item">
+            <div class="fee-label">Club member – Adult (16+)</div>
+            <div class="fee-value">$30</div>
+          </div>
+          <div class="fee-item">
+            <div class="fee-label">Club member – Junior (5–15)</div>
+            <div class="fee-value">$15</div>
+          </div>
+          <div class="fee-item">
+            <div class="fee-label">Non-club member – Adult (16+)</div>
+            <div class="fee-value">$25</div>
+          </div>
+          <div class="fee-item">
+            <div class="fee-label">Non-club member – Junior (5–15)</div>
+            <div class="fee-value">$20</div>
+          </div>
+          <div class="fee-note">Non–Tri Australia members: add $5 (One Day Licence) on top of the relevant race entry fee above.</div>
+        </div>
+ 
+        <div class="eft-box">
+          <strong>EFT option</strong><br>
+          Account name: Cronulla Tri Club<br>
+          BSB: 112879 &nbsp; Account No: 452384914<br>
+          Please add <strong>YOUR SURNAME, first name</strong> to the comments line.
+        </div>
+      </div>
+    </div>
+ 
+    <!-- Distances -->
+    <h3 class="section-title">Distances</h3>
+    <p class="section-link">Swim, bike and run distances by category</p>
+ 
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Category</th><th>Swim</th><th>Bike</th><th>Run</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Open (16+)</td><td>400m (16 × 25m laps)</td><td>15k (10 × Track 2)</td><td>4k (4 × Track 2)</td></tr>
+          <tr><td>Enticer (16+)</td><td>200m (8 × 25m laps)</td><td>10k (10 × Track 2)</td><td>2k (2 × Track 2)</td></tr>
+          <tr><td>Junior A (17–19)</td><td>400m (16 × 25m laps)</td><td>15k (15 × Track 2)</td><td>3k (3 × Track 2)</td></tr>
+          <tr><td>Junior B (15–16)</td><td>400m (16 × 25m laps)</td><td>15k (15 × Track 2)</td><td>3k (3 × Track 2)</td></tr>
+          <tr><td>Youth A (13–14)</td><td>300m (12 × 25m laps)</td><td>12k (12 × Track 2)</td><td>2.5k (2 × Track 2 &amp; 1 × Track 1)</td></tr>
+          <tr><td>Youth B (10–12)</td><td>200m (8 × 25m laps)</td><td>6k (6 × Track 2)</td><td>1k (1 × Track 1)</td></tr>
+          <tr><td>Youth C (7–9)</td><td>100m (4 × 25m laps)</td><td>3k (3 × Track 2)</td><td>400m (1 × Track 1)</td></tr>
+          <tr><td>Mini (&lt;7)</td><td>50m (2 × 25m laps)</td><td>400m (1 × Track 1)</td><td>400m (1 × Track 1)</td></tr>
+        </tbody>
+      </table>
+    </div>
+ 
         </div>
     </section>
 

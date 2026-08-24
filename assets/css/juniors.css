@@ -918,6 +918,7 @@ tbody tr:hover {
     color: var(--muted);
     font-size:0.9rem;
     line-height:1.55;
+    text-align: justify;
   }
   .benefit-text .highlight{
     color: var(--blue-dark);
@@ -1050,9 +1051,22 @@ tbody tr:hover {
   }
 
 
+
+}
+
   @media (max-width: 760px){
     .spotlight-wrapper{ grid-template-columns: 1fr; }
-    .photo-panel{ min-height: 320px; }
+    .photo-panel{ border-radius: 28px 28px 0 0;}
     h4{ font-size:1.7rem; }
-  }
+
+    .benefits-grid { grid-template-columns: 1fr; margin: 0 20px; }
+
+    .spotlight-card { border-radius:  0 0 28px 28px;
+       min-height: auto;
+    }
+
+    .benefit-text h3 {
+    font-size: 0.90rem;
 }
+}
+  

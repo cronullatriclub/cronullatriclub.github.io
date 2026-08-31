@@ -116,6 +116,14 @@ li {
     padding-bottom: 50px;
 }
 
+.padding-top-30 {
+    padding-top: 30px;
+}
+
+.margin-bottom-30 {
+    margin-bottom: 30px;
+}
+
 .justified-50 {
     max-width: 50%;
     margin: 0 auto;
@@ -130,6 +138,12 @@ li {
 
 .justified-90 {
     max-width: 90%;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.justified-100 {
+    max-width: 100%;
     margin: 0 auto;
     text-align: justify;
 }

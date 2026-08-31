@@ -185,6 +185,7 @@
   justify-content: center;
   border: 2px solid var(--cyan-medium);
   color: var(--cyan-medium);
+  background-color: white;
 }
 
 .section-label {
@@ -199,4 +200,8 @@
 .section-inner {
   max-width: 960px;
   margin: 0 auto;
+}
+
+.section-alt {
+    background: var(--off-white);
 }

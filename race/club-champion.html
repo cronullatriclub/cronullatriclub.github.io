@@ -22,6 +22,399 @@
     <link rel="stylesheet" href="/assets/css/footer.min.css">
     <link rel="stylesheet" href="/assets/css/footer-mobile.min.css">
     <link rel="stylesheet" href="/assets/css/scroller.min.css">
+
+    <style>
+      :root{
+    --navy:#0A2540;
+    --ocean:#1479C9;
+    --ocean-dark:#0E5A99;
+    --aqua-tint:#EFF7FC;
+    --coral:#FF5A36;
+    --slate:#4A5568;
+    --line:#DCE7EF;
+    --white:#FFFFFF;
+  }
+ 
+  /* *{ box-sizing:border-box; }
+ 
+  body{
+    margin:0;
+    font-family:'Inter', Arial, sans-serif;
+    color:var(--slate);
+    background:var(--white);
+    line-height:1.6;
+  } */
+ 
+  /* h1,h2,h3{
+    font-family:'Barlow Condensed', Arial, sans-serif;
+    color:var(--navy);
+    font-weight:700;
+    letter-spacing:0.2px;
+    margin:0;
+  } */
+ 
+  .wrap{
+    max-width:920px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+ 
+  /* a{ color:var(--ocean-dark); } */
+ 
+  /* ---------- HERO ---------- */
+  /* .hero{
+    position:relative;
+    background:linear-gradient(120deg, var(--ocean-dark) 0%, var(--ocean) 65%, #3FA9E8 100%);
+    padding:64px 0 110px;
+    clip-path: polygon(0 0, 100% 0, 100% 82%, 0 100%);
+  }
+ 
+  .hero .wrap{ position:relative; }
+ 
+  .hero .eventLabel{
+    color:#BEE3F8;
+    font-size:1.05em;
+    font-weight:600;
+    margin-bottom:6px;
+  }
+ 
+  .hero h1{
+    color:#fff;
+    font-size:3.4em;
+    line-height:0.95;
+  }
+ 
+  .hero p{
+    color:#E3F1FC;
+    max-width:52ch;
+    margin-top:14px;
+    font-size:1.05em;
+  } */
+ 
+  /* quick nav
+  .quicknav{
+    margin-top:34px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+  .quicknav a{
+    text-decoration:none;
+    color:#fff;
+    background:rgba(255,255,255,0.14);
+    border:1px solid rgba(255,255,255,0.35);
+    padding:7px 14px;
+    border-radius:20px;
+    font-size:0.88em;
+    font-weight:500;
+  }
+  .quicknav a:hover{ background:rgba(255,255,255,0.26); } */
+ 
+  .section-inner {
+    max-width: 70%;
+    margin: 0px auto;
+}
+  /* ---------- SECTIONS ---------- */
+  /* section{ padding:52px 0; } */
+  section.tint{ background:var(--off-white); }
+ 
+
+  .content-placeholder{ padding-bottom: 60px;
+    margin-top: 30px; }
+    .tint .content-placeholder{ padding-bottom: 60px;
+    padding-top: 30px; }
+  .kicker{
+    display:inline-block;
+    color:var(--ocean-dark);
+    font-weight:600;
+    font-size:0.82em;
+    margin-bottom:6px;
+  }
+/*  
+  h2{ font-size:2.1em; margin-bottom:18px; }
+  */
+  .lede{
+    font-size:1.12em;
+    /* color:var(--navy); */
+    /* max-width:68ch; */
+    text-align: start;
+  }
+ 
+  /* ---------- INTRO ---------- */
+  .intro-box{
+    border-left:4px solid var(--coral);
+    background:var(--aqua-tint);
+    padding:18px 24px;
+    border-radius:2px;
+    max-width:70ch;
+  }
+ 
+  /* ---------- STEPPER (How it works) ---------- */
+  .stepper{
+    display:flex;
+    flex-wrap:wrap;
+    gap:28px 30px;
+    margin-top:34px;
+    position:relative;
+  }
+  .stepper::before{
+    content:"";
+    position:absolute;
+    top:19px;
+    left:5%;
+    right:5%;
+    height:2px;
+    background:var(--line);
+    z-index:0;
+  }
+  .step{
+    position:relative;
+    z-index:1;
+    flex:1 1 190px;
+
+  }
+  .step .num{
+    width:38px; height:38px;
+    border-radius:50%;
+    background:var(--ocean);
+    color:#fff;
+    font-family:'Barlow Condensed', sans-serif;
+    font-weight:700;
+    font-size:1.2em;
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom:14px;
+    border:4px solid var(--white);
+  }
+  section.tint .step .num{ border-color:var(--aqua-tint); }
+  .step p{ font-size:0.97em; margin:0; color:var(--slate); }
+  .step strong{ color:var(--navy); }
+ 
+  /* ---------- MATHS ---------- */
+  .formula-card{
+    background:var(--navy);
+    color:#fff;
+    border-radius:6px;
+    margin-top:28px;
+  }
+
+    .formula-inner {
+    background: linear-gradient(rgba(0, 141, 208, 0.9), rgba(0, 141, 208, 0.4));
+    color: #fff;
+    padding: 32px 34px;
+    border-radius: 6px;
+  }
+
+  .formula-card .formula-inner .formula{
+    font-family:'Barlow Condensed', sans-serif;
+    font-size:1.3em;
+    font-weight:600;
+    color:#fff;
+  }
+  .formula-card .formula-inner .formula .op{ color:#7FC2F0; margin:0 6px; }
+  .formula-card .formula-inner .example{
+    margin-top:16px;
+    padding-top:16px;
+    border-top:1px solid rgba(255,255,255,0.18);
+    color:#CFE7F8;
+    font-size:0.98em;
+  }
+  .formula-card .formula-inner .example b{ color:#fff; }
+ 
+  .maths-note{
+    margin-top:20px;
+    font-size:0.98em;
+  }
+ 
+  /* ---------- CHEAT SHEET ---------- */
+  .cheatsheet{
+    margin-top:26px;
+    border:1px solid var(--line);
+    border-radius:6px;
+    overflow:hidden;
+  }
+  .cheat-row{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    padding:12px 20px;
+    border-bottom:1px solid var(--line);
+    background:#fff;
+  }
+  .cheat-row:last-child{ border-bottom:none; }
+  .cheat-row.head{
+    background:var(--cyan-medium-dark);
+    color:#fff;
+    /* font-family:'Barlow Condensed', sans-serif;
+    font-weight:600;
+    font-size:1.05em;
+    padding:0; */
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 10px 20px;
+  }
+  .cheat-row .gap{ font-weight:600; color:var(--navy); flex:0 0 130px; }
+  .cheat-row .bar-track{
+    flex:1 1 auto;
+    height:10px;
+    background:var(--aqua-tint);
+    border-radius:5px;
+    overflow:hidden;
+  }
+  /* .cheat-row .bar-fill{
+    height:100%;
+    background:var(--cyan-medium);
+    border-radius:5px;
+  } */
+
+  .cheat-row .bar-fill{
+  height:100%;
+  width:0%;
+  background:linear-gradient(90deg, var(--ocean-dark), var(--ocean));
+  border-radius:5px;
+  transition:width 2.2s cubic-bezier(0.16, 1, 0.3, 1); /* was 1s — now slower */
+}
+  .cheat-row.win .bar-fill{ background:var(--ctc-gold); }
+  .cheat-row .pts{ flex:0 0 70px; text-align:right; font-weight:700; color:var(--navy); }
+  .cheat-row.head .pts{ color:#fff; }
+  .cheat-row.head .inner { background:linear-gradient(rgba(0, 141, 208, 0.9), rgba(0, 141, 208, 0.4)); padding: 10px 20px;}
+ 
+  /* ---------- RESULTS NOTE ---------- */
+  .note-card{
+    display:flex;
+    gap:16px;
+    align-items:flex-start;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:20px 22px;
+    margin-top:20px;
+    max-width:70ch;
+  }
+  .note-card .dot{
+    flex:0 0 auto;
+    width:10px; height:10px;
+    border-radius:50%;
+    background:var(--coral);
+    margin-top:8px;
+  }
+ 
+  /* ---------- CONDITIONS ---------- */
+  .conditions{
+    list-style:none;
+    margin:26px 0 0;
+    padding:0;
+    display:grid;
+    gap:14px;
+  }
+  .conditions li{
+    display:flex;
+    gap:14px;
+    align-items:flex-start;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:16px 18px;
+  }
+  .conditions li .check{
+    flex:0 0 auto;
+    width:24px; height:24px;
+    border-radius:50%;
+    background:var(--ocean);
+    color:#fff;
+    display:flex; align-items:center; justify-content:center;
+    font-size:0.8em;
+    font-weight:700;
+  }
+  .conditions li p{ margin:0; font-size:0.98em; }
+  .conditions li b{ color:var(--navy); }
+ 
+  /* ---------- CALENDAR ---------- */
+  .cal-intro{ margin-top:8px; }
+ 
+  .cal-table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:26px;
+    font-size:0.94em;
+  }
+  .cal-table th{
+    text-align:left;
+    /* font-family:'Barlow Condensed', sans-serif;
+    font-weight:600;
+    font-size:1.1em;
+    color:var(--navy); */
+    padding:10px 14px;
+    border-bottom:2px solid var(--navy);
+        background:var(--cyan-medium-dark);
+    color:#fff;
+    /* font-family:'Barlow Condensed', sans-serif;
+    font-weight:600;
+    font-size:1.05em;
+    padding:0; */
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    /* padding: 10px 20px; */
+  }
+  .cal-table td{
+    padding:12px 14px;
+    border-bottom:1px solid var(--line);
+    vertical-align:top;
+  }
+  .cal-table tr:hover td{ background:rgba(255, 255, 255, 0.1); }
+  .cal-table .race-no{ color: var(--cyan-medium-dark); font-size: 13px; font-weight:600; white-space:nowrap; }
+  .cal-table .date{ white-space:nowrap; color:var(--slate); }
+  .cal-table .dist{ text-align:right; color:var(--slate); white-space:nowrap; }
+  .cal-table .event-name{ color:var(--navy); font-weight:500; }
+  .cal-table .event-name a{ color:var(--navy); text-decoration:none; }
+  .cal-table .event-name a:hover{ text-decoration:underline; }
+ 
+  .badge{
+    /* display:inline-block; */
+    margin-left:8px;
+    font-size:0.72em;
+    font-weight:700;
+    color:#fff;
+    background:#ff69b4;
+    padding:2px 8px;
+    border-radius:10px;
+    /* font-family:'Inter', sans-serif; */
+    letter-spacing:0.3px;
+    vertical-align:middle;
+        padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    /* font-size: 11px; */
+    text-transform: uppercase;
+    margin: 10px;
+  }
+ 
+  .month-row td{
+    padding:22px 14px 8px;
+    border-bottom:none;
+    font-size:1.15em;
+    font-weight:600;
+    color: var(--cyan-medium-dark);
+
+  }
+  .month-row:first-of-type td{ padding-top:6px; }
+ 
+  @media (max-width:700px){
+    .stepper{ gap:22px; }
+    .step{ flex:1 1 100%; }
+    .stepper::before{ display:none; }
+    .cheat-row{ padding:12px 14px; }
+    .cheat-row .gap{ flex-basis:90px; }
+    .cheat-row .pts{ flex-basis:60px; }
+    .cal-table{ font-size:0.86em; }
+    .cal-table .dist{ display:none; }
+    .cal-table th:last-child{ display:none; }
+  }
+</style>
 </head>
 <body>
     <section id="header-placeholder"></section>
@@ -29,165 +422,274 @@
     <section id="title-placeholder" data-title="Club Champion"></section>
 
     <section class="content-placeholder">
-        <div>
+        <div  class="section-inner">
             <h1>Event Details</h1>
-            <div>
-                <div class="padding-bottom-30">
-                    <h3 class="padding-bottom-10">Club Champion</h3>
-                    <p class="justified-90-mob">The athlete who obtains the most points from the alloted races will become this season's club champion.</p>
+                            <div class="padding-bottom-30">
+                    <p class=" justified-100 justified-90-mob">The athlete who earns the most points from the club's allotted races becomes this season's club champion, one score per gender age group, best four races count.</p>
                 </div>
+       </div>
 
-                <div class="padding-bottom-30">
+    <div class="section-inner">
+      <h3>How it works</h3>
+      <div class="stepper">
+        <div class="step">
+          <div class="num">1</div>
+          <p style="text-align: start;">The committee picks <strong>8–12 races</strong> for the season.</p>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <p style="text-align: start;">Win your gender age group and you score <strong>100 points</strong>.</p>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <p style="text-align: start;">Don't win it? You get a <strong>bit less than 100</strong>, depending on how far behind the winner you were.</p>
+        </div>
+        <div class="step">
+          <div class="num">4</div>
+          <p style="text-align: start;">Your <strong>best 4 races</strong> count, and Club Champs is worth <strong>double</strong>. Max possible score: <strong>500</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <section class=" tint" id="maths">
+    <div class="content-placeholder section-inner">
+      <h3>The Maths</h3>
+      <div class="formula-card">
+        <div class="formula-inner">
+          <div class="formula">Your gender age group winner's time <span class="op">÷</span> Your time <span class="op">×</span> 100 <span class="op">=</span> Your points</div>
+          <div class="example">Example: you finish in 50 minutes. Your gender age group winner does 47. <b>47 ÷ 50 × 100 = 94 points.</b></div>
+        </div>
+      </div>
+      <p class="maths-note justified-100">No place, no distance, no discipline — just your time against the winner's time in your age group. That's why a sprint tri and a full Ironman are worth the same, and why a 63-year-old woman and a 25-year-old bloke can both compete for their respective female and male Club Champion trophy. Points are calculated down to the last decimal place if needed, so there's no rounding of times or points involved.</p>
+    </div>
+  </section>
+ 
+  <section class="content-placeholder" id="cheatsheet">
+    <div class="section-inner">
+      <h3>Quick Reference</h3>
+      <p>If the winner beats you by…</p>
+      <div class="cheatsheet">
+
+        <div class="cheat-row head">
+          <!-- <div class="inner"> -->
+          <div class="gap" style="color:#fff;">Winner's margin</div>
+          <div class="bar-track" style="background:transparent;"></div>
+          <div class="pts">Points</div>
+          <!-- </div> -->
+        </div>
+        <div class="cheat-row win">
+          <div class="gap">0% (you won!)</div>
+          <div class="bar-track"><div class="bar-fill" data-width="100"></div></div>
+          <div class="pts">100</div>
+        </div>
+        <div class="cheat-row">
+          <div class="gap">5%</div>
+          <div class="bar-track"><div class="bar-fill" data-width="95"></div></div>
+          <div class="pts">95</div>
+        </div>
+        <div class="cheat-row">
+          <div class="gap">10%</div>
+          <div class="bar-track"><div class="bar-fill" data-width="90"></div></div>
+          <div class="pts">90</div>
+        </div>
+        <div class="cheat-row">
+          <div class="gap">20%</div>
+          <div class="bar-track"><div class="bar-fill" data-width="80"></div></div>
+          <div class="pts">80</div>
+        </div>
+        <div class="cheat-row">
+          <div class="gap">40%</div>
+          <div class="bar-track"><div class="bar-fill" data-width="60"></div></div>
+          <div class="pts">60</div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <section class="tint" id="results">
+                <div class="content-placeholder">
                     <h3 class="padding-bottom-10">Point Scorer Results</h3>
                     <p class="justified-90-mob">The results will be available to download here throughout the season once it starts.</p>
                 </div>
-
-                <div class="padding-bottom-30">
-                    <h3 class="padding-bottom-10">Point Scorer Races and Conditions</h3>
-                    <p class="justified-50-wide justified-70 justified-90-mob">&#9679; In order to earn points you must be a financial member at the time of each race.</p>
-                    <p class="justified-50-wide justified-70 justified-90-mob">&#9679; To be eligible for the end of year awards you must have completed a minimum of two designated races and participated or volunteered in at least one club race (Triathlon or Duathlon, excluding the Richie Walker Aquathlon) during the season.</p>
-                    <p class="justified-50-wide justified-70 justified-90-mob">&#9679; To obtain Race Points at Club Champs in February 2027 you must be racing for Cronulla Triathlon Club.</p>
-                    <p class="justified-50-wide justified-70 justified-90-mob">&#9679; Club Champs is a Double Point Score Race.</p>
-                </div>
-
-                <div class="padding-bottom-30">
-                    <h3 class="padding-bottom-10">Point Scoring System</h3>
-                    <p class="padding-bottom-30 justified-90-mob">Points will be awarded based on your finishing position in each designated race as follows:</p>
-                  <table class="justified-70 justified-90-mob" cellpadding="6" cellspacing="0">
-  <thead>
-    <tr>
-      <th>Race</th>
-      <th>Date</th>
-      <th>Event</th>
-      <th class="float-right">Distances</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Race 1</td>
-      <td>Sun 22/11/2026</td>
-      <td><a href="https://www.challenge-canberra.com/" target="_blank">T100 Challenge Canberra</a></td>
-      <td class="float-right">2km/80km/18km</td>
-    </tr>
-    <tr>
-      <td>Race 2</td>
-      <td>Sun 22/11/2026</td>
-      <td><a href="https://www.challenge-canberra.com/" target="_blank">Olympic Challenge Canberra</a></td>
-      <td class="float-right">1.5km/40km/10km</td>
-    </tr>
-    <tr>
-      <td>Race 3</td>
-      <td>Sun 22/11/2026</td>
-      <td><a href="https://www.challenge-canberra.com/" target="_blank">Sprint Challenge Canberra</a></td>
-      <td class="float-right">750m/20km/5km</td>
-    </tr>
-    <tr>
-      <td>Race 4</td>
-      <td>Sun 22/11/2026</td>
-      <td><a href="https://nepeantriathlon.com.au/" target="_blank">Classic Nepean Triathlon</a></td>
-      <td class="float-right">2km/60km/16km</td>
-    </tr>
-    <tr>
-      <td>Race 5</td>
-      <td>Sun 22/11/2026</td>
-      <td><a href="https://nepeantriathlon.com.au/" target="_blank">Nepean Triathlon</a></td>
-      <td class="float-right">1km/30km/8km</td>
-    </tr>
-    <tr>
-      <td>Race 6</td>
-      <td>Sun 22/11/2026</td>
-      <td><a href="https://nepeantriathlon.com.au/" target="_blank">Sprint Nepean Triathlon</a></td>
-      <td class="float-right">750m/20km/5km</td>
-    </tr>
-    <tr>
-      <td>Race 7</td>
-      <td>Sat 12/12/2026</td>
-      <td><a href="https://eliteenergy.com/event/callala-triathlon-festival" target="_blank">Standard Triathlon Callala</a></td>
-      <td class="float-right">1.5km/40km/10km</td>
-    </tr>
-    <tr>
-      <td>Race 8</td>
-      <td>Sat 12/12/2026</td>
-      <td><a href="https://eliteenergy.com/event/callala-triathlon-festival" target="_blank">Sprint Triathlon Callala</a></td>
-      <td class="float-right">750m/20km/5km</td>
-    </tr>
-    <tr>
-      <td>Race 9</td>
-      <td>Sat 30/01/2027</td>
-      <td><a href="https://cronullatriclub.com.au/race/triahlons" target="_blank">Club Race #5</a></td>
-      <td class="float-right">400m/15km/4km</td>
-    </tr>
-    <tr>
-      <td>Race 10</td>
-      <td>Sat 20/02/2027</td>
-      <td><a href="https://www.eliteenergy.com.au/event/club-champs/" target="_blank">Club Champs – Forster – Double Point Score Race</a></td>
-      <td class="float-right">1.5km/40km/10km</td>
-    </tr>
-    <tr>
-      <td>Race 11</td>
-      <td>Sat 20/02/2027</td>
-      <td><a href="https://www.eliteenergy.com.au/event/club-champs/" target="_blank">Club Champs – Forster – Double Point Score Race Aquabike</a></td>
-      <td class="float-right">1.5km/40km</td>
-    </tr>
-    <tr>
-      <td>Race 12</td>
-      <td>Sat 20/02/2027</td>
-      <td><a href="https://www.eliteenergy.com.au/event/club-champs/" target="_blank">Club Champs – Forster – Double Point Score Race Sprint</a></td>
-      <td class="float-right">750m/20km/5km</td>
-    </tr>
-    <tr>
-      <td>Race 13</td>
-      <td>Sat 20/02/2027</td>
-      <td><a href="https://www.eliteenergy.com.au/event/club-champs/" target="_blank">Club Champs – Forster – Double Point Score Race – Super Sprint</a></td>
-      <td class="float-right">200m/10km/2.8km</td>
-    </tr>
-    <tr>
-      <td>Race 14</td>
-      <td>Sat 06/03/2027</td>
-      <td><a href="https://huskytri.com.au/ultimate/" target="_blank">Husky Tri Festival Ultimate</a></td>
-      <td class="float-right">1.9km/90km/21.1km</td>
-    </tr>
-    <tr>
-      <td>Race 15</td>
-      <td>Sat 06/03/2027</td>
-      <td><a href="https://huskytri.com.au/classic/" target="_blank">Husky Tri Festival Classic</a></td>
-      <td class="float-right">1km/60km/10km</td>
-    </tr>
-    <tr>
-      <td>Race 16</td>
-      <td>Sat 06/03/2027</td>
-      <td><a href="https://huskytri.com.au/sprint/" target="_blank">Husky Tri Festival Sprint</a></td>
-      <td class="float-right">750m/20km/5km</td>
-    </tr>
-    <tr>
-      <td>Race 17</td>
-      <td>Sun 03/04/2027</td>
-      <td><a href="https://cronullatriclub.com.au/race/rwa" target="_blank">Richie Walker Aquathlon</a></td>
-      <td class="float-right">1km/5km</td>
-    </tr>
-    <tr>
-      <td>Race 19</td>
-      <td>Sun 18/04/2027</td>
-      <td><a href="https://www.eliteenergy.com.au/event/wollongong-triathlon-festival/" target="_blank">Wollongong Sprint Distance Triathlon</a></td>
-      <td class="float-right">750m/20km/5km</td>
-    </tr>
-    <tr>
-      <td>Race 20</td>
-      <td>Sun 18/04/2027</td>
-      <td><a href="https://www.eliteenergy.com.au/event/wollongong-triathlon-festival/" target="_blank">Wollongong Standard Distance Triathlon</a></td>
-      <td class="float-right">1.5km/40km/10km</td>
-    </tr>
-    <tr>
-      <td>Race 21</td>
-      <td>Sun 02/05/2027</td>
-      <td><a href="https://www.ironman.com/im703-western-sydney/" target="_blank">Ironman 70.3 Western Sydney</a></td>
-      <td class="float-right">1.9km/90km/21.1km</td>
-    </tr>
-  </tbody>
-</table>
-            </div>
-        </div>
-    </section>
+  </section>
+ 
+  <section class="content-placeholder" id="conditions">
+    <div class="section-inner">
+      <h3>Races and conditions</h3>
+      <ul class="conditions">
+        <li>
+          <div class="check">✓</div>
+          <p>In order to earn points you must be a <b>financial member</b> at the time of each race.</p>
+        </li>
+        <li>
+          <div class="check">✓</div>
+          <p class="justified-100">To be eligible for the end of year awards you must have completed a <b>minimum of two designated races</b> and participated or volunteered in at least one club race (Triathlon or Duathlon, excluding the Richie Walker Aquathlon) during the season.</p>
+        </li>
+        <li>
+          <div class="check">✓</div>
+          <p class="justified-100">To obtain Race Points at Club Champs in <b>February 2027</b> you must be racing for Cronulla Triathlon Club.</p>
+        </li>
+        <li>
+          <div class="check">✓</div>
+          <p class="justified-100"><b>Club Champs is a Double Point Score Race.</b></p>
+        </li>
+      </ul>
+    </div>
+  </section>
+ 
+  <section class="tint" id="calendar">
+    <div class="content-placeholder section-inner">
+      <h3>Race Calendar</h3>
+      <p class="cal-intro">Points will be awarded based on your finishing position in each designated race as follows:</p>
+ 
+      <table class="cal-table">
+        <thead>
+          <tr>
+            <th>Race</th>
+            <th>Date</th>
+            <th>Event</th>
+            <th style="text-align:right;">Distances</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="month-row"><td colspan="4">November 2026</td></tr>
+          <tr>
+            <td class="race-no">Race 1</td>
+            <td class="date">Sun 22/11/2026</td>
+            <td class="event-name"><a href="https://www.challenge-canberra.com/" target="_blank">T100 Challenge Canberra</a></td>
+            <td class="dist">2km / 80km / 18km</td>
+          </tr>
+          <tr>
+            <td class="race-no">Race 2</td>
+            <td class="date">Sun 22/11/2026</td>
+            <td class="event-name"><a href="https://www.challenge-canberra.com/" target="_blank">Olympic Challenge Canberra</a></td>
+            <td class="dist">1.5km / 40km / 10km</td>
+          </tr>
+          <tr>
+            <td class="race-no">Race 3</td>
+            <td class="date">Sun 22/11/2026</td>
+            <td class="event-name"><a href="https://www.challenge-canberra.com/" target="_blank">Sprint Challenge Canberra</a></td>
+            <td class="dist">750m / 20km / 5km</td>
+          </tr>
+          <tr>
+            <td class="race-no">Race 4</td>
+            <td class="date">Sun 22/11/2026</td>
+            <td class="event-name"><a href="https://nepeantriathlon.com.au/" target="_blank">Classic Nepean Triathlon</a></td>
+            <td class="dist">2km / 60km / 16km</td>
+          </tr>
+          <tr>
+            <td class="race-no">Race 5</td>
+            <td class="date">Sun 22/11/2026</td>
+            <td class="event-name"><a href="https://nepeantriathlon.com.au/" target="_blank">Nepean Triathlon</a></td>
+            <td class="dist">1km / 30km / 8km</td>
+          </tr>
+          <tr>
+            <td class="race-no">Race 6</td>
+            <td class="date">Sun 22/11/2026</td>
+            <td class="event-name"><a href="https://nepeantriathlon.com.au/" target="_blank">Sprint Nepean Triathlon</a></td>
+            <td class="dist">750m / 20km / 5km</td>
+          </tr>
+ 
+          <tr class="month-row"><td colspan="4">December 2026</td></tr>
+          <tr>
+            <td class="race-no">Race 7</td>
+            <td class="date">Sat 12/12/2026</td>
+            <td class="event-name"><a href="https://eliteenergy.com/event/callala-triathlon-festival" target="_blank">Standard Triathlon Callala</a></td>
+            <td class="dist">1.5km / 40km / 10km</td>
+          </tr>
+          <tr>
+            <td class="race-no">Race 8</td>
+            <td class="date">Sat 12/12/2026</td>
+            <td class="event-name"><a href="https://eliteenergy.com/event/callala-triathlon-festival" target="_blank">Sprint Triathlon Callala</a></td>
+            <td class="dist">750m / 20km / 5km</td>
+          </tr>
+ 
+          <tr class="month-row"><td colspan="4">January 2027</td></tr>
+          <tr>
+            <td class="race-no">Race 9</td>
+            <td class="date">Sat 30/01/2027</td>
+            <td class="event-name"><a href="https://cronullatriclub.com.au/race/triathlons" target="_blank">Club Race #5</a></td>
+            <td class="dist">400m / 15km / 4km</td>
+          </tr>
+ 
+          <tr class="month-row"><td colspan="4">February 2027</td></tr>
+          <tr>
+            <td class="race-no">Race 10</td>
+            <td class="date">Sat 20/02/2027 <span class="badge">2× points</span></td>
+            <td class="event-name"><a href="https://cronullatriclub.com.au/race/club-champs" target="_blank">Club Champs, Forster — Standard</a></td>
+            <td class="dist">1.5km / 40km / 10km</td>
+          </tr>
+          <tr>
+            <td class="race-no">Race 11</td>
+            <td class="date">Sat 20/02/2027 <span class="badge">2× points</span></td>
+            <td class="event-name"><a href="https://cronullatriclub.com.au/race/club-champs" target="_blank">Club Champs, Forster — Aquabike</a></td>
+            <td class="dist">1.5km / 40km</td>
+          </tr>
+          <tr>
+            <td class="race-no">Race 12</td>
+            <td class="date">Sat 20/02/2027 <span class="badge">2× points</span></td>
+            <td class="event-name"><a href="https://cronullatriclub.com.au/race/club-champs" target="_blank">Club Champs, Forster — Sprint</a></td>
+            <td class="dist">750m / 20km / 5km</td>
+          </tr>
+          <tr>
+            <td class="race-no">Race 13</td>
+            <td class="date">Sat 20/02/2027 <span class="badge">2× points</span></td>
+            <td class="event-name"><a href="https://cronullatriclub.com.au/race/club-champs" target="_blank">Club Champs, Forster — Super Sprint</a></td>
+            <td class="dist">200m / 10km / 2.8km</td>
+          </tr>
+ 
+          <tr class="month-row"><td colspan="4">March 2027</td></tr>
+          <tr>
+            <td class="race-no">Race 14</td>
+            <td class="date">Sat 06/03/2027</td>
+            <td class="event-name"><a href="https://huskytri.com.au/ultimate/" target="_blank">Husky Tri Festival Ultimate</a></td>
+            <td class="dist">1.9km / 90km / 21.1km</td>
+          </tr>
+          <tr>
+            <td class="race-no">Race 15</td>
+            <td class="date">Sat 06/03/2027</td>
+            <td class="event-name"><a href="https://huskytri.com.au/classic/" target="_blank">Husky Tri Festival Classic</a></td>
+            <td class="dist">1km / 60km / 10km</td>
+          </tr>
+          <tr>
+            <td class="race-no">Race 16</td>
+            <td class="date">Sat 06/03/2027</td>
+            <td class="event-name"><a href="https://huskytri.com.au/sprint/" target="_blank">Husky Tri Festival Sprint</a></td>
+            <td class="dist">750m / 20km / 5km</td>
+          </tr>
+ 
+          <tr class="month-row"><td colspan="4">April 2027</td></tr>
+          <tr>
+            <td class="race-no">Race 17</td>
+            <td class="date">Sun 03/04/2027</td>
+            <td class="event-name"><a href="https://cronullatriclub.com.au/race/rwa" target="_blank">Richie Walker Aquathlon</a></td>
+            <td class="dist">1km / 5km</td>
+          </tr>
+          <tr>
+            <td class="race-no">Race 19</td>
+            <td class="date">Sun 18/04/2027</td>
+            <td class="event-name"><a href="https://www.eliteenergy.com.au/event/wollongong-triathlon-festival/">Wollongong Sprint Distance Triathlon</a></td>
+            <td class="dist">750m / 20km / 5km</td>
+          </tr>
+          <tr>
+            <td class="race-no">Race 20</td>
+            <td class="date">Sun 18/04/2027</td>
+            <td class="event-name"><a href="https://www.eliteenergy.com.au/event/wollongong-triathlon-festival/">Wollongong Standard Distance Triathlon</a></td>
+            <td class="dist">1.5km / 40km / 10km</td>
+          </tr>
+ 
+          <tr class="month-row"><td colspan="4">May 2027</td></tr>
+          <tr>
+            <td class="race-no">Race 21</td>
+            <td class="date">Sun 02/05/2027</td>
+            <td class="event-name"><a href="https://www.ironman.com/im703-western-sydney/" target="_blank">Ironman 70.3 Western Sydney</a></td>
+            <td class="dist">1.9km / 90km / 21.1km</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
 
     <section id="footer-placeholder"></section>
 
@@ -197,5 +699,40 @@
     <script src="/assets/js/footer.min.js"></script>
     <script src="/assets/js/header.min.js"></script>
     <script src="/assets/js/scroller.min.js"></script>
+      <script>
+    (function(){
+      var cheatsheet = document.querySelector('.cheatsheet');
+      if(!cheatsheet) return;
+      var bars = cheatsheet.querySelectorAll('.bar-fill');
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ 
+      function runAnimation(){
+        bars.forEach(function(bar, i){
+          var target = bar.getAttribute('data-width') + '%';
+          if(reduceMotion){
+            bar.style.width = target;
+            return;
+          }
+          setTimeout(function(){
+            bar.style.width = target;
+          }, i * 90);
+        });
+      }
+ 
+      if('IntersectionObserver' in window){
+        var observer = new IntersectionObserver(function(entries){
+          entries.forEach(function(entry){
+            if(entry.isIntersecting){
+              runAnimation();
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.4 });
+        observer.observe(cheatsheet);
+      } else {
+        runAnimation();
+      }
+    })();
+  </script>
 </body>
 </html>

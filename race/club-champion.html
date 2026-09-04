@@ -128,7 +128,7 @@
 
   .formula-card .formula-inner .formula{
     font-family:'Barlow Condensed', sans-serif;
-    font-size:1.3em;
+    font-size:1.1em;
     font-weight:600;
     color:#fff;
   }
@@ -240,6 +240,14 @@
   .conditions li p{ margin:0; font-size:0.98em; }
   .conditions li b{ color:var(--navy); }
 
+  .event-name a{
+  display:block;
+}
+.event-name .badge{
+  margin-left:0;
+  margin-top:4px;
+}
+
   .cal-intro{ margin-top:8px; }
 
   .cal-table{
@@ -303,7 +311,8 @@
   .month-row:first-of-type td{ padding-top:6px; }
 
   @media (max-width:700px){
-    .section-inner{ max-width:100%; }
+    .section-inner{ max-width:100%; padding: 0 20px;}
+    .step .num { justify-self: center; }
     .stepper{ gap:22px; }
     .step{ flex:1 1 100%; }
     .stepper::before{ display:none; }
@@ -370,7 +379,7 @@
 
     <section class="content-placeholder">
         <div  class="section-inner">
-            <h1>Event Details</h1>
+            <h1>Details</h1>
                             <div class="padding-bottom-30">
                     <p class=" justified-100 justified-90-mob">The athlete who earns the most points from the club's allotted races becomes this season's club champion, one score per gender age group, best four races count.</p>
                 </div>
@@ -381,7 +390,7 @@
       <div class="stepper">
         <div class="step">
           <div class="num">1</div>
-          <p style="text-align: start;">The committee picks <strong>8–12 races</strong> for the season.</p>
+          <p style="text-align: start;">The committee picks <strong>16-22 races</strong> for the season.</p>
         </div>
         <div class="step">
           <div class="num">2</div>
@@ -465,7 +474,7 @@
       <ul class="conditions">
         <li>
           <div class="check">✓</div>
-          <p>In order to earn points you must be a <b>financial member</b> at the time of each race.</p>
+          <p class="justified-100">In order to earn points you must be a <b>financial member</b> at the time of each race.</p>
         </li>
         <li>
           <div class="check">✓</div>
@@ -486,7 +495,7 @@
   <section class="tint" id="calendar">
     <div class="content-placeholder section-inner">
       <h3>Race Calendar</h3>
-      <p class="cal-intro">Points will be awarded based on your finishing position in each designated race as follows:</p>
+      <p class="justified-100 cal-intro">Points will be awarded based on your finishing position in each designated race as follows:</p>
 
       <div class="cal-table-scroll">
       <table class="cal-table">
@@ -562,26 +571,26 @@
           <tr class="month-row"><td colspan="4">February 2027</td></tr>
           <tr>
             <td class="race-no" data-label="Race">Race 10</td>
-            <td class="date" data-label="Date">Sat 20/02/2027 <span class="badge">2× points</span></td>
-            <td class="event-name" data-label="Event"><a href="https://cronullatriclub.com.au/race/club-champs" target="_blank">Club Champs, Forster — Standard</a></td>
+            <td class="date" data-label="Date">Sat 20/02/2027</td>
+            <td class="event-name" data-label="Event"><a href="https://cronullatriclub.com.au/race/club-champs" target="_blank">Club Champs, Forster — Standard</a><span class="badge">2× points</span></td>
             <td class="dist" data-label="Distance">1.5km / 40km / 10km</td>
           </tr>
           <tr>
             <td class="race-no" data-label="Race">Race 11</td>
-            <td class="date" data-label="Date">Sat 20/02/2027 <span class="badge">2× points</span></td>
-            <td class="event-name" data-label="Event"><a href="https://cronullatriclub.com.au/race/club-champs" target="_blank">Club Champs, Forster — Aquabike</a></td>
+            <td class="date" data-label="Date">Sat 20/02/2027</td>
+            <td class="event-name" data-label="Event"><a href="https://cronullatriclub.com.au/race/club-champs" target="_blank">Club Champs, Forster — Aquabike</a><span class="badge">2× points</span></td>
             <td class="dist" data-label="Distance">1.5km / 40km</td>
           </tr>
           <tr>
             <td class="race-no" data-label="Race">Race 12</td>
-            <td class="date" data-label="Date">Sat 20/02/2027 <span class="badge">2× points</span></td>
-            <td class="event-name" data-label="Event"><a href="https://cronullatriclub.com.au/race/club-champs" target="_blank">Club Champs, Forster — Sprint</a></td>
+            <td class="date" data-label="Date">Sat 20/02/2027</td>
+            <td class="event-name" data-label="Event"><a href="https://cronullatriclub.com.au/race/club-champs" target="_blank">Club Champs, Forster — Sprint</a><span class="badge">2× points</span></td>
             <td class="dist" data-label="Distance">750m / 20km / 5km</td>
           </tr>
           <tr>
             <td class="race-no" data-label="Race">Race 13</td>
-            <td class="date" data-label="Date">Sat 20/02/2027 <span class="badge">2× points</span></td>
-            <td class="event-name" data-label="Event"><a href="https://cronullatriclub.com.au/race/club-champs" target="_blank">Club Champs, Forster — Super Sprint</a></td>
+            <td class="date" data-label="Date">Sat 20/02/2027</td>
+            <td class="event-name" data-label="Event"><a href="https://cronullatriclub.com.au/race/club-champs" target="_blank">Club Champs, Forster — Super Sprint</a><span class="badge">2× points</span></td>
             <td class="dist" data-label="Distance">200m / 10km / 2.8km</td>
           </tr>
 

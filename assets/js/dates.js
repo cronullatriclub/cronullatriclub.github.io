@@ -50,7 +50,9 @@ function populateDates(eventId, maxEvents, from = null, to = null) {
             <div class="dates-events-info">
                     <div class="dates-events-day"><span class="dates-time">${times}</span> <span class="dates-day-name">${dayName}, ${monthDay}</span></div>
                     ${x.event.registerurl && x.eventDate >= dateNow ? `<p><a class="dates-events-a" href="${x.event.registerurl}" target="_blank">Register Here</a></p>` : ""}
+                    ${x.event.juniorsregisterurl && x.eventDate >= dateNow ? `<p><a class="dates-events-a" href="${x.event.juniorregisterurl}" target="_blank">Juniors Register Here</a></p>` : ""}
                     ${x.event.resultsurl ? `<p><a class="dates-events-a" href="${x.event.resultsurl}" target="_blank">Results</a></p>` : ""}
+                    ${x.event.fullresults ? `<p><a class="dates-events-a" href="${x.event.fullresults}" target="_blank">Full Results</a></p>` : ""}
                 </div>
             </div>
         `;

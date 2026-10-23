@@ -66,7 +66,7 @@
             padding: 10px 18px;
             background: rgba(17, 147, 212, 0.08);
             border: 1px solid rgba(17, 147, 212, 0.18);
-            /* border-radius: 999px; */
+            border-radius: 999px;
             color: var(--ocean-dark);
             font-size: 1.06rem;
             font-weight: 700;
@@ -96,7 +96,7 @@
     margin: 0 auto 28px;
     background: var(--white);
     border: 1px solid var(--line);
-    /* border-radius: 14px; */
+    border-radius: 14px;
     /* box-shadow: 0 10px 30px var(--shadow); */
     /* overflow: hidden; */
     max-width: 1100px;
@@ -162,7 +162,7 @@
         .category-card {
             background: var(--white);
             border: 1px solid var(--line);
-            /* border-radius: 16px; */
+            border-radius: 16px;
             box-shadow: 0 10px 30px var(--shadow);
             overflow: hidden;
         }
@@ -199,10 +199,12 @@
 
         .table-wrap {
             overflow-x: auto;
+            overflow-y: hidden;
             -webkit-overflow-scrolling: touch;
             border: 1px solid var(--line);
-            /* border-radius: 12px; */
+            border-radius: 12px;
             background: #fff;
+            width: 100%;
         }
 
         table {
@@ -394,22 +396,51 @@
                 border-left: 1px solid var(--line);
             }
 
+            .category-card {
+                overflow: visible;
+            }
+
             .category-head {
                 flex-direction: column;
                 align-items: flex-start;
             }
 
-            /* .table-wrap {
+            .category-body {
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            .table-wrap {
                 border-radius: 10px;
-            } */
+                overflow-x: auto;
+                overflow-y: hidden;
+                -webkit-overflow-scrolling: touch;
+                width: 100%;
+                max-width: 100%;
+                display: block;
+            }
+
+            table {
+                min-width: 760px;
+                width: 760px;
+            }
 
             .table-wrap.sticky-guard th:first-child,
             .table-wrap.sticky-guard td:first-child,
             .table-wrap.sticky-guard th:nth-child(2),
-            .table-wrap.sticky-guard td:nth-child(2),
+            .table-wrap.sticky-guard td:nth-child(2) {
+                position: static;
+                left: auto;
+                box-shadow: none;
+                background: transparent;
+            }
+
             .table-wrap.sticky-guard th:last-child,
             .table-wrap.sticky-guard td:last-child {
                 position: sticky;
+                right: 0;
+                box-shadow: -1px 0 0 var(--line);
+                z-index: 1;
             }
         }
     </style>

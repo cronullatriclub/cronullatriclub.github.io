@@ -361,12 +361,37 @@
             }
 
             .points-card {
-                overflow-x: auto;
+                overflow-x: hidden;
             }
 
             .points-grid {
-                grid-template-columns: repeat(5, minmax(80px, 1fr));
-                min-width: 420px;
+                grid-template-columns: 1fr;
+                min-width: 0;
+            }
+
+            .point-item {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                border-right: none;
+                border-top: 1px solid var(--line);
+            }
+
+            .point-item:first-child {
+                border-top: none;
+            }
+
+            .points-label,
+            .points-value {
+                border-top: none;
+                padding: 12px 10px;
+            }
+
+            .points-label {
+                border-right: 1px solid var(--line);
+            }
+
+            .points-value {
+                border-left: 1px solid var(--line);
             }
 
             .category-head {

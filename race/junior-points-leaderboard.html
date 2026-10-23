@@ -118,17 +118,23 @@
 
         .points-grid {
             display: grid;
-            grid-template-columns: repeat(5, minmax(110px, 1fr));
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            min-width: 420px;
         }
 
-        .point-row {
-            display: contents;
+        .point-item {
+            display: grid;
+            grid-template-rows: auto auto;
+            border-right: 1px solid var(--line);
+        }
+
+        .point-item:last-child {
+            border-right: none;
         }
 
         .points-label,
         .points-value {
             padding: 12px 14px;
-            border-right: 1px solid var(--line);
             border-top: 1px solid var(--line);
             text-align: center;
             font-size: 0.96rem;
@@ -144,10 +150,6 @@
             color: var(--navy);
             font-weight: 800;
             font-size: 1.15rem;
-        }
-
-        .points-value:last-child {
-            border-right: none;
         }
 
         .category-stack {
@@ -358,8 +360,13 @@
                 font-size: 0.98rem;
             }
 
+            .points-card {
+                overflow-x: auto;
+            }
+
             .points-grid {
-                grid-template-columns: repeat(2, minmax(120px, 1fr));
+                grid-template-columns: repeat(5, minmax(80px, 1fr));
+                min-width: 420px;
             }
 
             .category-head {
@@ -395,16 +402,26 @@
         <div class="points-card" aria-label="Junior points system">
             <div class="points-card-header">Points system</div>
             <div class="points-grid">
-                <div class="points-label">1st</div>
-                <div class="points-label">2nd</div>
-                <div class="points-label">3rd</div>
-                <div class="points-label">Finished</div>
-                <div class="points-label">DNF</div>
-                <div class="points-value">4</div>
-                <div class="points-value">3</div>
-                <div class="points-value">2</div>
-                <div class="points-value">1</div>
-                <div class="points-value">0</div>
+                <div class="point-item">
+                    <div class="points-label">1st</div>
+                    <div class="points-value">4</div>
+                </div>
+                <div class="point-item">
+                    <div class="points-label">2nd</div>
+                    <div class="points-value">3</div>
+                </div>
+                <div class="point-item">
+                    <div class="points-label">3rd</div>
+                    <div class="points-value">2</div>
+                </div>
+                <div class="point-item">
+                    <div class="points-label">Finished</div>
+                    <div class="points-value">1</div>
+                </div>
+                <div class="point-item">
+                    <div class="points-label">DNF</div>
+                    <div class="points-value">0</div>
+                </div>
             </div>
         </div>
 
